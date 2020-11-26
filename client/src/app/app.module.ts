@@ -18,15 +18,13 @@ import { environment } from '../environments/environment';
 import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { PruebaComponent } from './components/prueba/prueba.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroUsuarioComponent,
     HomeComponent,
-    LoginComponent,
-    PruebaComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
