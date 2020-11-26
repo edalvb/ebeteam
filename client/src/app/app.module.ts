@@ -8,10 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegistroUsuarioComponent
   ],
   imports: [
     BrowserModule,
