@@ -1,1 +1,15 @@
-<p>login works!</p>
+<mat-form-field appearance="outline">
+    <mat-label>Usuario</mat-label>
+    <input #usuario matInput placeholder="Placeholder">
+    <mat-icon matSuffix>person</mat-icon>
+    <!-- <mat-hint>Hint</mat-hint> -->
+</mat-form-field>
+<br>
+<mat-form-field appearance="outline">
+    <mat-label>Contraseña</mat-label>
+    <input #contrasena matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <!-- <mat-hint>Hint</mat-hint> -->
+</mat-form-field>
+
+<button (click)="login(usuario.value, contrasena.value)" mat-raised-button color="primary">Ingresar</button>

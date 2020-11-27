@@ -62,6 +62,7 @@ export class RegistroUsuarioComponent implements OnInit {
     );
     console.log(this.client);
   }
+  
   create(dni: string, name: string, last_name: string, cellphone: string, imei: string) {
     this.apollo.mutate({
       mutation: CREATE_CLIENTES,
