@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { Apollo, APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
-import { InMemoryCache,ApolloLink } from '@apollo/client/core';
+import { InMemoryCache, ApolloLink } from '@apollo/client/core';
 import { setContext } from '@apollo/client/link/context';
 
 const uri = 'http://localhost:1337/graphql';
@@ -22,7 +22,7 @@ export function createApollo(httpLink: HttpLink) {
     } else {
       return {
         headers: {
-          Authorization: `JWT ${token}`
+          Authorization: `Bearer ${token}`
         }
       };
     }
@@ -47,4 +47,4 @@ export function createApollo(httpLink: HttpLink) {
     deps: [HttpLink]
   }]
 })
-export class GraphQLModule {}
+export class GraphQLModule { }

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         contrasena: password
       }
     }).subscribe((res: any) => {
-      localStorage.setItem('token', res.data.login.jwt);
+      localStorage.setItem('token', `${res.data.login.jwt}`);
       console.log(localStorage.getItem('token'));
     });
   }
