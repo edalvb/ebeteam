@@ -19,6 +19,8 @@ import { environment } from '../environments/environment';
 import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { CanalesComponent } from './components/canales/canales.component';
+import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 @NgModule({
@@ -27,6 +29,8 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
     RegistroUsuarioComponent,
     HomeComponent,
     LoginComponent,
+    CanalesComponent,
+    DenunciasComponent,
     TopBarComponent
   ],
   imports: [
