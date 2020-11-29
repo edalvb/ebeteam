@@ -1,36 +1,66 @@
-<mat-form-field appearance="outline">
-    <mat-label>Nombres</mat-label>
-    <input #name matInput placeholder="Placeholder">
-    <mat-icon matSuffix>person</mat-icon>
-    <!-- <mat-hint>Hint</mat-hint> -->
-</mat-form-field>
-<mat-form-field appearance="outline">
-    <mat-label>Apellidos</mat-label>
-    <input #apellido matInput placeholder="Placeholder">
-    <mat-icon matSuffix>person</mat-icon>
-    <!-- <mat-hint>Hint</mat-hint> -->
-</mat-form-field>
-<mat-form-field appearance="outline">
-    <mat-label>Número de Documento de Identidad</mat-label>
-    <input #dni matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <!-- <mat-hint>Hint</mat-hint> -->
-</mat-form-field>
-<mat-form-field appearance="outline">
-    <mat-label>Numero de Celular</mat-label>
-    <input #celular matInput placeholder="Placeholder">
-    <mat-icon matSuffix>phone</mat-icon>
-    <!-- <mat-hint>Hint</mat-hint> -->
-</mat-form-field>
-<mat-form-field appearance="outline">
-    <mat-label>IMEI</mat-label>
-    <input #imei matInput placeholder="Placeholder">
-    <mat-icon matSuffix>space_bar</mat-icon>
-    <!-- <mat-hint>Hint</mat-hint> -->
-</mat-form-field>
-<ul>
-    <li *ngFor="let c of client | async">
-        {{c.name}}
-    </li>
-</ul>
-<button (click)="create(dni.value, name.value, apellido.value, celular.value, imei.value)" mat-raised-button color="primary">Registrarme</button>
+<div style="text-align: center;">
+    <mat-card class="conf-card">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nombres</mat-label>
+            <input required #name matInput placeholder="Escriba sus Nombre" [formControl]="nameForm">
+            <mat-error *ngIf="nameForm.hasError('required')">
+                El Nombre es <strong>requirido</strong>
+            </mat-error>
+            <mat-hint align="end">{{name.value?.length || 0}}/255</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Apellidos</mat-label>
+            <input required #apellido matInput placeholder="Escriba sus Apellidos" [formControl]="apellidoForm">
+            <mat-error *ngIf="apellidoForm.hasError('required')">
+                Los Apellidos son <strong>requiridos</strong>
+            </mat-error>
+            <mat-hint align="end">{{apellido.value?.length || 0}}/255</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>DNI</mat-label>
+            <input required #dni matInput placeholder="Escriba el Número de Documento de Identidad"
+                [formControl]="dniForm" maxlength="8" minlength="8">
+            <mat-error *ngIf="dniForm.hasError('required')">
+                El DNI es <strong>requirido</strong>
+            </mat-error>
+            <mat-hint align="end">{{dni.value?.length || 0}}/8</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Numero de Celular</mat-label>
+            <input required #celular matInput placeholder="Escriba su número de celular" [formControl]="celularForm"
+                maxlength="9" minlength="9">
+            <mat-error *ngIf="celularForm.hasError('required')">
+                El DNI es <strong>requirido</strong>
+            </mat-error>
+            <mat-hint align="end">{{celular.value?.length || 0}}/9</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>IMEI</mat-label>
+            <input required #imei matInput placeholder="Escriba el IMEI del celular" [formControl]="imeiForm"
+                maxlength="15" minlength="15">
+            <mat-error *ngIf="imeiForm.hasError('required')">
+                El DNI es <strong>requirido</strong>
+            </mat-error>
+            <mat-hint align="end">{{imei.value?.length || 0}}/15</mat-hint>
+        </mat-form-field>
+
+        <ul>
+            <li *ngFor="let c of client | async">
+                {{c.name}}
+            </li>
+        </ul>
+
+        <button *ngIf="nameForm && 
+                apellidoForm.valid &&
+                dniForm.valid &&
+                celularForm.valid &&
+                imeiForm.valid" (click)="create(dni.value, name.value, apellido.value, celular.value, imei.value)"
+            mat-raised-button color="primary">Registrarme</button>
+
+    </mat-card>
+</div>

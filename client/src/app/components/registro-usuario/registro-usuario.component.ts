@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+
 
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
@@ -46,6 +49,12 @@ const CREATE_CLIENTES = gql`
 })
 export class RegistroUsuarioComponent implements OnInit {
 
+  nameForm = new FormControl('', [Validators.required, Validators.maxLength(200)]);
+  apellidoForm = new FormControl('', [Validators.required, Validators.maxLength(200)]);
+  dniForm = new FormControl('', [Validators.required, Validators.maxLength(8), Validators.minLength(8)]);
+  celularForm = new FormControl('', [Validators.required, Validators.maxLength(9), Validators.minLength(9)]);
+  imeiForm = new FormControl('', [Validators.required, Validators.maxLength(15), Validators.minLength(15)]);
+
   client: any;
 
   constructor(private apollo: Apollo) { }
@@ -62,7 +71,7 @@ export class RegistroUsuarioComponent implements OnInit {
     );
     console.log(this.client);
   }
-  
+
   create(dni: string, name: string, last_name: string, cellphone: string, imei: string) {
     this.apollo.mutate({
       mutation: CREATE_CLIENTES,
@@ -77,5 +86,13 @@ export class RegistroUsuarioComponent implements OnInit {
     }).subscribe(() => {
       console.log('created')
     })
+  }
+}
+
+/** Error cuando el control no válido está sucio, tocado o enviado. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
 }
