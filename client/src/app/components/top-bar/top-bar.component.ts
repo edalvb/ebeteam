@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   selector: 'app-top-bar',
@@ -13,7 +13,11 @@ export class TopBarComponent implements OnInit {
 
   cambiaTema: boolean = false;
 
-  constructor() { }
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'logo',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/img/logo.svg'));
+  }
 
   ngOnInit(): void {
   }
@@ -23,11 +27,4 @@ export class TopBarComponent implements OnInit {
     this.tema.emit(this.cambiaTema);
   }
 
-}
-export class IconSvgLogo {
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-        'logo',
-        sanitizer.bypassSecurityTrustResourceUrl('assets/img/logo.svg'));
-  }
 }
