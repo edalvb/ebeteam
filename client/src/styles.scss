@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@mixin cambiarColoreDe($tema) {
+    .mat-sidenav-content {
+        background: mat-color(map-get($tema, background), 'card');
+    }
+    .mat-dialog-container{
+        background: mat-color(map-get($tema, background), 'card');
+    }
+    
+}
+
+$primary: mat-palette($mat-indigo, 900);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+@include cambiarColoreDe($theme);
+
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+.temadark {
+    @include angular-material-theme($dark-theme);
+    @include cambiarColoreDe($dark-theme);
+}

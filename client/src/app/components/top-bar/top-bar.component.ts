@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 
@@ -9,9 +9,18 @@ import {MatIconRegistry} from '@angular/material/icon';
 })
 export class TopBarComponent implements OnInit {
 
+  @Output() tema = new EventEmitter();
+
+  cambiaTema: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambiarTema() {
+    this.cambiaTema = !this.cambiaTema;
+    this.tema.emit(this.cambiaTema);
   }
 
 }

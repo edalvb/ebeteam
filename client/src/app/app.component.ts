@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
+
+  cambiaTema: boolean = false;
+
+  cambia(e: any){
+    this.cambiaTema = e;
+  }
 }

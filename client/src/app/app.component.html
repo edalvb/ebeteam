@@ -1,2 +1,4 @@
-<app-top-bar></app-top-bar>
-<router-outlet></router-outlet>
+<section [class.temadark]="cambiaTema">
+    <app-top-bar (tema)="cambia($event)"></app-top-bar>
+    <router-outlet></router-outlet>
+</section>
