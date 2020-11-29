@@ -7,3 +7,9 @@ mat-form-field {
   margin: 5px;
   width: 250px;
 }
+
+.conf-card {
+  max-width: 300px;
+  margin: 1em;
+  display: inline-block;
+}

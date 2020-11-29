@@ -13,9 +13,3 @@ mat-card {
     margin: 24px;
     text-align: center;
 }
-
-.conf-card {
-    max-width: 300px;
-    margin: 1em;
-    display: inline-block;
-}
