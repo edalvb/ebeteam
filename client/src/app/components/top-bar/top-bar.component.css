@@ -1,19 +1,19 @@
 .example-spacer {
   flex: 1 1 auto;
-  }
+}
 
-  .searchbox {
-    background-color: #ffffff;
-    max-width: 450px;
-    border-radius: 20px;
-    border-width: 1px;
-    margin-left: auto;
-    margin-right: auto;
-    float: right;
-  }
+.searchbox {
+  background-color: #ffffff;
+  max-width: 450px;
+  border-radius: 20px;
+  border-width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
 
-  .search{
-    width: 350px;
-    margin-left: 15px;
-    border: none;
-  }
+.search {
+  width: 350px;
+  margin-left: 15px;
+  border: none;
+}
