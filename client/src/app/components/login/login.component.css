@@ -1,24 +1,9 @@
-body {
-  display: table;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.login-card {
-  max-width: 300px;
-  margin: 0;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-radius: 20px;
-}
-
 .logo {
   max-width: 200px;
+  margin-top: 10px;
 }
 
-.login-content {
-  max-width: 300px;
-  display: table-cell;
-  vertical-align: middle;
+mat-form-field {
+  margin: 5px;
+  width: 250px;
 }
