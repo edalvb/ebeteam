@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CanalesComponent } from './components/canales/canales.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { DenunciasComponent } from './components/denuncias/denuncias.component';
     HomeComponent,
     LoginComponent,
     CanalesComponent,
-    DenunciasComponent
+    DenunciasComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { DenunciasComponent } from './components/denuncias/denuncias.component';
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

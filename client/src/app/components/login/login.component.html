@@ -1,21 +1,23 @@
 <body>
     <section class="login-content">
-        <img mat-card-image class="logo" src="https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/zon/zona-logo/images/logo.png">
+        <img mat-card-image class="logo"
+            src="https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/zon/zona-logo/images/logo.png">
         <mat-card class="login-card">
-        <mat-form-field appearance="outline">
-            <mat-label>Usuario</mat-label>
+            <mat-form-field appearance="outline">
+                <mat-label>Usuario</mat-label>
                 <input #usuario matInput placeholder="Email">
                 <!-- <mat-hint>Hint</mat-hint> -->
             </mat-form-field>
             <br>
             <mat-form-field appearance="outline">
                 <mat-label>Contraseña</mat-label>
-                <input #contrasena matInput placeholder="Contraseña">
+                <input #contrasena matInput placeholder="Contraseña" type="password">
                 <!-- <mat-hint>Hint</mat-hint> -->
             </mat-form-field>
-            <button style="border-radius: 15px;" (click)="login(usuario.value, contrasena.value)" mat-raised-button color="primary">Ingresar</button>
+            <button style="border-radius: 15px;" (click)="login(usuario.value, contrasena.value)" mat-raised-button
+                color="primary">Ingresar</button>
             <br>
-            <button class="unstyled-button" >Crear una cuenta</button>
-            </mat-card>   
-        </section>
+            <button mat-button color="primary" style="margin-top: 20px;">Crear una cuenta</button>
+        </mat-card>
+    </section>
 </body>
