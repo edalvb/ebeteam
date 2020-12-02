@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "entidad_referencias",
+  "collectionName": "estado_cuestionamientos",
   "info": {
-    "name": "entidad_referencia"
+    "name": "estado_cuestionamiento"
   },
   "options": {
     "increments": true,
@@ -14,7 +14,7 @@
       "type": "string"
     },
     "cuestionamientos": {
-      "via": "entidad_referencia",
+      "via": "estado_cuestionamiento",
       "collection": "cuestionamiento"
     }
   }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/resultado-cuestionamientos",
+      "handler": "resultado-cuestionamiento.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resultado-cuestionamientos/count",
+      "handler": "resultado-cuestionamiento.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resultado-cuestionamientos/:id",
+      "handler": "resultado-cuestionamiento.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/resultado-cuestionamientos",
+      "handler": "resultado-cuestionamiento.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/resultado-cuestionamientos/:id",
+      "handler": "resultado-cuestionamiento.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/resultado-cuestionamientos/:id",
+      "handler": "resultado-cuestionamiento.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

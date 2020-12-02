@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "entidad_referencias",
+  "collectionName": "modalidad_ingresos",
   "info": {
-    "name": "entidad_referencia"
+    "name": "modalidad_ingreso"
   },
   "options": {
     "increments": true,
@@ -14,7 +14,7 @@
       "type": "string"
     },
     "cuestionamientos": {
-      "via": "entidad_referencia",
+      "via": "modalidad_ingreso",
       "collection": "cuestionamiento"
     }
   }

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "clientes",
   "info": {
-    "name": "cliente"
+    "name": "cliente",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -30,13 +31,17 @@
       "type": "string",
       "maxLength": 9,
       "minLength": 9,
-      "required": true
+      "required": false
     },
     "imei": {
       "type": "string",
-      "required": true,
+      "required": false,
       "maxLength": 15,
       "minLength": 15
+    },
+    "cuestionamientos": {
+      "via": "cliente",
+      "collection": "cuestionamiento"
     }
   }
 }
