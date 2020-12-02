@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "months",
+  "info": {
+    "name": "month"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "numero": {
+      "type": "integer"
+    }
+  }
+}

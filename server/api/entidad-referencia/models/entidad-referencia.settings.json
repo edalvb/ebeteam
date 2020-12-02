@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entidad_referencias",
+  "info": {
+    "name": "entidad_referencia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

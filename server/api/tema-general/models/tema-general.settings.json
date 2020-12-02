@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tema_generals",
+  "info": {
+    "name": "tema_general"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

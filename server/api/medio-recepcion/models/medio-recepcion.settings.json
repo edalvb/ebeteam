@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medio_recepcions",
+  "info": {
+    "name": "medio_recepcion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "canal_atencion": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    }
+  }
+}
