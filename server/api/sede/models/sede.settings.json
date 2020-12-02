@@ -36,8 +36,8 @@
       "model": "tipo-sede",
       "via": "sedes"
     },
-    "region": {
-      "model": "region",
+    "departamento": {
+      "model": "departamento",
       "via": "sedes"
     }
   }

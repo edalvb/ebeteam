@@ -28,8 +28,8 @@
       "via": "cuestionamientos"
     },
     "entidad_referencia": {
-      "model": "entidad-referencia",
-      "via": "cuestionamientos"
+      "via": "cuestionamientos",
+      "model": "entidad-referencia"
     },
     "modalidad_ingreso": {
       "model": "modalidad-ingreso",

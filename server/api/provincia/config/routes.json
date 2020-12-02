@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/regions",
-      "handler": "region.find",
+      "path": "/provincias",
+      "handler": "provincia.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/regions/count",
-      "handler": "region.count",
+      "path": "/provincias/count",
+      "handler": "provincia.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/regions/:id",
-      "handler": "region.findOne",
+      "path": "/provincias/:id",
+      "handler": "provincia.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/regions",
-      "handler": "region.create",
+      "path": "/provincias",
+      "handler": "provincia.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/regions/:id",
-      "handler": "region.update",
+      "path": "/provincias/:id",
+      "handler": "provincia.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/regions/:id",
-      "handler": "region.delete",
+      "path": "/provincias/:id",
+      "handler": "provincia.delete",
       "config": {
         "policies": []
       }

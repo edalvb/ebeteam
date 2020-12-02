@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/departamentos",
+      "handler": "departamento.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/departamentos/count",
+      "handler": "departamento.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/departamentos/:id",
+      "handler": "departamento.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/departamentos",
+      "handler": "departamento.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/departamentos/:id",
+      "handler": "departamento.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/departamentos/:id",
+      "handler": "departamento.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

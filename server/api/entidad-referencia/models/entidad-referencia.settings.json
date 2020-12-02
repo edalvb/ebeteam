@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "entidad_referencias",
   "info": {
-    "name": "entidad_referencia"
+    "name": "entidad_referencia",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -14,8 +15,18 @@
       "type": "string"
     },
     "cuestionamientos": {
-      "via": "entidad_referencia",
-      "collection": "cuestionamiento"
+      "collection": "cuestionamiento",
+      "via": "entidad_referencia"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "distrito": {
+      "model": "distrito",
+      "via": "entidad_referencias"
+    },
+    "horario": {
+      "type": "text"
     }
   }
 }
