@@ -3,7 +3,7 @@
   "collectionName": "entidad_referencias",
   "info": {
     "name": "entidad_referencia",
-    "description": ""
+    "description": "Puede ser; \"Empresa Operadora, Servicio de cable (que no es de una Empresa Operadora) y hasta el mismo Usuario\""
   },
   "options": {
     "increments": true,
