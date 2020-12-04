@@ -8,3 +8,8 @@ mat-form-field {
     margin: 1em;
     display: inline-block;
 }
+
+.logo {
+    max-width: 200px;
+    margin-top: 10px;
+  }

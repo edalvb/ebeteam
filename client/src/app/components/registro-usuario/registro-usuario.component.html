@@ -1,6 +1,7 @@
 <div style="text-align: center;">
-    <mat-card class="conf-card">
 
+    <mat-card class="conf-card">
+        <img class="logo" src="https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/zon/zona-logo/images/logo.png">
         <mat-form-field appearance="outline">
             <mat-label>Nombres</mat-label>
             <input required #name matInput placeholder="Escriba sus Nombre" [formControl]="nameForm">
@@ -38,29 +39,9 @@
             </mat-error>
             <mat-hint align="end">{{celular.value?.length || 0}}/9</mat-hint>
         </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>IMEI</mat-label>
-            <input required #imei matInput placeholder="Escriba el IMEI del celular" [formControl]="imeiForm"
-                maxlength="15" minlength="15">
-            <mat-error *ngIf="imeiForm.hasError('required')">
-                El DNI es <strong>requirido</strong>
-            </mat-error>
-            <mat-hint align="end">{{imei.value?.length || 0}}/15</mat-hint>
-        </mat-form-field>
-
-        <ul>
-            <li *ngFor="let c of client | async">
-                {{c.name}}
-            </li>
-        </ul>
-
-        <button *ngIf="nameForm && 
-                apellidoForm.valid &&
-                dniForm.valid &&
-                celularForm.valid &&
-                imeiForm.valid" (click)="create(dni.value, name.value, apellido.value, celular.value, imei.value)"
-            mat-raised-button color="primary">Registrarme</button>
-
+        <button style="border-radius: 15px;" mat-raised-button color="primary">Registrarse</button>
+        <br>
+        <button mat-button color="primary" style="margin-top: 20px;" routerLink="/login">Login</button>
     </mat-card>
+
 </div>
