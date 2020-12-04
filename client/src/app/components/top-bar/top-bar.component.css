@@ -15,5 +15,7 @@
 .search {
   width: 350px;
   margin-left: 15px;
-  border: none;
+  border: 0;
+	line-height: inherit;
+	padding: 0;
 }

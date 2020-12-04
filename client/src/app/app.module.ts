@@ -9,6 +9,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +28,11 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CanalesComponent } from './components/canales/canales.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { AssistantComponent } from './components/assistant/assistant.component';
+import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +42,9 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
     LoginComponent,
     CanalesComponent,
     DenunciasComponent,
-    TopBarComponent
+    TopBarComponent,
+    AssistantComponent,
+    ScnDenunciasComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +60,14 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
     MatInputModule,
     MatToolbarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatSelectModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
