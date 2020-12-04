@@ -1,47 +1,50 @@
-<div style="text-align: center;">
-
+<app-step-registro>
+    <cdk-step> 
+        <mat-card class="conf-card">
+            <img class="logo" src="https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/zon/zona-logo/images/logo.png">
+            <mat-form-field appearance="outline">
+                <mat-label>Documento Nacional de Identidad</mat-label>
+                <input required #name matInput placeholder="Ingrese su DNI" >
+                <mat-hint align="end">*</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>N° Celular</mat-label>
+                <input required #name matInput placeholder="Ingrese su DNI" >
+                <mat-hint align="end">*</mat-hint>
+            </mat-form-field>
+            <button style="border-radius: 15px;" mat-raised-button matStepperNext color="primary">Siguiente</button>
+            <br>
+            <button mat-button color="primary" routerLink="/login">Login</button>
+        </mat-card>
+    </cdk-step>
+  <cdk-step>
     <mat-card class="conf-card">
         <img class="logo" src="https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/zon/zona-logo/images/logo.png">
         <mat-form-field appearance="outline">
             <mat-label>Nombres</mat-label>
-            <input required #name matInput placeholder="Escriba sus Nombre" [formControl]="nameForm">
-            <mat-error *ngIf="nameForm.hasError('required')">
-                El Nombre es <strong>requirido</strong>
-            </mat-error>
-            <mat-hint align="end">{{name.value?.length || 0}}/255</mat-hint>
+            <input required #name matInput value={{nombre}}>
+            <mat-hint align="end">*</mat-hint>
         </mat-form-field>
-
         <mat-form-field appearance="outline">
-            <mat-label>Apellidos</mat-label>
-            <input required #apellido matInput placeholder="Escriba sus Apellidos" [formControl]="apellidoForm">
-            <mat-error *ngIf="apellidoForm.hasError('required')">
-                Los Apellidos son <strong>requiridos</strong>
-            </mat-error>
-            <mat-hint align="end">{{apellido.value?.length || 0}}/255</mat-hint>
+            <mat-label>Apellido Paterno</mat-label>
+            <input required #name matInput value={{apaterno}} >
+            <mat-hint align="end">*</mat-hint>
         </mat-form-field>
-
         <mat-form-field appearance="outline">
-            <mat-label>DNI</mat-label>
-            <input required #dni matInput placeholder="Escriba el Número de Documento de Identidad"
-                [formControl]="dniForm" maxlength="8" minlength="8">
-            <mat-error *ngIf="dniForm.hasError('required')">
-                El DNI es <strong>requirido</strong>
-            </mat-error>
-            <mat-hint align="end">{{dni.value?.length || 0}}/8</mat-hint>
+            <mat-label>Apellido Materno</mat-label>
+            <input required #name matInput value={{amaterno}} >
+            <mat-hint align="end">*</mat-hint>
         </mat-form-field>
-
         <mat-form-field appearance="outline">
-            <mat-label>Numero de Celular</mat-label>
-            <input required #celular matInput placeholder="Escriba su número de celular" [formControl]="celularForm"
-                maxlength="9" minlength="9">
-            <mat-error *ngIf="celularForm.hasError('required')">
-                El DNI es <strong>requirido</strong>
-            </mat-error>
-            <mat-hint align="end">{{celular.value?.length || 0}}/9</mat-hint>
+            <mat-label>Correo Electrónico</mat-label>
+            <input #name matInput placeholder='example@example.com' >
+            <mat-hint align="end">*</mat-hint>
         </mat-form-field>
-        <button style="border-radius: 15px;" mat-raised-button color="primary">Registrarse</button>
         <br>
-        <button mat-button color="primary" style="margin-top: 20px;" routerLink="/login">Login</button>
+        <button style="border-radius: 15px;" mat-raised-button matStepperPrevious color="accent">Atras</button>
+        <button style="border-radius: 15px;" mat-raised-button matStepperNext color="primary">Registrar</button>
+        <br>
+        <button mat-button color="primary" routerLink="/login">Login</button>
     </mat-card>
-
-</div>
+    </cdk-step>
+</app-step-registro>

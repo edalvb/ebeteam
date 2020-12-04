@@ -15,6 +15,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+
+import {CdkStepperModule} from '@angular/cdk/stepper';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,8 +34,8 @@ import { CanalesComponent } from './components/canales/canales.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { AssistantComponent } from './components/assistant/assistant.component';
 import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
-import {MatSelectModule} from '@angular/material/select';
-import {MatStepperModule} from '@angular/material/stepper';
+import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
+import {NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -44,7 +48,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     DenunciasComponent,
     TopBarComponent,
     AssistantComponent,
-    ScnDenunciasComponent
+    ScnDenunciasComponent,
+    StepRegistroComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -68,6 +74,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatTableModule,
     MatSelectModule,
     MatStepperModule,
+
+    CdkStepperModule,
+    NgxCaptchaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
