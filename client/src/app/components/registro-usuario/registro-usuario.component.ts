@@ -9,12 +9,9 @@ export class RegistroUsuarioComponent implements OnInit {
   nombre = 'Erik';
   apaterno = 'Huaman';
   amaterno = 'Guiop';
-  
-  constructor() {
-      
-     }
-  
-    ngOnInit(): void {
-      
-    }
+
+  constructor() { }
+
+  ngOnInit(): void { }
+
 }
