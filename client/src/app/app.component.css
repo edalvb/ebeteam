@@ -1,0 +1,27 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+@media screen and (max-width:600px) {
+    .contenido-main {
+        padding-top: 56px;
+        overflow-y: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:600px) {
+    .contenido-main {
+        padding-top: 64px;
+        overflow-y: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .contenido-main {
+        padding-top: 64px;
+        overflow-y: auto;
+        height: 100%;
+    }
+}
