@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "denuncias",
+  "info": {
+    "name": "denuncia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "numero_denuncia": {
+      "type": "string",
+      "required": true
+    },
+    "fecha_recepcion": {
+      "type": "datetime",
+      "required": true
+    },
+    "fecha_solucion": {
+      "type": "datetime"
+    },
+    "plazo_solucion": {
+      "type": "datetime"
+    },
+    "sede": {
+      "model": "sede",
+      "via": "denuncias"
+    },
+    "recurso_denuncia": {
+      "model": "recurso-denuncia",
+      "via": "denuncias"
+    },
+    "entidad_referencia": {
+      "via": "denuncias",
+      "model": "entidad-referencia"
+    },
+    "servicio": {
+      "model": "servicio",
+      "via": "denuncias"
+    },
+    "estado_denuncia": {
+      "model": "estado-denuncia",
+      "via": "denuncias"
+    },
+    "materia_denuncia": {
+      "model": "materia-denuncia",
+      "via": "denuncias"
+    }
+  }
+}

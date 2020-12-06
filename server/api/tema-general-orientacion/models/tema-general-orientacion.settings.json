@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tema_general_orientacions",
+  "info": {
+    "name": "tema_general_orientacion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "orientacions": {
+      "via": "tema_general_orientacion",
+      "collection": "orientacion"
+    }
+  }
+}

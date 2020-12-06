@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dia_atencion_sedes",
+  "info": {
+    "name": "dia_atencion_sede"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sede": {
+      "model": "sede",
+      "via": "dia_atencion_sedes"
+    },
+    "dia": {
+      "type": "string",
+      "required": true
+    },
+    "inicio": {
+      "type": "time"
+    },
+    "fin": {
+      "type": "time"
+    }
+  }
+}

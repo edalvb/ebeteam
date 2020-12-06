@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "celulars",
+  "info": {
+    "name": "celular"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cliente": {
+      "via": "celulars",
+      "model": "cliente"
+    },
+    "numero": {
+      "type": "string",
+      "required": true
+    },
+    "imei": {
+      "type": "string"
+    }
+  }
+}

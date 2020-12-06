@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dia_atencion_centro_atencions",
+  "info": {
+    "name": "dia_atencion_centro_atencion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "centro_atencion": {
+      "model": "centro-atencion",
+      "via": "dia_atencion_centro_atencions"
+    },
+    "dia": {
+      "type": "string",
+      "required": true
+    },
+    "inicio": {
+      "type": "time"
+    },
+    "fin": {
+      "type": "time"
+    }
+  }
+}

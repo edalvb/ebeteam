@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sedes",
+  "info": {
+    "name": "sede"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "departamento": {
+      "model": "departamento",
+      "via": "sedes"
+    },
+    "tipo_sede": {
+      "model": "tipo-sede",
+      "via": "sedes"
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "celular1": {
+      "type": "string"
+    },
+    "celular2": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "dia_atencion_sedes": {
+      "via": "sede",
+      "collection": "dia-atencion-sede"
+    },
+    "denuncias": {
+      "via": "sede",
+      "collection": "denuncia"
+    },
+    "orientacions": {
+      "via": "sede",
+      "collection": "orientacion"
+    }
+  }
+}

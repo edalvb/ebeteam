@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dia-atencion-centro-atencions",
+      "handler": "dia-atencion-centro-atencion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dia-atencion-centro-atencions/count",
+      "handler": "dia-atencion-centro-atencion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dia-atencion-centro-atencions/:id",
+      "handler": "dia-atencion-centro-atencion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dia-atencion-centro-atencions",
+      "handler": "dia-atencion-centro-atencion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dia-atencion-centro-atencions/:id",
+      "handler": "dia-atencion-centro-atencion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dia-atencion-centro-atencions/:id",
+      "handler": "dia-atencion-centro-atencion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

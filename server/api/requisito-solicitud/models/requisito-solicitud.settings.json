@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requisito_solicituds",
+  "info": {
+    "name": "requisito_solicitud"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "categoria_solicituds": {
+      "via": "requisito_solicituds",
+      "collection": "categoria-solicitud"
+    }
+  }
+}

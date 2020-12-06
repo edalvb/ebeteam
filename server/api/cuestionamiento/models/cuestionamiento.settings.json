@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuestionamientos",
+  "info": {
+    "name": "cuestionamiento"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "carta_respuesta": {
+      "type": "string",
+      "required": true
+    },
+    "fecha_recepcion": {
+      "type": "datetime",
+      "required": true
+    },
+    "fecha_respuesta": {
+      "type": "datetime"
+    },
+    "plazo_solucion": {
+      "type": "datetime"
+    },
+    "cliente": {
+      "model": "cliente",
+      "via": "cuestionamientos"
+    },
+    "modalidad_ingreso": {
+      "model": "modalidad-ingreso",
+      "via": "cuestionamientos"
+    },
+    "estado_cuentionamiento": {
+      "model": "estado-cuentionamiento",
+      "via": "cuestionamientos"
+    },
+    "resultado_cuestionamiento": {
+      "model": "resultado-cuestionamiento",
+      "via": "cuestionamientos"
+    },
+    "entidad_referencia": {
+      "via": "cuestionamientos",
+      "model": "entidad-referencia"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modalidad_ingresos",
+  "info": {
+    "name": "modalidad_ingreso"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "cuestionamientos": {
+      "via": "modalidad_ingreso",
+      "collection": "cuestionamiento"
+    }
+  }
+}

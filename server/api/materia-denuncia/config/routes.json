@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/materia-denuncias",
+      "handler": "materia-denuncia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/materia-denuncias/count",
+      "handler": "materia-denuncia.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/materia-denuncias/:id",
+      "handler": "materia-denuncia.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/materia-denuncias",
+      "handler": "materia-denuncia.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/materia-denuncias/:id",
+      "handler": "materia-denuncia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/materia-denuncias/:id",
+      "handler": "materia-denuncia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

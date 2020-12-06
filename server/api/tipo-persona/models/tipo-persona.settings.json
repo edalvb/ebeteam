@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_personas",
+  "info": {
+    "name": "tipo_persona"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "clientes": {
+      "via": "tipo_persona",
+      "collection": "cliente"
+    }
+  }
+}

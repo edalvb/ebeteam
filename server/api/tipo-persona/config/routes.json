@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tipo-personas",
+      "handler": "tipo-persona.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tipo-personas/count",
+      "handler": "tipo-persona.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tipo-personas/:id",
+      "handler": "tipo-persona.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tipo-personas",
+      "handler": "tipo-persona.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tipo-personas/:id",
+      "handler": "tipo-persona.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tipo-personas/:id",
+      "handler": "tipo-persona.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

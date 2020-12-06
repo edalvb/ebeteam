@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provincias",
+  "info": {
+    "name": "provincia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "codigo": {
+      "type": "string",
+      "maxLength": 4,
+      "minLength": 4,
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "departamento": {
+      "model": "departamento",
+      "via": "provincias"
+    },
+    "distritos": {
+      "via": "provincia",
+      "collection": "distrito"
+    }
+  }
+}

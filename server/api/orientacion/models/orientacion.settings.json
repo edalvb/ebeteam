@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orientacions",
+  "info": {
+    "name": "orientacion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "mes": {
+      "type": "integer",
+      "required": true
+    },
+    "entidad_referencia": {
+      "via": "orientacions",
+      "model": "entidad-referencia"
+    },
+    "servicio": {
+      "model": "servicio",
+      "via": "orientacions"
+    },
+    "tema_general_orientacion": {
+      "model": "tema-general-orientacion",
+      "via": "orientacions"
+    },
+    "sede": {
+      "model": "sede",
+      "via": "orientacions"
+    },
+    "canal_atencion": {
+      "via": "orientacions",
+      "model": "canal-atencion"
+    }
+  }
+}

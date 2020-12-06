@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "centro_atencions",
+  "info": {
+    "name": "centro_atencion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "distrito": {
+      "model": "distrito",
+      "via": "centro_atencions"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "entidad_referencia": {
+      "via": "centro_atencions",
+      "model": "entidad-referencia"
+    },
+    "dia_atencion_centro_atencions": {
+      "via": "centro_atencion",
+      "collection": "dia-atencion-centro-atencion"
+    }
+  }
+}

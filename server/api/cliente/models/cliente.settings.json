@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "name": "cliente",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "tipo_persona": {
+      "model": "tipo-persona",
+      "via": "clientes"
+    },
+    "documento_legal": {
+      "type": "string",
+      "required": true
+    },
+    "tipo_documento_legal": {
+      "model": "tipo-documento-legal",
+      "via": "clientes"
+    },
+    "email": {
+      "type": "email"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "celulars": {
+      "collection": "celular",
+      "via": "cliente"
+    },
+    "distrito": {
+      "model": "distrito",
+      "via": "clientes"
+    },
+    "cuestionamientos": {
+      "via": "cliente",
+      "collection": "cuestionamiento"
+    }
+  }
+}

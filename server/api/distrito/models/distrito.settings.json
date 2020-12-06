@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distritos",
+  "info": {
+    "name": "distrito"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "codigo": {
+      "type": "string",
+      "maxLength": 6,
+      "minLength": 6,
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "provincia": {
+      "model": "provincia",
+      "via": "distritos"
+    },
+    "clientes": {
+      "via": "distrito",
+      "collection": "cliente"
+    },
+    "centro_atencions": {
+      "via": "distrito",
+      "collection": "centro-atencion"
+    }
+  }
+}

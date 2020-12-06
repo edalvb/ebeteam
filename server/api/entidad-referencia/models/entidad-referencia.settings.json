@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entidad_referencias",
+  "info": {
+    "name": "entidad_referencia",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "centro_atencions": {
+      "collection": "centro-atencion",
+      "via": "entidad_referencia"
+    },
+    "denuncias": {
+      "collection": "denuncia",
+      "via": "entidad_referencia"
+    },
+    "orientacions": {
+      "collection": "orientacion",
+      "via": "entidad_referencia"
+    },
+    "cuestionamientos": {
+      "collection": "cuestionamiento",
+      "via": "entidad_referencia"
+    },
+    "canal_atencions": {
+      "via": "entidad_referencias",
+      "collection": "canal-atencion",
+      "dominant": true
+    },
+    "categoria_solicituds": {
+      "via": "entidad_referencias",
+      "collection": "categoria-solicitud"
+    }
+  }
+}

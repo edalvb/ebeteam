@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "canal_atencions",
+  "info": {
+    "name": "canal_atencion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "orientacions": {
+      "collection": "orientacion",
+      "via": "canal_atencion"
+    },
+    "entidad_referencias": {
+      "collection": "entidad-referencia",
+      "via": "canal_atencions"
+    },
+    "categoria_solicituds": {
+      "via": "canal_atencions",
+      "collection": "categoria-solicitud",
+      "dominant": true
+    }
+  }
+}

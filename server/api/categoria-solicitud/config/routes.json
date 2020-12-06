@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/categoria-solicituds",
+      "handler": "categoria-solicitud.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categoria-solicituds/count",
+      "handler": "categoria-solicitud.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categoria-solicituds/:id",
+      "handler": "categoria-solicitud.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/categoria-solicituds",
+      "handler": "categoria-solicitud.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/categoria-solicituds/:id",
+      "handler": "categoria-solicitud.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/categoria-solicituds/:id",
+      "handler": "categoria-solicitud.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_documento_legals",
+  "info": {
+    "name": "tipo_documento_legal"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "cantidad_caracteres": {
+      "type": "integer",
+      "required": true
+    },
+    "clientes": {
+      "via": "tipo_documento_legal",
+      "collection": "cliente"
+    }
+  }
+}

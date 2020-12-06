@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estado_denuncias",
+  "info": {
+    "name": "estado_denuncia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "denuncias": {
+      "via": "estado_denuncia",
+      "collection": "denuncia"
+    }
+  }
+}

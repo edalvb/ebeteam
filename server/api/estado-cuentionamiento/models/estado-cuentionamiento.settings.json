@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estado_cuentionamientos",
+  "info": {
+    "name": "estado_cuentionamiento"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "cuestionamientos": {
+      "via": "estado_cuentionamiento",
+      "collection": "cuestionamiento"
+    }
+  }
+}

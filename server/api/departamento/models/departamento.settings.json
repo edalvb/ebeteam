@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departamentos",
+  "info": {
+    "name": "departamento"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "codigo": {
+      "type": "string",
+      "maxLength": 2,
+      "minLength": 2,
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "provincias": {
+      "via": "departamento",
+      "collection": "provincia"
+    },
+    "sedes": {
+      "via": "departamento",
+      "collection": "sede"
+    }
+  }
+}

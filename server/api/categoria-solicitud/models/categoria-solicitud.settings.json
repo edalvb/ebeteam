@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoria_solicituds",
+  "info": {
+    "name": "categoria_solicitud",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "requisito_solicituds": {
+      "collection": "requisito-solicitud",
+      "via": "categoria_solicituds",
+      "dominant": true
+    },
+    "canal_atencions": {
+      "collection": "canal-atencion",
+      "via": "categoria_solicituds"
+    },
+    "entidad_referencias": {
+      "collection": "entidad-referencia",
+      "via": "categoria_solicituds",
+      "dominant": true
+    }
+  }
+}

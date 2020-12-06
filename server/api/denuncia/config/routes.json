@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/denuncias",
+      "handler": "denuncia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/denuncias/count",
+      "handler": "denuncia.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/denuncias/:id",
+      "handler": "denuncia.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/denuncias",
+      "handler": "denuncia.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/denuncias/:id",
+      "handler": "denuncia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/denuncias/:id",
+      "handler": "denuncia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

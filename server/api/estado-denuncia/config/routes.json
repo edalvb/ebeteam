@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/estado-denuncias",
+      "handler": "estado-denuncia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/estado-denuncias/count",
+      "handler": "estado-denuncia.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/estado-denuncias/:id",
+      "handler": "estado-denuncia.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/estado-denuncias",
+      "handler": "estado-denuncia.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/estado-denuncias/:id",
+      "handler": "estado-denuncia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/estado-denuncias/:id",
+      "handler": "estado-denuncia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

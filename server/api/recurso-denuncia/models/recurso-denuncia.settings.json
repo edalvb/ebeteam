@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recurso_denuncias",
+  "info": {
+    "name": "recurso_denuncia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "denuncias": {
+      "via": "recurso_denuncia",
+      "collection": "denuncia"
+    }
+  }
+}

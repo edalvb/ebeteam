@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tema-general-orientacions",
+      "handler": "tema-general-orientacion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tema-general-orientacions/count",
+      "handler": "tema-general-orientacion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tema-general-orientacions/:id",
+      "handler": "tema-general-orientacion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tema-general-orientacions",
+      "handler": "tema-general-orientacion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tema-general-orientacions/:id",
+      "handler": "tema-general-orientacion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tema-general-orientacions/:id",
+      "handler": "tema-general-orientacion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
