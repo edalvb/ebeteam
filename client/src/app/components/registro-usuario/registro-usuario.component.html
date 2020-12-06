@@ -1,50 +1,18 @@
-<app-step-registro>
-    <cdk-step> 
-        <mat-card class="conf-card">
-            <img class="logo" src="https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/zon/zona-logo/images/logo.png">
+<mat-card class="conf-card">
+    <mat-card-title>Registrar</mat-card-title>
+    <mat-card-content>
+        <form>
             <mat-form-field appearance="outline">
-                <mat-label>Documento Nacional de Identidad</mat-label>
-                <input required #name matInput placeholder="Ingrese su DNI" >
-                <mat-hint align="end">*</mat-hint>
+                <mat-label>DNI</mat-label>
+                <input [(ngModel)]="persona_dni.dni" type="text" required matInput name="dni" >
             </mat-form-field>
             <mat-form-field appearance="outline">
-                <mat-label>N° Celular</mat-label>
-                <input required #name matInput placeholder="Ingrese su DNI" >
-                <mat-hint align="end">*</mat-hint>
+                <mat-label>Cui</mat-label>
+                <input [(ngModel)]="persona_dni.cui" type="text" required matInput name="cui" >
             </mat-form-field>
-            <button style="border-radius: 15px;" mat-raised-button matStepperNext color="primary">Siguiente</button>
-            <br>
-            <button mat-button color="primary" routerLink="/login">Login</button>
-        </mat-card>
-    </cdk-step>
-  <cdk-step>
-    <mat-card class="conf-card">
-        <img class="logo" src="https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/zon/zona-logo/images/logo.png">
-        <mat-form-field appearance="outline">
-            <mat-label>Nombres</mat-label>
-            <input required #name matInput value={{nombre}}>
-            <mat-hint align="end">*</mat-hint>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>Apellido Paterno</mat-label>
-            <input required #name matInput value={{apaterno}} >
-            <mat-hint align="end">*</mat-hint>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>Apellido Materno</mat-label>
-            <input required #name matInput value={{amaterno}} >
-            <mat-hint align="end">*</mat-hint>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>Correo Electrónico</mat-label>
-            <input #name matInput placeholder='example@example.com' >
-            <mat-hint align="end">*</mat-hint>
-        </mat-form-field>
-        <br>
-        <button style="border-radius: 15px;" mat-raised-button matStepperPrevious color="accent">Atras</button>
-        <button style="border-radius: 15px;" mat-raised-button matStepperNext color="primary">Registrar</button>
-        <br>
-        <button mat-button color="primary" routerLink="/login">Login</button>
-    </mat-card>
-    </cdk-step>
-</app-step-registro>
+            <button style="border-radius: 15px;" mat-raised-button color="primary"
+                (click)="getpersona()">Siguiente</button>
+        </form>
+    </mat-card-content>
+
+</mat-card>

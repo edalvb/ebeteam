@@ -28,6 +28,7 @@ const routes: Routes = [
     path: 'denuncias',
     component: ScnDenunciasComponent
   },
+
 ];
 
 @NgModule({

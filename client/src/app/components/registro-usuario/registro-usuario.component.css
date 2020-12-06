@@ -1,13 +1,4 @@
 
-.content{
-    max-width: 50%;
-    margin: 0;
-    text-align: center;
-}
-.logo {
-    max-width: 200px;
-    margin-top: 10px;
-  }
   
   mat-form-field {
     margin: 5px;
@@ -15,7 +6,8 @@
   }
   
   .conf-card {
-    max-width: 300px;
-    margin: 1em;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 100px auto;
   }

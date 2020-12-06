@@ -9,16 +9,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatTableModule} from '@angular/material/table';
-import {MatSelectModule} from '@angular/material/select';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import {CdkStepperModule} from '@angular/cdk/stepper';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +36,7 @@ import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { AssistantComponent } from './components/assistant/assistant.component';
 import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
 import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
-import {NgxCaptchaModule } from 'ngx-captcha';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -74,6 +75,7 @@ import {NgxCaptchaModule } from 'ngx-captcha';
     MatTableModule,
     MatSelectModule,
     MatStepperModule,
+    MatSnackBarModule,
 
     CdkStepperModule,
     NgxCaptchaModule,
