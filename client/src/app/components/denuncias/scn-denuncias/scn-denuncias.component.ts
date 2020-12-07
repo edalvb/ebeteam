@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import {MatTableDataSource} from '@angular/material/table';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormDenunciaComponent } from '../form-denuncia/form-denuncia.component';
 
 export interface PeriodicElement {
   fecha: string;
@@ -25,7 +26,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ScnDenunciasComponent implements OnInit {
   confirm: boolean = false;
-  constructor() { }
+  constructor( private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -42,4 +43,13 @@ export class ScnDenunciasComponent implements OnInit {
   funAlmacenar(e: any){
     this.confirm = e;
   }
+
+  onCreate(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
+    this.dialog.open(FormDenunciaComponent);
+  }
+
 }

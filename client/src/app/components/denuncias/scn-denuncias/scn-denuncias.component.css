@@ -6,10 +6,6 @@
   margin-bottom: 48px;
 }
 
-.example-label {
-  margin: 20px;
-}
-
 .example-label a {
   font-size: 16px;
   font-weight: bolder;
@@ -32,5 +28,7 @@ table {
 
 mat-card-title{
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
+  margin: 20px;
 }
