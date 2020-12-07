@@ -10,10 +10,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "sede": {
-      "model": "sede",
-      "via": "dia_atencion_sedes"
-    },
     "dia": {
       "type": "string",
       "required": true

@@ -4,5 +4,4 @@ export interface PersonaDni {
     name?: String;
     first_name?: String;
     last_name?: String;
-
 }

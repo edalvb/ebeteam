@@ -28,8 +28,8 @@
       "via": "orientacions"
     },
     "sede": {
-      "model": "sede",
-      "via": "orientacions"
+      "via": "orientacions",
+      "model": "sede"
     },
     "canal_atencion": {
       "via": "orientacions",

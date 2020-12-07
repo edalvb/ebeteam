@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { PersonaDni } from '../../modelo/persona-dni';
+import { PersonaDni } from '../../modelo/persona';
 import { PersonaDniService } from '../../servicio/persona-dni.service';
 import { Router } from "@angular/router";
 import { MatSnackBar } from '@angular/material/snack-bar';

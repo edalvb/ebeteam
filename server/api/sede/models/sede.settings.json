@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "sedes",
   "info": {
-    "name": "sede"
+    "name": "sede",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -37,17 +38,16 @@
     "email": {
       "type": "email"
     },
-    "dia_atencion_sedes": {
-      "via": "sede",
-      "collection": "dia-atencion-sede"
-    },
     "denuncias": {
-      "via": "sede",
-      "collection": "denuncia"
+      "collection": "denuncia",
+      "via": "sede"
     },
     "orientacions": {
-      "via": "sede",
-      "collection": "orientacion"
+      "collection": "orientacion",
+      "via": "sede"
+    },
+    "horario": {
+      "type": "string"
     }
   }
 }
