@@ -24,7 +24,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./scn-denuncias.component.css']
 })
 export class ScnDenunciasComponent implements OnInit {
-  
+  confirm: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -37,5 +37,9 @@ export class ScnDenunciasComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  funAlmacenar(e: any){
+    this.confirm = e;
   }
 }

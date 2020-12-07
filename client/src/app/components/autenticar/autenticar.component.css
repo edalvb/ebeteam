@@ -1,0 +1,9 @@
+mat-form-field {
+  margin: 5px;
+  width: 250px;
+}
+
+.conf-card {
+  display: flex;
+  justify-content: center;
+}
