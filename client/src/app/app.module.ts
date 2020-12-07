@@ -37,6 +37,7 @@ import { AssistantComponent } from './components/assistant/assistant.component';
 import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
 import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     AssistantComponent,
     ScnDenunciasComponent,
     StepRegistroComponent,
+    MonitoreoPaginaComponent,
 
   ],
   imports: [
