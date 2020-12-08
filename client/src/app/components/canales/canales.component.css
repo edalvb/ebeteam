@@ -2,3 +2,7 @@
     max-width: 220px;
     height: 465px;
 }
+
+.example-button-row .mat-button-base {
+    margin: 20px 10px 10px 0;
+  }
