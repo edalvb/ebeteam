@@ -1,4 +1,29 @@
+.contenedor {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .denuncias-card {
     max-width: 220px;
     height: 465px;
+}
+
+.title {display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-card {
+    max-width: 200px;
+    margin: 10px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
 }

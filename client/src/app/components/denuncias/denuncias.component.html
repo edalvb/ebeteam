@@ -1,17 +1,86 @@
-<mat-card class="denuncias-card">
-    <mat-card-header>
-        <mat-card-title>Denuncias</mat-card-title>
-        <mat-card-subtitle>Reclame sus derechos</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://www.flaticon.es/svg/static/icons/svg/3782/3782248.svg"
-        alt="Imagen de reclamar tus derechos">
-    <mat-card-content>
-        <p>
-            Los usuarios del servicio de telecomunicaciones tienen derecho a presentar una denuncia al OSIPTEL.
-        </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button color="accent" routerLink="/denuncias">Denunciar</button>
-        <button mat-button color="warn">Info</button>
-    </mat-card-actions>
-</mat-card>
+<div class="contenedor">
+
+    
+    <div class="canalosiptel-card1">
+        <mat-card-header class="title">
+            <mat-card-title>CANALES OSIPTEL</mat-card-title>
+        </mat-card-header>
+
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-subtitle>Telefónico</mat-card-subtitle>
+                <!-- <button mat-button>Ir</button> -->
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-subtitle>Telefónico</mat-card-subtitle>
+                <!-- <button mat-button>Ir</button> -->
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-subtitle>Telefónico</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-subtitle>Telefónico</mat-card-subtitle>
+                <!-- <button mat-button>Ir</button> -->
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-subtitle>Telefónico</mat-card-subtitle>
+                <!-- <button mat-button>Ir</button> -->
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-subtitle>Telefónico</mat-card-subtitle>
+                <!-- <button mat-button>Ir</button> -->
+            </mat-card-header>
+        </mat-card>
+
+    </div>
+
+    <mat-card class="denuncias-card">
+        <mat-card-header>
+            <mat-card-title>Mesa de Partes Virtual</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://www.flaticon.es/svg/static/icons/svg/651/651016.svg"
+            alt="Imagen de reclamar tus derechos">
+        <mat-card-content>
+            <button mat-button color="accent">Denuncias</button>
+            <button mat-button color="accent">Cuestionamientos</button>
+        </mat-card-content>
+    </mat-card>
+
+    <!-- <mat-card class="denuncias-card">
+        <mat-card-header class="title">
+            <mat-card-title>Denuncias</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <mat-list>
+                <div *ngFor="let d of denuncias">
+                    <div mat-subheader>{{d.atributo}}</div>
+                    <mat-list-item>
+                        <div mat-list-item>{{d.descripcion}}</div>
+                    </mat-list-item>
+                </div>
+            </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button color="accent" routerLink="/denuncias">Denunciar</button>
+            <button mat-button color="warn">Info</button>
+        </mat-card-actions>
+    </mat-card> -->
+
+</div>

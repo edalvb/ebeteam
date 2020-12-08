@@ -18,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -44,6 +45,8 @@ import { OficinaOsiptelComponent } from './components/oficina-osiptel/oficina-os
 import { CanalAtencionOsiptelComponent } from './components/canal-atencion-osiptel/canal-atencion-osiptel.component';
 import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
 import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.component';
+import { AutenticarComponent } from './components/autenticar/autenticar.component';
+import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
 
 
 @NgModule({
@@ -62,6 +65,8 @@ import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.com
     CanalAtencionOsiptelComponent,
     CanalOsiptelComponent,
     MapaOficinaComponent,
+    AutenticarComponent,
+    FormDenunciaComponent,
 
   ],
   imports: [
@@ -90,12 +95,14 @@ import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.com
     CdkStepperModule,
     NgxCaptchaModule,
     MatListModule,
+    MatDialogModule,
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
       // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FormDenunciaComponent]
 })
 export class AppModule { }
