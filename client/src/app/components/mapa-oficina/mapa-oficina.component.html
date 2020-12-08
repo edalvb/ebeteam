@@ -1,7 +1,0 @@
-<div class="canal-mapa-oficina" style="margin: 0px;">
-    <mgl-map [style]="'mapbox://styles/mapbox/streets-v9'" [zoom]="[5]" [center]="[-65.017, -16.457]">
-        <mgl-marker *ngFor="let feature of geojson.features" [feature]="feature">
-            <div (click)="alert(feature.properties.message)" class="marker" [ngStyle]="estilos(feature)"></div>
-        </mgl-marker>
-    </mgl-map>
-</div>

@@ -17,7 +17,7 @@ export class CanalAtencionEoComponent implements OnInit {
     },
     {
       nombre: 'Claro',
-      icono: 'Claro'
+      icono: 'claro'
     },
     {
       nombre: 'Bitel',
@@ -41,6 +41,7 @@ export class CanalAtencionEoComponent implements OnInit {
   agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       nombre,
+      //bitel.svg
       sanitizer.bypassSecurityTrustResourceUrl(`assets/img/${nombre}.svg`));
   }
 

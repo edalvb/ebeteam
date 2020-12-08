@@ -42,15 +42,16 @@ import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-
 import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
-import { OficinaOsiptelComponent } from './components/oficina-osiptel/oficina-osiptel.component';
+import { OficinaOsiptelComponent } from './components/oficina/oficina-osiptel/oficina-osiptel.component';
 import { CanalAtencionOsiptelComponent } from './components/canal-osiptel/canal-atencion-osiptel/canal-atencion-osiptel.component';
 import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
-import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.component';
+import { MapaDialogOficinaComponent } from './components/mapa/mapa-dialog-oficina/mapa-dialog-oficina.component';
 import { AutenticarComponent } from './components/autenticar/autenticar.component';
 import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
 import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component';
 import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
-import { OficinaEoComponent } from './components/oficina-eo/oficina-eo.component';
+import { OficinaEoComponent } from './components/oficina/oficina-eo/oficina-eo.component';
+import { DialogCanalPresDesOsiptelComponent } from './components/dialog/dialog-canal-pres-des-osiptel/dialog-canal-pres-des-osiptel.component';
 
 
 @NgModule({
@@ -68,12 +69,13 @@ import { OficinaEoComponent } from './components/oficina-eo/oficina-eo.component
     OficinaOsiptelComponent,
     CanalAtencionOsiptelComponent,
     CanalOsiptelComponent,
-    MapaOficinaComponent,
+    MapaDialogOficinaComponent,
     AutenticarComponent,
     FormDenunciaComponent,
     DialogCanalDesOsiptelComponent,
     DialogCanalDesEoComponent,
     OficinaEoComponent,
+    DialogCanalPresDesOsiptelComponent,
 
   ],
   imports: [

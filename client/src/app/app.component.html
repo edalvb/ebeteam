@@ -3,9 +3,7 @@
     <mat-sidenav #drawer class="sidenav" fixedInViewport style="width: 250px;"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'">
 
-        <mat-toolbar color="primary"
-            style="width: 100%; background-size: cover;"
-            [ngStyle]="setStyles()">
+        <mat-toolbar color="primary" style="width: 100%; background-size: cover;" [ngStyle]="setStyles()">
             <mat-toolbar-row>
                 <button fixedInViewport type="button" aria-label="Toggle sidenav" mat-icon-button
                     (click)="drawer.toggle()">
@@ -27,7 +25,7 @@
                 </mat-list-item>
 
                 <mat-divider></mat-divider>
-                
+
                 <div mat-subheader>Mesa de Partes Virtual</div>
                 <mat-list-item [routerLink]="['/denuncias']">
                     <mat-icon mat-list-icon>gavel</mat-icon>
@@ -65,10 +63,10 @@
                     (click)="drawer.toggle()">
                     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
                 </button>
-                <button mat-icon-button aria-label="Logo" routerLink="/">
+                <button mat-button aria-label="Logo" routerLink="/" style="padding: 0px;">
                     <mat-icon svgIcon="logo"></mat-icon>
+                    <span style="font-size: large; padding-left: 5px;">OSIPTEL</span>
                 </button>
-                <span>OSIPTEL</span>
 
                 <span class="spacer"></span>
                 <button mat-icon-button class="material-icons" aria-label="Login" routerLink="/login">

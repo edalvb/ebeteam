@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-mapa-oficina',
-  templateUrl: './mapa-oficina.component.html',
-  styleUrls: ['./mapa-oficina.component.css']
+  selector: 'app-mapa-dialog-oficina',
+  templateUrl: './mapa-dialog-oficina.component.html',
+  styleUrls: ['./mapa-dialog-oficina.component.css']
 })
-export class MapaOficinaComponent implements OnInit {
+export class MapaDialogOficinaComponent implements OnInit {
   @Input() center: number[] = [0, 0];
 
   geojson = {
@@ -58,7 +58,7 @@ export class MapaOficinaComponent implements OnInit {
     alert(message);
   }
 
-  estilos(feature: any) {
+  estilosMarcador(feature: any) {
     return {
       'background-image': feature.properties.urlIcono + feature.properties.iconSize.join('/') + '/)',
       width: feature.properties.iconSize[0] + 'px',

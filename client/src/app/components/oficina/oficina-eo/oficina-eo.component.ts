@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OficinaEo } from "../../modelo/empresa-operadora";
-import { Distrito } from "../../modelo/ubicacion";
+import { OficinaEo } from "../../../modelo/empresa-operadora";
+import { Distrito } from "../../../modelo/ubicacion";
 
 @Component({
   selector: 'app-oficina-eo',

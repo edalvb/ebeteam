@@ -9,6 +9,9 @@
     .mat-dialog-container{
         background: mat-color(map-get($tema, background), 'card');
     }
+    .dialogs {
+        background: mat-color(map-get($tema, background), 'div');
+    }
     
 }
 

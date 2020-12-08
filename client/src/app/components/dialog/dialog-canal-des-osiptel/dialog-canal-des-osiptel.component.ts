@@ -1,8 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface DialogData {
-  animal: string;
+  nombre: string;
   name: string;
 }
 
@@ -15,7 +15,7 @@ export class DialogCanalDesOsiptelComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<any>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+    @Inject(MAT_DIALOG_DATA) public canal: DialogData) { }
 
   ngOnInit(): void {
   }

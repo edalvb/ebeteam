@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OficinaOsiptel } from "../../modelo/osiptel";
-import { Departamento } from "../../modelo/ubicacion";
+import { OficinaOsiptel } from "../../../modelo/osiptel";
+import { Departamento } from "../../../modelo/ubicacion";
 
 @Component({
   selector: 'app-oficina-osiptel',

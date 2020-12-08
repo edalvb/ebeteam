@@ -5,7 +5,7 @@
 
     <mat-card matRipple class="example-card" *ngFor="let canal of canales">
         <mat-list style="padding: 0px;">
-            <mat-list-item (click)="openDialog()">
+            <mat-list-item (click)="canal.nombre=='Presencial'? openDialogPresencial() : openDialogDescripcion()">
                 <mat-icon mat-list-icon svgIcon="{{canal.icono}}"></mat-icon>
                 <div style="font-weight: 200; font-size: smaller;">{{canal.nombre}}</div>
             </mat-list-item>
