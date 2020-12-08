@@ -15,5 +15,6 @@ export interface OficinaOsiptel {
 export interface CanalAtencionOsiptel {
     nombre: String,
     descripcion1?: String,
-    descripcion2?: String
+    descripcion2?: String,
+    icono?: String
 }

@@ -18,7 +18,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatRippleModule } from '@angular/material/core';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -34,7 +35,7 @@ import { environment } from '../environments/environment';
 import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { CanalesComponent } from './components/canales/canales.component';
+import { CanalAtencionEoComponent } from './components/canal-atencion-eo/canal-atencion-eo.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { AssistantComponent } from './components/assistant/assistant.component';
 import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
@@ -42,11 +43,12 @@ import { StepRegistroComponent } from './components/registro-usuario/step-regist
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
 import { OficinaOsiptelComponent } from './components/oficina-osiptel/oficina-osiptel.component';
-import { CanalAtencionOsiptelComponent } from './components/canal-atencion-osiptel/canal-atencion-osiptel.component';
+import { CanalAtencionOsiptelComponent } from './components/canal-osiptel/canal-atencion-osiptel/canal-atencion-osiptel.component';
 import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
 import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.component';
 import { AutenticarComponent } from './components/autenticar/autenticar.component';
 import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
+import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component';
 
 
 @NgModule({
@@ -55,7 +57,7 @@ import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form
     RegistroUsuarioComponent,
     HomeComponent,
     LoginComponent,
-    CanalesComponent,
+    CanalAtencionEoComponent,
     DenunciasComponent,
     AssistantComponent,
     ScnDenunciasComponent,
@@ -67,6 +69,7 @@ import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form
     MapaOficinaComponent,
     AutenticarComponent,
     FormDenunciaComponent,
+    DialogCanalDesOsiptelComponent,
 
   ],
   imports: [
@@ -99,7 +102,8 @@ import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
       // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
-    })
+    }),
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

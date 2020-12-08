@@ -20,9 +20,13 @@ export class AppComponent {
     private breakpointObserver: BreakpointObserver,
     iconRegistry: MatIconRegistry, sanitizer: DomSanitizer
     /*private authService: AuthService*/) {
+    this.agregarIcono('logo', iconRegistry, sanitizer)
+  }
+
+  agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
-      'logo',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/img/logo.svg'));
+      nombre,
+      sanitizer.bypassSecurityTrustResourceUrl(`assets/img/${nombre}.svg`));
   }
 
   setStyles() {
