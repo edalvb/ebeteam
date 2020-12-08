@@ -71,7 +71,8 @@ export class CanalAtencionOsiptelComponent implements OnInit {
   openDialog(): void {
 
     const dialogRef = this.dialog.open(DialogCanalDesOsiptelComponent, {
-      width: '250px',
+      width: '600px',
+      height: '500px',
       data: { name: this.name, animal: this.animal }
     });
 

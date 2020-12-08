@@ -49,6 +49,8 @@ import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.com
 import { AutenticarComponent } from './components/autenticar/autenticar.component';
 import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
 import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component';
+import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
+import { OficinaEoComponent } from './components/oficina-eo/oficina-eo.component';
 
 
 @NgModule({
@@ -70,6 +72,8 @@ import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal
     AutenticarComponent,
     FormDenunciaComponent,
     DialogCanalDesOsiptelComponent,
+    DialogCanalDesEoComponent,
+    OficinaEoComponent,
 
   ],
   imports: [

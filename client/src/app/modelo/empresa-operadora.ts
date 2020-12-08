@@ -17,3 +17,18 @@ export interface Materia{
     id: String;
     nombre: String;
 }
+
+export interface Departamento {
+    id: String;
+    nombre: String
+}
+
+export interface Provincia {
+    id: String;
+    nombre: String
+}
+
+export interface Distrito {
+    id: String;
+    nombre: String
+}
