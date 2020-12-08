@@ -18,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -37,6 +38,9 @@ import { AssistantComponent } from './components/assistant/assistant.component';
 import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
 import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
+import { AutenticarComponent } from './components/autenticar/autenticar.component';
+import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
 
 
 @NgModule({
@@ -50,6 +54,9 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     AssistantComponent,
     ScnDenunciasComponent,
     StepRegistroComponent,
+    MonitoreoPaginaComponent,
+    AutenticarComponent,
+    FormDenunciaComponent,
 
   ],
   imports: [
@@ -77,9 +84,11 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     MatSnackBarModule,
     CdkStepperModule,
     NgxCaptchaModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FormDenunciaComponent]
 })
 export class AppModule { }

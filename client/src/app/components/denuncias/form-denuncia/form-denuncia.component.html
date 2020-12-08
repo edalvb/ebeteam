@@ -1,0 +1,81 @@
+<mat-card class="content">
+    <mat-card-title><a color="accent">Formulario de Denuncias</a></mat-card-title>
+    <mat-divider></mat-divider>
+    <form>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>DNI</mat-label>
+            <input type="text" required matInput value={{dni}}>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Nombre</mat-label>
+            <input type="text" required matInput value={{nombres}}>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Apellido Paterno</mat-label>
+            <input required matInput type="text" value={{aP}}>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Apellido Materno</mat-label>
+            <input required matInput type="text" value={{aM}}>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Celular</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Distrito</mat-label>
+            <input required matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Provincia</mat-label>
+            <input required matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Departamento</mat-label>
+            <input required matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Dirección</mat-label>
+            <input required matInput type="text">
+        </mat-form-field>
+        <br>
+        <mat-divider></mat-divider>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Empresa Operadora</mat-label>
+            <mat-select>
+                <mat-option value="e.id" *ngFor="let e of eos">
+                    {{e.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Servicio</mat-label>
+            <mat-select>
+                <mat-option value="s.id" *ngFor="let s of servs">
+                    {{s.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Materia</mat-label>
+            <mat-select>
+                <mat-option value="m.id" *ngFor="let m of mats">
+                    {{m.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inpt">
+            <mat-label>Recurso</mat-label>
+            <mat-select>
+                <mat-option value="r.id" *ngFor="let r of recs">
+                    {{r.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-divider></mat-divider>
+        <button mat-raised-button color="accent">Cancelar</button>
+        <button mat-raised-button color="primary">Enviar Denuncia</button>
+    </form>
+
+</mat-card>

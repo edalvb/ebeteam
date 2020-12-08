@@ -29,6 +29,7 @@ const routes: Routes = [
     component: ScnDenunciasComponent
   },
 
+
 ];
 
 @NgModule({
