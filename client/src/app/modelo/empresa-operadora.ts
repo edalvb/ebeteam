@@ -18,17 +18,10 @@ export interface Materia{
     nombre: String;
 }
 
-export interface Departamento {
-    id: String;
-    nombre: String
-}
-
-export interface Provincia {
-    id: String;
-    nombre: String
-}
-
-export interface Distrito {
-    id: String;
-    nombre: String
+export interface OficinaEo {
+    distrito: String,
+    direccion?: String,
+    horario?: String
+    ubicacion_latitud?: String,
+    ubicacion_longitud?: String
 }

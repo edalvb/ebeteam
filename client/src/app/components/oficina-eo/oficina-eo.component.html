@@ -2,7 +2,7 @@
     <mat-form-field appearance="outline">
         <mat-label>Selecciona una Sede</mat-label>
         <mat-select>
-            <mat-option value="d.id" *ngFor="let d of departamentos">
+            <mat-option value="d.id" *ngFor="let d of distritos">
                 {{d.nombre}}
             </mat-option>
         </mat-select>
@@ -12,7 +12,7 @@
         <mat-expansion-panel *ngFor="let o of oficinas">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    {{o.nombre}}
+                    {{o.direccion}}
                 </mat-panel-title>
             </mat-expansion-panel-header>
 
@@ -21,26 +21,6 @@
                 <mat-list-item class="canal-list-item" *ngIf="o.direccion">
                     <mat-icon mat-list-icon>location_on</mat-icon>
                     <div mat-line class="canal-mat-line">{{o.direccion}}</div>
-                </mat-list-item>
-
-                <mat-list-item class="canal-list-item" *ngIf="o.telefono">
-                    <mat-icon mat-list-icon>local_phone</mat-icon>
-                    <div mat-line class="canal-mat-line">{{o.telefono}}</div>
-                </mat-list-item>
-
-                <mat-list-item class="canal-list-item" *ngIf="o.celular1">
-                    <mat-icon mat-list-icon>stay_current_portrait</mat-icon>
-                    <div mat-line class="canal-mat-line">{{o.celular1}}</div>
-                </mat-list-item>
-
-                <mat-list-item class="canal-list-item" *ngIf="o.celular2">
-                    <mat-icon mat-list-icon>stay_current_portrait</mat-icon>
-                    <div mat-line class="canal-mat-line">{{o.celular2}}</div>
-                </mat-list-item>
-
-                <mat-list-item class="canal-list-item" *ngIf="o.email">
-                    <mat-icon mat-list-icon>email</mat-icon>
-                    <div mat-line class="canal-mat-line">{{o.email}}</div>
                 </mat-list-item>
 
                 <mat-list-item class="canal-list-item" *ngIf="o.horario">

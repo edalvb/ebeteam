@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OficinaEo} from "../../modelo/osiptel";
-import { Departamento } from "../../modelo/ubicacion";
+import { OficinaEo } from "../../modelo/empresa-operadora";
+import { Distrito } from "../../modelo/ubicacion";
 
 @Component({
   selector: 'app-oficina-eo',
@@ -11,80 +11,51 @@ export class OficinaEoComponent implements OnInit {
 
   panelOpenState = false;
 
-  departamentos: Departamento[] = [
+  distritos: Distrito[] = [
     {
-      id: '1',
+      id: '2',
       codigo: '01',
-      nombre: 'Amazonas'
+      nombre: 'Bagua',
     },
     {
       id: '2',
       codigo: '02',
-      nombre: 'Chachapoyas'
+      nombre: 'La Peca'
     }
   ]
 
   oficinas: OficinaEo[] = [
     {
-      departamento: 'Lima',
-      nombre: 'CO Huacho',
-      tipo: 'CO',
+      distrito: 'Lima',
       direccion: 'Calle Colón N°150, plaza de armas de Huacho',
-      telefono: '01- 7380942',
-      celular1: '940722140',
-      email: 'cohuacho@osiptel.gob.pe',
       horario: '8:30 am - 5:30 pm'
     },
     {
-      departamento: 'Lima',
-      nombre: 'CO Lima - Cercado',
-      tipo: 'CO',
-      direccion: 'Av. Bolivia N°380-Cercado de Lima',
-      telefono: '01-4251435',
-      celular1: '962381787',
+      distrito: 'Lima',
       horario: '8:30 am - 5:30 pm'
     },
     {
-      departamento: 'Lima',
-      nombre: 'CO Lima - Norte',
-      tipo: 'CO',
-      direccion: 'Av. Las Palmeras N° 3901 - Los Olivos',
-      telefono: '01-5215781',
-      celular1: '991941751',
+      distrito: 'Lima',
       horario: '8:30 am - 5:30 pm'
     },
     {
-      departamento: 'Lima',
-      nombre: 'CO Lima - Este',
-      tipo: 'CO',
+      distrito: 'Lima',
       direccion: 'Av. Pirámide del Sol N° 428 - Urb. Zárate - San Juan de Lurigancho',
-      telefono: '01- 2761768',
-      celular1: '961271298',
       horario: '8:30 am - 5:30 pm'
     },
     {
-      departamento: 'Lima',
-      nombre: 'CO Lima - Sur',
-      tipo: 'CO',
+      distrito: 'Lima',
       direccion: 'Proximamente en el MAC Lima Sur',
-      celular1: '961271362',
       horario: '8:30 am - 5:30 pm'
     },
     {
-      departamento: 'Lima',
-      nombre: 'CO Lima - Callao',
-      tipo: 'CO',
+      distrito: 'Lima',
       direccion: 'Av. Saénz Peña 199 - Callao',
-      telefono: '01- 4292912',
-      celular1: '980413247',
       horario: '8:30 am - 5:30 pm'
     },
     {
-      departamento: 'Lima',
-      nombre: 'Oficina San Borja',
-      tipo: 'CO',
+      distrito: 'Lima',
       direccion: 'Calle De la Prosa 136 - San Borja',
-      celular1: '942739628',
       horario: '8:30 am - 5:30 pm'
     },
   ];
