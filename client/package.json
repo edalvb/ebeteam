@@ -25,7 +25,9 @@
     "@apollo/client": "^3.0.0",
     "apollo-angular": "^2.1.0",
     "graphql": "^15.0.0",
+    "mapbox-gl": "^1.13.0",
     "ngx-captcha": "^8.0.1",
+    "ngx-mapbox-gl": "^4.8.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -35,6 +37,7 @@
     "@angular/cli": "~11.0.2",
     "@angular/compiler-cli": "~11.0.1",
     "@types/jasmine": "~3.6.0",
+    "@types/mapbox-gl": "^1.12.9",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",

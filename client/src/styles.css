@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '~mapbox-gl/dist/mapbox-gl.css';
+@import '~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css';
+
 html, body {
     height: 100%;
 }
@@ -12,4 +15,68 @@ body {
 mat-card {
     margin: 24px;
     text-align: center;
+}
+
+.bloque-linea {
+    margin: 1em;
+    display: inline-block;
+}
+
+.canal-mapa-oficina {
+    display: inline-block;
+    width: 90%;
+    height: 90%;
+}
+
+.canal-list-item {
+    height: fit-content !important;
+    margin-bottom: 2%;
+}
+
+.canal-mat-line {
+    white-space: normal !important;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+@media screen and (max-width:600px) {
+    .contenido-main {
+        padding-top: 56px;
+        overflow-y: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:600px) {
+    .contenido-main {
+        padding-top: 64px;
+        overflow-y: auto;
+        height: 100%;
+    }
+    .bloque-linea {
+        width: 45%;
+    }
+
+    .canal-mapa-oficina {
+        width: 45%;
+        height: 45%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .contenido-main {
+        padding-top: 64px;
+        overflow-y: auto;
+        height: 100%;
+    }
+    .bloque-linea {
+        width: 25%;
+    }
+
+    .canal-mapa-oficina {
+        width: 25%;
+        height: 25%;
+    }
 }

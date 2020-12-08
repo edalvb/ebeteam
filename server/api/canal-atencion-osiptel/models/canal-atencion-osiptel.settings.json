@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "canal_atencion_osiptels",
+  "info": {
+    "name": "canal_atencion_osiptel"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    }
+  }
+}

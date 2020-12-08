@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
 import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
 
 import { HomeComponent } from './components/home/home.component';
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'denuncias',
     component: ScnDenunciasComponent
+  },
+  {
+    path: 'canal-osiptel',
+    component: CanalOsiptelComponent
   },
 
 ];

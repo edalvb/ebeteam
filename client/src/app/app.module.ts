@@ -21,6 +21,8 @@ import { MatListModule } from '@angular/material/list';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
@@ -39,6 +41,9 @@ import { StepRegistroComponent } from './components/registro-usuario/step-regist
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
 import { OficinaOsiptelComponent } from './components/oficina-osiptel/oficina-osiptel.component';
+import { CanalAtencionOsiptelComponent } from './components/canal-atencion-osiptel/canal-atencion-osiptel.component';
+import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
+import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.component';
 
 
 @NgModule({
@@ -54,6 +59,9 @@ import { OficinaOsiptelComponent } from './components/oficina-osiptel/oficina-os
     StepRegistroComponent,
     MonitoreoPaginaComponent,
     OficinaOsiptelComponent,
+    CanalAtencionOsiptelComponent,
+    CanalOsiptelComponent,
+    MapaOficinaComponent,
 
   ],
   imports: [
@@ -81,7 +89,11 @@ import { OficinaOsiptelComponent } from './components/oficina-osiptel/oficina-os
     MatSnackBarModule,
     CdkStepperModule,
     NgxCaptchaModule,
-    MatListModule
+    MatListModule,
+    NgxMapboxGLModule.withConfig({
+      accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
+      // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

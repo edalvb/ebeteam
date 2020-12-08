@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/canal-atencion-osiptels",
+      "handler": "canal-atencion-osiptel.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/canal-atencion-osiptels/count",
+      "handler": "canal-atencion-osiptel.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/canal-atencion-osiptels/:id",
+      "handler": "canal-atencion-osiptel.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/canal-atencion-osiptels",
+      "handler": "canal-atencion-osiptel.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/canal-atencion-osiptels/:id",
+      "handler": "canal-atencion-osiptel.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/canal-atencion-osiptels/:id",
+      "handler": "canal-atencion-osiptel.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
