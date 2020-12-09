@@ -74,6 +74,7 @@ export class CanalAtencionOsiptelComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogCanalDesOsiptelComponent, {
       width: '600px',
       height: '500px',
+      disableClose: true,
       data: { name: this.name, animal: this.animal }
     });
 
@@ -88,6 +89,7 @@ export class CanalAtencionOsiptelComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogCanalPresDesOsiptelComponent, {
       width: '1000px',
       height: '600px',
+      disableClose: true,
       data: { name: this.name, animal: this.animal }
     });
 

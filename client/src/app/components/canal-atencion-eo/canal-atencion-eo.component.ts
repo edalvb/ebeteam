@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
-// import { Util } from "../../util/util";
+import { MatDialog } from '@angular/material/dialog';
+import { DialogCanalDesEoComponent } from '../dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
 
 @Component({
   selector: 'app-canal-atencion-eo',
@@ -29,7 +30,7 @@ export class CanalAtencionEoComponent implements OnInit {
     },
   ]
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, public dialog: MatDialog) {
     this.agregarIcono('movistar', iconRegistry, sanitizer);
     this.agregarIcono('claro', iconRegistry, sanitizer);
     this.agregarIcono('bitel', iconRegistry, sanitizer);
@@ -45,4 +46,12 @@ export class CanalAtencionEoComponent implements OnInit {
       sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
   }
 
+  openDialog(): void {
+
+    this.dialog.open(DialogCanalDesEoComponent, {
+      width: '600px',
+      height: '500px',
+    });
+
+  }
 }

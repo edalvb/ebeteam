@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/empresa-operadora';
+import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/denuncia';
 
 @Component({
   selector: 'app-form-denuncia',

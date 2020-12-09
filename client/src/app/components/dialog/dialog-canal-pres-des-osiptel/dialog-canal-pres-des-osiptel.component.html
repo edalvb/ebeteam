@@ -1,10 +1,13 @@
-<h1 mat-dialog-title>Descripción de Canal de Atención OSIPTEL</h1>
+<app-titulo-dialog></app-titulo-dialog>
+
 <mat-dialog-content class="mat-typography">
-    <app-oficina-osiptel></app-oficina-osiptel>
-    <app-oficina-osiptel></app-oficina-osiptel>
-    <app-mapa-dialog-oficina style="width: 250px;height: 250px;display: inline-block;"></app-mapa-dialog-oficina>
+    <div style="display: table;">
+        <app-descripcion-canal-dialog style="display: table-cell; vertical-align: middle;"></app-descripcion-canal-dialog>
+        <app-oficina-osiptel style="display: table-cell; vertical-align: middle;"></app-oficina-osiptel>
+        <app-mapa-dialog-oficina style="width: 250px;height: 250px; display: table-cell; vertical-align: middle;"></app-mapa-dialog-oficina>
+    </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    <button mat-button>No Thanks</button>
+    <button mat-button cdkFocusInitial [mat-dialog-close]="">Aceptar</button>
     <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
 </mat-dialog-actions>

@@ -53,6 +53,8 @@ import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal
 import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
 import { OficinaEoComponent } from './components/oficina/oficina-eo/oficina-eo.component';
 import { DialogCanalPresDesOsiptelComponent } from './components/dialog/dialog-canal-pres-des-osiptel/dialog-canal-pres-des-osiptel.component';
+import { DescripcionCanalDialogComponent } from './components/canal-osiptel/descripcion-canal-dialog/descripcion-canal-dialog.component';
+import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-dialog.component';
 
 
 @NgModule({
@@ -77,6 +79,8 @@ import { DialogCanalPresDesOsiptelComponent } from './components/dialog/dialog-c
     DialogCanalDesEoComponent,
     OficinaEoComponent,
     DialogCanalPresDesOsiptelComponent,
+    DescripcionCanalDialogComponent,
+    TituloDialogComponent,
 
   ],
   imports: [

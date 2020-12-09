@@ -19,7 +19,6 @@ mat-card {
 .bloque-linea {
     margin: 1em;
     display: inline-block;
-    overflow: auto;
 }
 
 .canal-list-item {

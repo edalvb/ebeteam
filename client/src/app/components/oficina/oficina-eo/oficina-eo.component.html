@@ -1,35 +1,78 @@
-<div class="bloque-linea">
+<div >
+  <div class="contenedor">
     <mat-form-field appearance="outline">
-        <mat-label>Selecciona una Sede</mat-label>
+        <mat-label>Selecciona Departamento</mat-label>
         <mat-select>
-            <mat-option value="d.id" *ngFor="let d of distritos">
-                {{d.nombre}}
+            <mat-option value="d.id" *ngFor="let de of departamentos">
+                {{de.nombre}}
             </mat-option>
         </mat-select>
     </mat-form-field>
 
-    <mat-accordion>
-        <mat-expansion-panel *ngFor="let o of oficinas">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    {{o.direccion}}
-                </mat-panel-title>
-            </mat-expansion-panel-header>
+    <mat-form-field appearance="outline">
+      <mat-label>Selecciona Provincia</mat-label>
+      <mat-select>
+          <mat-option value="d.id" *ngFor="let p of provincias">
+              {{p.nombre}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
 
-            <mat-list>
+  <mat-form-field appearance="outline">
+    <mat-label>Selecciona Distrito</mat-label>
+    <mat-select>
+        <mat-option value="d.id" *ngFor="let d of distritos">
+            {{d.nombre}}<ng-container ></ng-container>
+        </mat-option>
+    </mat-select>
+</mat-form-field>
 
-                <mat-list-item class="canal-list-item" *ngIf="o.direccion">
-                    <mat-icon mat-list-icon>location_on</mat-icon>
-                    <div mat-line class="canal-mat-line">{{o.direccion}}</div>
-                </mat-list-item>
+</div>
+<div class="contenedor">
 
-                <mat-list-item class="canal-list-item" *ngIf="o.horario">
-                    <mat-icon mat-list-icon>access_time</mat-icon>
-                    <div mat-line class="canal-mat-line">{{o.horario}}</div>
-                </mat-list-item>
+  <!-- <mat-list>
 
-            </mat-list>
+    <mat-list-item class="canal-list-item" *ngIf="o.direccion">
+        <mat-icon mat-list-icon>location_on</mat-icon>
+        <div mat-line class="canal-mat-line">{{o.direccion}}</div>
+    </mat-list-item>
 
-        </mat-expansion-panel>
-    </mat-accordion>
+    <mat-list-item class="canal-list-item" *ngIf="o.telefono">
+        <mat-icon mat-list-icon>local_phone</mat-icon>
+        <div mat-line class="canal-mat-line">{{o.telefono}}</div>
+    </mat-list-item>
+
+    <mat-list-item class="canal-list-item" *ngIf="o.celular1">
+        <mat-icon mat-list-icon>stay_current_portrait</mat-icon>
+        <div mat-line class="canal-mat-line">{{o.celular1}}</div>
+    </mat-list-item>
+
+    <mat-list-item class="canal-list-item" *ngIf="o.celular2">
+        <mat-icon mat-list-icon>stay_current_portrait</mat-icon>
+        <div mat-line class="canal-mat-line">{{o.celular2}}</div>
+    </mat-list-item>
+
+    <mat-list-item class="canal-list-item" *ngIf="o.email">
+        <mat-icon mat-list-icon>email</mat-icon>
+        <div mat-line class="canal-mat-line">{{o.email}}</div>
+    </mat-list-item>
+
+    <mat-list-item class="canal-list-item" *ngIf="o.horario">
+        <mat-icon mat-list-icon>access_time</mat-icon>
+        <div mat-line class="canal-mat-line">{{o.horario}}</div>
+    </mat-list-item>
+
+</mat-list> -->
+
+  <!-- <mat-list>
+    <div mat-subheader>Información </div>
+    <mat-list-item *ngFor="let d of distritos">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <div mat-line>{{d.nombre}}</div>
+
+    </mat-list-item>
+  </mat-list> -->
+
+</div>
+
 </div>
