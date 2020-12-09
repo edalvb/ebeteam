@@ -9,29 +9,3 @@ mgl-map {
     height: 100%;
     width: 100%;
 }
-/* 
-.mapa-dialog-oficina {
-    margin: 0px;
-    display: inline-block;
-}
-
-@media screen and (max-width:600px) {
-    .mapa-dialog-oficina {
-        width: 90%;
-        height: 90%;
-    }
-}
-
-@media screen and (max-width:1024px) and (min-width:600px) {
-    .mapa-dialog-oficina {
-        width: 45%;
-        height: 45%;
-    }
-}
-
-@media screen and (min-width:1024px) {
-    .mapa-dialog-oficina {
-        width: 50%;
-        height: 50%;
-    }
-} */

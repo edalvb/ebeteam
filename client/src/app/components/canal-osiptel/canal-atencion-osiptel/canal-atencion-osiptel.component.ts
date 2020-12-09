@@ -66,7 +66,7 @@ export class CanalAtencionOsiptelComponent implements OnInit {
   agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       nombre,
-      sanitizer.bypassSecurityTrustResourceUrl(`https://ebeteam.s3.us-east-2.amazonaws.com/assets/img/${nombre}.svg`));
+      sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
   }
 
   openDialogDescripcion(): void {
@@ -87,7 +87,7 @@ export class CanalAtencionOsiptelComponent implements OnInit {
 
     const dialogRef = this.dialog.open(DialogCanalPresDesOsiptelComponent, {
       width: '1000px',
-      height: '500px',
+      height: '600px',
       data: { name: this.name, animal: this.animal }
     });
 

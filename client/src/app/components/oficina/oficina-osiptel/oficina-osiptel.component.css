@@ -10,12 +10,12 @@
 
 @media screen and (max-width:1024px) and (min-width:600px) {
     .bloque-linea {
-        width: 45%;
+        width: 50%;
     }
 }
 
 @media screen and (min-width:1024px) {
     .bloque-linea {
-        width: 25%;
+        width: 33%;
     }
 }

@@ -26,7 +26,7 @@ export class AppComponent {
   agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       nombre,
-      sanitizer.bypassSecurityTrustResourceUrl(`https://ebeteam.s3.us-east-2.amazonaws.com/assets/img/${nombre}.svg`));
+      sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
   }
 
   setStyles() {

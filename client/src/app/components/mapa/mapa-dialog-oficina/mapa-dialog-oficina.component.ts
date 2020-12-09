@@ -15,8 +15,7 @@ export class MapaDialogOficinaComponent implements OnInit {
         type: 'Feature' as const,
         properties: {
           message: 'Foo',
-          iconSize: [60, 60],
-          urlIcono: 'url(https://placekitten.com/g/'
+          iconSize: [40, 40]
         },
         geometry: {
           type: 'Point' as const,
@@ -27,8 +26,7 @@ export class MapaDialogOficinaComponent implements OnInit {
         type: 'Feature' as const,
         properties: {
           message: 'Bar',
-          iconSize: [50, 50],
-          urlIcono: 'url(https://placekitten.com/g/'
+          iconSize: [40, 40]
         },
         geometry: {
           type: 'Point' as const,
@@ -39,8 +37,7 @@ export class MapaDialogOficinaComponent implements OnInit {
         type: 'Feature' as const,
         properties: {
           message: 'Baz',
-          iconSize: [40, 40],
-          urlIcono: 'url(https://placekitten.com/g/'
+          iconSize: [40, 40]
         },
         geometry: {
           type: 'Point' as const,
@@ -60,7 +57,7 @@ export class MapaDialogOficinaComponent implements OnInit {
 
   estilosMarcador(feature: any) {
     return {
-      'background-image': feature.properties.urlIcono + feature.properties.iconSize.join('/') + '/)',
+      'background-image': 'url(/assets/img/logo.svg)',
       width: feature.properties.iconSize[0] + 'px',
       height: feature.properties.iconSize[1] + 'px'
     };
