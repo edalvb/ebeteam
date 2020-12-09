@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import { CanalAtencionOsiptel } from "../../../modelo/osiptel";
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogCanalDesOsiptelComponent } from "../../dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component";
+import { DialogCanalPresDesOsiptelComponent } from "../../dialog/dialog-canal-pres-des-osiptel/dialog-canal-pres-des-osiptel.component";
 
 export interface DialogData {
   animal: string;
@@ -65,14 +66,30 @@ export class CanalAtencionOsiptelComponent implements OnInit {
   agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       nombre,
-      sanitizer.bypassSecurityTrustResourceUrl(`assets/img/${nombre}.svg`));
+      sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
   }
 
-  openDialog(): void {
+  openDialogDescripcion(): void {
 
     const dialogRef = this.dialog.open(DialogCanalDesOsiptelComponent, {
       width: '600px',
       height: '500px',
+      disableClose: true,
+      data: { name: this.name, animal: this.animal }
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  openDialogPresencial(): void {
+
+    const dialogRef = this.dialog.open(DialogCanalPresDesOsiptelComponent, {
+      width: '1000px',
+      height: '600px',
+      disableClose: true,
       data: { name: this.name, animal: this.animal }
     });
 

@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-mapa-oficina',
-  templateUrl: './mapa-oficina.component.html',
-  styleUrls: ['./mapa-oficina.component.css']
+  selector: 'app-mapa-dialog-oficina',
+  templateUrl: './mapa-dialog-oficina.component.html',
+  styleUrls: ['./mapa-dialog-oficina.component.css']
 })
-export class MapaOficinaComponent implements OnInit {
+export class MapaDialogOficinaComponent implements OnInit {
   @Input() center: number[] = [0, 0];
 
   geojson = {
@@ -15,8 +15,7 @@ export class MapaOficinaComponent implements OnInit {
         type: 'Feature' as const,
         properties: {
           message: 'Foo',
-          iconSize: [60, 60],
-          urlIcono: 'url(https://placekitten.com/g/'
+          iconSize: [40, 40]
         },
         geometry: {
           type: 'Point' as const,
@@ -27,8 +26,7 @@ export class MapaOficinaComponent implements OnInit {
         type: 'Feature' as const,
         properties: {
           message: 'Bar',
-          iconSize: [50, 50],
-          urlIcono: 'url(https://placekitten.com/g/'
+          iconSize: [40, 40]
         },
         geometry: {
           type: 'Point' as const,
@@ -39,8 +37,7 @@ export class MapaOficinaComponent implements OnInit {
         type: 'Feature' as const,
         properties: {
           message: 'Baz',
-          iconSize: [40, 40],
-          urlIcono: 'url(https://placekitten.com/g/'
+          iconSize: [40, 40]
         },
         geometry: {
           type: 'Point' as const,
@@ -58,9 +55,9 @@ export class MapaOficinaComponent implements OnInit {
     alert(message);
   }
 
-  estilos(feature: any) {
+  estilosMarcador(feature: any) {
     return {
-      'background-image': feature.properties.urlIcono + feature.properties.iconSize.join('/') + '/)',
+      'background-image': 'url(/assets/img/logo.svg)',
       width: feature.properties.iconSize[0] + 'px',
       height: feature.properties.iconSize[1] + 'px'
     };

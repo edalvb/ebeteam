@@ -1,16 +1,17 @@
 <div >
     <mat-card class="canales-card">
         <mat-card-header>
-            <mat-card-title>Canales de Atención</mat-card-title>
-            <mat-card-subtitle>Empresas Operadoras</mat-card-subtitle>
+            <mat-card-title>Canales de Atención </mat-card-title>
+            <mat-card-subtitle>EMPRESAS OPERADORAS</mat-card-subtitle>
         </mat-card-header>
+
         <mat-card-content>
             <section>
                 <div class="example-button-row">
                     <div class="example-flex-container">
                         <div class="example-button-container" *ngFor="let canal of canales">
-                            <button mat-fab color="warn" aria-label="Example icon button with a home icon">
-                                <mat-icon svgIcon="{{canal.icono}}">{{canal.nombre}}</mat-icon>
+                            <button mat-icon-button (click)="openDialog()">
+                                <mat-icon svgIcon="{{canal.icono}}"></mat-icon>
                             </button>
                         </div>
                     </div>

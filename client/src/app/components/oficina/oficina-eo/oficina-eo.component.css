@@ -1,0 +1,12 @@
+.canal-mat-line {
+    text-align: justify;
+}
+
+.contenedor {display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px, 10px, 10px ; */
+}
+

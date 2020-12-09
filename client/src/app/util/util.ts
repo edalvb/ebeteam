@@ -6,7 +6,7 @@ class Util {
     agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
         iconRegistry.addSvgIcon(
             nombre,
-            sanitizer.bypassSecurityTrustResourceUrl(`assets/img/${nombre}.svg`));
+            sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
     }
 
 }

@@ -2,7 +2,6 @@
 
 @import '~mapbox-gl/dist/mapbox-gl.css';
 @import '~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css';
-
 html, body {
     height: 100%;
 }
@@ -20,12 +19,6 @@ mat-card {
 .bloque-linea {
     margin: 1em;
     display: inline-block;
-}
-
-.canal-mapa-oficina {
-    display: inline-block;
-    width: 90%;
-    height: 90%;
 }
 
 .canal-list-item {
@@ -56,12 +49,7 @@ mat-card {
         height: 100%;
     }
     .bloque-linea {
-        width: 45%;
-    }
-
-    .canal-mapa-oficina {
-        width: 45%;
-        height: 45%;
+        width: 32%;
     }
 }
 
@@ -73,10 +61,5 @@ mat-card {
     }
     .bloque-linea {
         width: 25%;
-    }
-
-    .canal-mapa-oficina {
-        width: 25%;
-        height: 25%;
     }
 }

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
 import { FormDenunciaComponent } from '../form-denuncia/form-denuncia.component';
 
 export interface PeriodicElement {
   fecha: string;
   ndenuncia: string;
-  operadora:string;
+  operadora: string;
   recurso: string;
   servicio: string;
   materia: string;
@@ -14,8 +14,8 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {fecha: '08/01/2019', ndenuncia: '001-2019-LN/DEN', operadora: 'TELEFÓNICA DEL PERÚ S.A.A.', recurso: 'Incumplimiento de resolución de primera instancia',  servicio: 'Servicios empaquetados',  materia: 'Derechos reconocidos',  estado: 'CONCLUIDO'},
-  {fecha: '08/01/2019', ndenuncia: '001-2019-LN/DEN', operadora: 'TELEFÓNICA DEL PERÚ S.A.A.', recurso: 'Incumplimiento de resolución de primera instancia',  servicio: 'Servicios empaquetados',  materia: 'Derechos reconocidos',  estado: 'CONCLUIDO'}, 
+  { fecha: '08/01/2019', ndenuncia: '001-2019-LN/DEN', operadora: 'TELEFÓNICA DEL PERÚ S.A.A.', recurso: 'Incumplimiento de resolución de primera instancia', servicio: 'Servicios empaquetados', materia: 'Derechos reconocidos', estado: 'CONCLUIDO' },
+  { fecha: '08/01/2019', ndenuncia: '001-2019-LN/DEN', operadora: 'TELEFÓNICA DEL PERÚ S.A.A.', recurso: 'Incumplimiento de resolución de primera instancia', servicio: 'Servicios empaquetados', materia: 'Derechos reconocidos', estado: 'CONCLUIDO' },
 
 ];
 
@@ -26,7 +26,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ScnDenunciasComponent implements OnInit {
   confirm: boolean = false;
-  constructor( private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -40,11 +40,11 @@ export class ScnDenunciasComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  funAlmacenar(e: any){
+  funAlmacenar(e: any) {
     this.confirm = e;
   }
 
-  onCreate(){
+  onCreate() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;

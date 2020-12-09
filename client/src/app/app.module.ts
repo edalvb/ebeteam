@@ -20,6 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatRippleModule } from '@angular/material/core';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -42,17 +43,24 @@ import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-
 import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
-import { OficinaOsiptelComponent } from './components/oficina-osiptel/oficina-osiptel.component';
+import { OficinaOsiptelComponent } from './components/oficina/oficina-osiptel/oficina-osiptel.component';
 import { CanalAtencionOsiptelComponent } from './components/canal-osiptel/canal-atencion-osiptel/canal-atencion-osiptel.component';
 import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
-import { MapaOficinaComponent } from './components/mapa-oficina/mapa-oficina.component';
+import { MapaDialogOficinaComponent } from './components/mapa/mapa-dialog-oficina/mapa-dialog-oficina.component';
 import { AutenticarComponent } from './components/autenticar/autenticar.component';
 import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
 import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component';
 import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
+<<<<<<< HEAD
 import { OficinaEoComponent } from './components/oficina-eo/oficina-eo.component';
 import { CuestionamientosComponent } from './components/cuestionamientos/cuestionamientos.component';
 import { CardOptionsComponent } from './components/card-options/card-options.component';
+=======
+import { OficinaEoComponent } from './components/oficina/oficina-eo/oficina-eo.component';
+import { DialogCanalPresDesOsiptelComponent } from './components/dialog/dialog-canal-pres-des-osiptel/dialog-canal-pres-des-osiptel.component';
+import { DescripcionCanalDialogComponent } from './components/canal-osiptel/descripcion-canal-dialog/descripcion-canal-dialog.component';
+import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-dialog.component';
+>>>>>>> bb37cfcfbbd0076186bc2e5a34b5f6ea9ccc97dc
 
 
 @NgModule({
@@ -70,14 +78,20 @@ import { CardOptionsComponent } from './components/card-options/card-options.com
     OficinaOsiptelComponent,
     CanalAtencionOsiptelComponent,
     CanalOsiptelComponent,
-    MapaOficinaComponent,
+    MapaDialogOficinaComponent,
     AutenticarComponent,
     FormDenunciaComponent,
     DialogCanalDesOsiptelComponent,
     DialogCanalDesEoComponent,
     OficinaEoComponent,
+<<<<<<< HEAD
     CuestionamientosComponent,
     CardOptionsComponent,
+=======
+    DialogCanalPresDesOsiptelComponent,
+    DescripcionCanalDialogComponent,
+    TituloDialogComponent,
+>>>>>>> bb37cfcfbbd0076186bc2e5a34b5f6ea9ccc97dc
 
   ],
   imports: [
@@ -106,6 +120,13 @@ import { CardOptionsComponent } from './components/card-options/card-options.com
     CdkStepperModule,
     NgxCaptchaModule,
     MatListModule,
+    MatDialogModule,
+    NgxMapboxGLModule.withConfig({
+      accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
+      // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
+    }),
+    MatRippleModule,
+    MatGridListModule,
     MatDialogModule,
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)

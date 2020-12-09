@@ -13,7 +13,7 @@ export interface Recurso {
     nombre: String;
 }
 
-export interface Materia{
+export interface Materia {
     id: String;
     nombre: String;
 }
@@ -25,3 +25,4 @@ export interface OficinaEo {
     ubicacion_latitud?: String,
     ubicacion_longitud?: String
 }
+

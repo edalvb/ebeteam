@@ -13,7 +13,7 @@ export interface OficinaOsiptel {
 }
 
 export interface CanalAtencionOsiptel {
-    nombre: String,
+    nombre: string,
     descripcion1?: String,
     descripcion2?: String,
     icono?: String

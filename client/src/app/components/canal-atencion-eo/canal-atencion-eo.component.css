@@ -4,5 +4,16 @@
 }
 
 .example-button-row .mat-button-base {
-    margin: 20px 10px 10px 0;
+    margin: 10px 10px 10px 0;
+  }
+
+mat-icon {
+height: 50px;
+width: 50px;
+}
+
+button {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
   }
