@@ -42,7 +42,7 @@ export class CanalAtencionEoComponent implements OnInit {
     iconRegistry.addSvgIcon(
       nombre,
       //bitel.svg
-      sanitizer.bypassSecurityTrustResourceUrl(`assets/img/${nombre}.svg`));
+      sanitizer.bypassSecurityTrustResourceUrl(`https://ebeteam.s3.us-east-2.amazonaws.com/assets/img/${nombre}.svg`));
   }
 
 }
