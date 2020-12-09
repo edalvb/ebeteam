@@ -51,6 +51,8 @@ import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form
 import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component';
 import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
 import { OficinaEoComponent } from './components/oficina-eo/oficina-eo.component';
+import { CuestionamientosComponent } from './components/cuestionamientos/cuestionamientos.component';
+import { CardOptionsComponent } from './components/card-options/card-options.component';
 
 
 @NgModule({
@@ -74,6 +76,8 @@ import { OficinaEoComponent } from './components/oficina-eo/oficina-eo.component
     DialogCanalDesOsiptelComponent,
     DialogCanalDesEoComponent,
     OficinaEoComponent,
+    CuestionamientosComponent,
+    CardOptionsComponent,
 
   ],
   imports: [
