@@ -1,18 +1,10 @@
 <h1 mat-dialog-title>Descripción de Canal de Atención OSIPTEL</h1>
 <div mat-dialog-content>
-    <mat-grid-list cols="3" rowHeight="3:1">
-        <mat-grid-tile>
-            <app-oficina-osiptel></app-oficina-osiptel>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <app-oficina-osiptel></app-oficina-osiptel>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <app-mapa-dialog-oficina style="width: 250px;height: 250px;display: inline-block;"></app-mapa-dialog-oficina>
-        </mat-grid-tile>
-    </mat-grid-list>
+    <app-oficina-osiptel></app-oficina-osiptel>
+    <app-oficina-osiptel></app-oficina-osiptel>
+    <app-mapa-dialog-oficina style="width: 250px;height: 250px;display: inline-block;"></app-mapa-dialog-oficina>
 </div>
 <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button>No Thanks</button>
     <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
 </div>
