@@ -1,6 +1,9 @@
 <mat-card class="conf-card">
     <mat-card-content>
-        <form>
+        
+        <mat-card-title>Verificar tu identidad</mat-card-title>
+        <mat-card-subtitle>Para brindarte el acceso a la información es necesario validar tu identidad.</mat-card-subtitle>
+        <form style="height: 65px;">
             <mat-form-field appearance="outline">
                 <mat-label>DNI</mat-label>
                 <input [(ngModel)]="persona_dni.dni" type="text" required matInput name="dni">
@@ -9,7 +12,14 @@
                 <mat-label>Cui</mat-label>
                 <input [(ngModel)]="persona_dni.cui" type="text" required matInput name="cui">
             </mat-form-field>
-            <button style="border-radius: 15px;" mat-raised-button color="primary"
+            <span class="info">
+                <mat-icon class="material-icons" color="accent">info</mat-icon>
+                <span class="capa">
+                    <img src="https://mesapartesvirtual.jne.gob.pe/dist/assets/imgs/digitodni.png">
+                </span>
+            </span>
+
+            <button style="border-radius: 15px; bottom: 10%;" mat-raised-button color="primary"
                 (click)="getpersona()">Siguiente</button>
         </form>
     </mat-card-content>

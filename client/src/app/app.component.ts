@@ -20,6 +20,7 @@ export class AppComponent {
     private breakpointObserver: BreakpointObserver,
     iconRegistry: MatIconRegistry, sanitizer: DomSanitizer
     /*private authService: AuthService*/) {
+    this.agregarIcono('osiptel', iconRegistry, sanitizer),
     this.agregarIcono('logo', iconRegistry, sanitizer)
   }
 

@@ -11,13 +11,7 @@ export class CuestionamientosComponent implements OnInit {
 
   confirm: boolean = false;
 
-  persona_dni: PersonaDni = {
-    cui: '',
-    dni: '',
-    first_name: '',
-    last_name: '',
-    name: ''
-  };
+  
   constructor( private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -27,11 +21,4 @@ export class CuestionamientosComponent implements OnInit {
     this.confirm = e;
   }
 
-  funPersona(e: any) {
-    this.persona_dni = e;
-  }
-
-  onCreate(){
-
-  }
 }
