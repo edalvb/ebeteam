@@ -12,12 +12,8 @@ import { RegistroUsuarioComponent } from './components/registro-usuario/registro
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    component: HomeComponent,
     pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: HomeComponent
   },
   {
     path: 'login',
