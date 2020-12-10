@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { PersonaDni } from 'src/app/modelo/persona';
 import { FormDenunciaComponent } from '../form-denuncia/form-denuncia.component';
 
 export interface PeriodicElement {
@@ -26,6 +27,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ScnDenunciasComponent implements OnInit {
   confirm: boolean = false;
+  persona_dni: PersonaDni = {
+    cui: '',
+    dni: '',
+    first_name: '',
+    last_name: '',
+    name: ''
+  };
+
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -44,12 +53,16 @@ export class ScnDenunciasComponent implements OnInit {
     this.confirm = e;
   }
 
+  funPersona(e: any) {
+    this.persona_dni = e;
+  }
+
   onCreate() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "60%";
-    this.dialog.open(FormDenunciaComponent);
+    const dialogRef = this.dialog.open(FormDenunciaComponent, {
+      disableClose: true,
+      data: { dni: this.persona_dni.dni, nombre: this.persona_dni.name, 
+        paterno: this.persona_dni.first_name, materno: this.persona_dni.last_name }
+    });
   }
 
 }

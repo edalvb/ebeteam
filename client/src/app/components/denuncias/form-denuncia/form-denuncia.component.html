@@ -5,19 +5,19 @@
         <form>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>DNI</mat-label>
-                <input type="text" required matInput value={{dni}}>
+                <input type="text" required matInput value={{persona.dni}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Nombre</mat-label>
-                <input type="text" required matInput value={{nombres}}>
+                <input type="text" required matInput value={{persona.nombre}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Apellido Paterno</mat-label>
-                <input required matInput type="text" value={{aP}}>
+                <input required matInput type="text" value={{persona.paterno}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Apellido Materno</mat-label>
-                <input required matInput type="text" value={{aM}}>
+                <input required matInput type="text" value={{persona.materno}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Celular</mat-label>
@@ -75,7 +75,7 @@
             </mat-form-field>
             <br>
             <mat-divider></mat-divider>
-            <button mat-raised-button color="accent">Cancelar</button>
+            <button mat-raised-button color="accent" (click)="onNoClick()">Cancelar</button>
             <button mat-raised-button color="primary">Enviar Denuncia</button>
         </form>
 

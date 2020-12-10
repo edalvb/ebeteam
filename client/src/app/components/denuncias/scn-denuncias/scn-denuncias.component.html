@@ -1,7 +1,8 @@
 <mat-card-title><a color="accent">GESTIONA TUS DENUNCIAS</a></mat-card-title>
 <mat-divider></mat-divider>
-<app-autenticar [link]="'/home'" (confirm)="funAlmacenar($event)" *ngIf = "!confirm"></app-autenticar>
-<mat-card class="content" *ngIf = "confirm">
+<app-autenticar [link]="'/home'" (setpersona)="funPersona($event)" (confirm)="funAlmacenar($event)" *ngIf="!confirm">
+</app-autenticar>
+<mat-card class="content" *ngIf="confirm">
     <button mat-raised-button style="float: left;" color="primary" (click)="onCreate()">Presenta tu Denuncia</button>
     <mat-form-field>
         <mat-label>Filtrar</mat-label>

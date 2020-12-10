@@ -1,5 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/denuncia';
+
+export interface DialogData {
+  nombre: String;
+  dni: String;
+  
+  paterno: String;
+  materno: String;
+}
 
 @Component({
   selector: 'app-form-denuncia',
@@ -8,11 +17,6 @@ import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/den
 })
 
 export class FormDenunciaComponent {
-  dni = '71193285';
-  nombres = 'Erik';
-  aP = 'Huaman';
-  aM = 'Guiop';
-
   eos: EmpresaOperadora[] = [
     {
       id: '1',
@@ -49,20 +53,20 @@ export class FormDenunciaComponent {
 
   mats: Materia[] = [
     {
-      id : '1',
-      nombre : 'Facturación'
+      id: '1',
+      nombre: 'Facturación'
     },
     {
-      id : '2',
-      nombre : 'Cobro del servicio'
+      id: '2',
+      nombre: 'Cobro del servicio'
     },
     {
-      id : '3',
-      nombre : 'Calidad o idoneidad en la prestación del servicio'
+      id: '3',
+      nombre: 'Calidad o idoneidad en la prestación del servicio'
     },
     {
-      id : '4',
-      nombre : 'Veracidad de la información brindada por la empresa operadora al usuario'
+      id: '4',
+      nombre: 'Veracidad de la información brindada por la empresa operadora al usuario'
     }
   ]
 
@@ -80,5 +84,11 @@ export class FormDenunciaComponent {
       nombre: 'Incumplimiento de aplicación de SAR'
     }
   ]
+  constructor(
+    public dialogRef: MatDialogRef<any>,
+    @Inject(MAT_DIALOG_DATA) public persona: DialogData) { }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
