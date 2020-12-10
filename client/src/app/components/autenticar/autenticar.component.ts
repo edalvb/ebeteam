@@ -19,12 +19,14 @@ export class AutenticarComponent {
 
   @Input('link') link = '/home';
   @Output() confirm = new EventEmitter;
+  @Output() setpersona =new EventEmitter;
 
   constructor(private persona: PersonaDniService, private _snackBar: MatSnackBar) { }
 
   getpersona() {
     this.persona.getPersonaDni(this.persona_dni.dni).subscribe((res: any) => {
       if (res.cui == this.persona_dni.cui) {
+        this.setpersona.emit(res);
         this.confirm.emit(true);
       } else {
         this.confirm.emit(false);

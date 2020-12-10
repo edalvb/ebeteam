@@ -1,0 +1,14 @@
+.section {
+  display: table;
+  padding-top: 10px;
+}
+
+.label {
+  display: table-cell;
+  font-size: x-large;
+  padding-left: 10px;
+}
+
+.l-row {
+  display: table-cell;
+}
