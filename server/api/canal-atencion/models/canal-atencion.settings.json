@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "canal_atencions",
+  "collectionName": "ca",
   "info": {
-    "name": "canal_atencion",
-    "description": ""
+    "name": "cate",
+    "description": "Canal de Atención"
   },
   "options": {
     "increments": true,
@@ -17,15 +17,15 @@
     },
     "orientacions": {
       "collection": "orientacion",
-      "via": "canal_atencion"
+      "via": "cate"
     },
-    "entidad_referencias": {
+    "enres": {
       "collection": "entidad-referencia",
-      "via": "canal_atencions"
+      "via": "cates"
     },
-    "categoria_solicituds": {
-      "via": "canal_atencions",
+    "casos": {
       "collection": "categoria-solicitud",
+      "via": "cates",
       "dominant": true
     }
   }

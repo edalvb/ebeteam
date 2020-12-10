@@ -15,7 +15,7 @@
       "type": "integer",
       "required": true
     },
-    "entidad_referencia": {
+    "enre": {
       "via": "orientacions",
       "model": "entidad-referencia"
     },
@@ -31,7 +31,7 @@
       "via": "orientacions",
       "model": "sede"
     },
-    "canal_atencion": {
+    "cate": {
       "via": "orientacions",
       "model": "canal-atencion"
     }

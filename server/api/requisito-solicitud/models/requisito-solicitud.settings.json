@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "requisito_solicituds",
+  "collectionName": "resos",
   "info": {
-    "name": "requisito_solicitud"
+    "name": "reso",
+    "description": "Requisito de Solicitud"
   },
   "options": {
     "increments": true,
@@ -14,8 +15,8 @@
       "type": "string",
       "required": true
     },
-    "categoria_solicituds": {
-      "via": "requisito_solicituds",
+    "casos": {
+      "via": "resos",
       "collection": "categoria-solicitud"
     }
   }
