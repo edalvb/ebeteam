@@ -48,6 +48,12 @@
     },
     "horario": {
       "type": "string"
+    },
+    "ubicacion_latitud": {
+      "type": "string"
+    },
+    "ubicacion_longitud": {
+      "type": "string"
     }
   }
 }

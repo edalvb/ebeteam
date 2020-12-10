@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "categoria_solicituds",
+  "collectionName": "casos",
   "info": {
-    "name": "categoria_solicitud",
-    "description": ""
+    "name": "caso",
+    "description": "Categoría de Solicitud"
   },
   "options": {
     "increments": true,
@@ -15,18 +15,18 @@
       "type": "string",
       "required": true
     },
-    "requisito_solicituds": {
+    "resos": {
       "collection": "requisito-solicitud",
-      "via": "categoria_solicituds",
+      "via": "casos",
       "dominant": true
     },
-    "canal_atencions": {
-      "collection": "canal-atencion",
-      "via": "categoria_solicituds"
+    "cates": {
+      "via": "casos",
+      "collection": "canal-atencion"
     },
-    "entidad_referencias": {
+    "enres": {
       "collection": "entidad-referencia",
-      "via": "categoria_solicituds",
+      "via": "casos",
       "dominant": true
     }
   }

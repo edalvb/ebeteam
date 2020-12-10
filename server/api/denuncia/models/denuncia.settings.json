@@ -32,7 +32,7 @@
       "model": "recurso-denuncia",
       "via": "denuncias"
     },
-    "entidad_referencia": {
+    "enre": {
       "via": "denuncias",
       "model": "entidad-referencia"
     },

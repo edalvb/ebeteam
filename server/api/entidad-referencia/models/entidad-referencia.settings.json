@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "entidad_referencias",
+  "collectionName": "enres",
   "info": {
-    "name": "entidad_referencia",
-    "description": ""
+    "name": "enre",
+    "description": "Entidad de Referencia"
   },
   "options": {
     "increments": true,
@@ -16,28 +16,28 @@
       "required": true
     },
     "centro_atencions": {
-      "collection": "centro-atencion",
-      "via": "entidad_referencia"
+      "via": "enre",
+      "collection": "centro-atencion"
     },
     "denuncias": {
       "collection": "denuncia",
-      "via": "entidad_referencia"
+      "via": "enre"
     },
     "orientacions": {
       "collection": "orientacion",
-      "via": "entidad_referencia"
+      "via": "enre"
     },
     "cuestionamientos": {
       "collection": "cuestionamiento",
-      "via": "entidad_referencia"
+      "via": "enre"
     },
-    "canal_atencions": {
-      "via": "entidad_referencias",
+    "cates": {
+      "via": "enres",
       "collection": "canal-atencion",
       "dominant": true
     },
-    "categoria_solicituds": {
-      "via": "entidad_referencias",
+    "casos": {
+      "via": "enres",
       "collection": "categoria-solicitud"
     }
   }

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "centro_atencions",
   "info": {
-    "name": "centro_atencion"
+    "name": "centro_atencion",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,13 +18,19 @@
     "direccion": {
       "type": "text"
     },
-    "entidad_referencia": {
-      "via": "centro_atencions",
-      "model": "entidad-referencia"
+    "enre": {
+      "model": "entidad-referencia",
+      "via": "centro_atencions"
     },
     "dia_atencion_centro_atencions": {
-      "via": "centro_atencion",
-      "collection": "dia-atencion-centro-atencion"
+      "collection": "dia-atencion-centro-atencion",
+      "via": "centro_atencion"
+    },
+    "ubicacion_latitud": {
+      "type": "string"
+    },
+    "ubicacion_longitud": {
+      "type": "string"
     }
   }
 }

@@ -12,8 +12,8 @@
   },
   "attributes": {
     "centro_atencion": {
-      "model": "centro-atencion",
-      "via": "dia_atencion_centro_atencions"
+      "via": "dia_atencion_centro_atencions",
+      "model": "centro-atencion"
     },
     "dia": {
       "type": "string",
