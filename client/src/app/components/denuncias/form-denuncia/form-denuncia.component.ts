@@ -8,11 +8,6 @@ import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/den
 })
 
 export class FormDenunciaComponent {
-  dni = '71193285';
-  nombres = 'Erik';
-  aP = 'Huaman';
-  aM = 'Guiop';
-
   eos: EmpresaOperadora[] = [
     {
       id: '1',
