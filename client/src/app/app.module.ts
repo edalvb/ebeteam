@@ -51,10 +51,15 @@ import { AutenticarComponent } from './components/autenticar/autenticar.componen
 import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
 import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component';
 import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
+
+import { CuestionamientosComponent } from './components/cuestionamientos/cuestionamientos.component';
+import { CardOptionsComponent } from './components/card-options/card-options.component';
+
 import { OficinaEoComponent } from './components/oficina/oficina-eo/oficina-eo.component';
 import { DialogCanalPresDesOsiptelComponent } from './components/dialog/dialog-canal-pres-des-osiptel/dialog-canal-pres-des-osiptel.component';
 import { DescripcionCanalDialogComponent } from './components/canal-osiptel/descripcion-canal-dialog/descripcion-canal-dialog.component';
 import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-dialog.component';
+
 
 
 @NgModule({
@@ -78,9 +83,14 @@ import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-
     DialogCanalDesOsiptelComponent,
     DialogCanalDesEoComponent,
     OficinaEoComponent,
+
+    CuestionamientosComponent,
+    CardOptionsComponent,
+
     DialogCanalPresDesOsiptelComponent,
     DescripcionCanalDialogComponent,
     TituloDialogComponent,
+
 
   ],
   imports: [

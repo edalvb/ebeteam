@@ -25,10 +25,13 @@
     "@angular/service-worker": "~11.0.1",
     "@apollo/client": "^3.0.0",
     "apollo-angular": "^2.1.0",
+    "bootstrap": "^5.0.0-beta1",
     "graphql": "^15.0.0",
+    "jquery": "^3.5.1",
     "mapbox-gl": "^1.13.0",
     "ngx-captcha": "^8.0.1",
     "ngx-mapbox-gl": "^4.8.1",
+    "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

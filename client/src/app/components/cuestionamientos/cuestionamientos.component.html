@@ -1,0 +1,6 @@
+<mat-card-title><a color="accent">GESTIONA TUS CUSTIONAMIENTOS</a></mat-card-title>
+<mat-divider></mat-divider>
+<app-autenticar (confirm)="funAlmacenar($event)" *ngIf = "!confirm"></app-autenticar>
+<mat-card class = "content" *ngIf="confirm">
+    <span>Cuestionamientos</span>
+</mat-card>

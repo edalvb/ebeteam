@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
+import { CardOptionsComponent } from './components/card-options/card-options.component';
+import { CuestionamientosComponent } from './components/cuestionamientos/cuestionamientos.component';
 import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
 
 import { HomeComponent } from './components/home/home.component';
@@ -33,7 +35,14 @@ const routes: Routes = [
     path: 'canal-osiptel',
     component: CanalOsiptelComponent
   },
-
+  {
+    path: 'cuestionamientos',
+    component: CuestionamientosComponent
+  },
+  {
+    path: 'cards',
+    component: CardOptionsComponent
+  },
 
 ];
 
