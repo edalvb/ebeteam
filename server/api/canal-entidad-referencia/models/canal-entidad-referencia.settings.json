@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "canal_entidad_referencias",
+  "info": {
+    "name": "canal_entidad_referencia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cate": {
+      "via": "canal_entidad_referencias",
+      "model": "canal-atencion"
+    },
+    "enre": {
+      "model": "entidad-referencia",
+      "via": "canal_entidad_referencias"
+    },
+    "descripcion1": {
+      "type": "text"
+    },
+    "descripcion2": {
+      "type": "text"
+    }
+  }
+}

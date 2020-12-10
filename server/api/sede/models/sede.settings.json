@@ -42,10 +42,6 @@
       "collection": "denuncia",
       "via": "sede"
     },
-    "orientacions": {
-      "collection": "orientacion",
-      "via": "sede"
-    },
     "horario": {
       "type": "string"
     },
@@ -54,6 +50,14 @@
     },
     "ubicacion_longitud": {
       "type": "string"
+    },
+    "canal_sedes": {
+      "via": "sede",
+      "collection": "canal-sede"
+    },
+    "orientacions": {
+      "via": "sede",
+      "collection": "orientacion"
     }
   }
 }
