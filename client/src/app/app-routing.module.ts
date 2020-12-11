@@ -35,10 +35,6 @@ const routes: Routes = [
     path: 'cuestionamientos',
     component: CuestionamientosComponent
   },
-  {
-    path: 'cards',
-    component: CardOptionsComponent
-  },
 
 ];
 
