@@ -2,12 +2,16 @@
 
 <mat-dialog-content class="mat-typography">
   <div style="display: table;">
-    <!-- <app-oficina-eo></app-oficina-eo> -->
-    <app-mapa-dialog-oficina style="width: 250px;height: 250px; display: table-cell; vertical-align: middle;">
-    </app-mapa-dialog-oficina>
+    <app-oficina-eo></app-oficina-eo>
+  </div>
+  <div>
+    <app-descripcion-eo style="display: inline-block;"></app-descripcion-eo>
+    <app-mapa-dialog-oficina style="width: 250px;height: 250px; display: inline-block;"></app-mapa-dialog-oficina>
   </div>
 </mat-dialog-content>
+
 <mat-dialog-actions align="end">
-  <button mat-button cdkFocusInitial [mat-dialog-close]="">Aceptar</button>
-  <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+  <button mat-icon-button [mat-dialog-close]="">
+    <mat-icon>west</mat-icon>
+  </button>
 </mat-dialog-actions>

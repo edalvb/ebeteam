@@ -59,6 +59,7 @@ import { OficinaEoComponent } from './components/oficina/oficina-eo/oficina-eo.c
 import { DialogCanalPresDesOsiptelComponent } from './components/dialog/dialog-canal-pres-des-osiptel/dialog-canal-pres-des-osiptel.component';
 import { DescripcionCanalDialogComponent } from './components/canal-osiptel/descripcion-canal-dialog/descripcion-canal-dialog.component';
 import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-dialog.component';
+import { DescripcionEoComponent } from './components/oficina/oficina-eo/descripcion-eo/descripcion-eo.component';
 
 
 
@@ -90,6 +91,7 @@ import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-
     DialogCanalPresDesOsiptelComponent,
     DescripcionCanalDialogComponent,
     TituloDialogComponent,
+    DescripcionEoComponent,
 
 
   ],

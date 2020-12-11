@@ -1,0 +1,13 @@
+<mat-card style="display: inline-block;">
+  <mat-list>
+    <div mat-subheader>Información</div>
+    <mat-list-item *ngFor="let eo of empresaoperadora">
+      <mat-icon mat-list-icon>room</mat-icon>
+      <div mat-line>{{eo.direccion}}</div>
+    </mat-list-item>
+    <mat-list-item *ngFor="let eo of empresaoperadora">
+      <mat-icon mat-list-icon>event_note</mat-icon>
+      <div mat-line>{{eo.horario}}</div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
