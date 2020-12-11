@@ -131,12 +131,6 @@ import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz
     }),
     MatRippleModule,
     MatGridListModule,
-    MatDialogModule,
-    NgxMapboxGLModule.withConfig({
-      accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
-      // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
-    }),
-    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

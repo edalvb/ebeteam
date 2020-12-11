@@ -5,7 +5,7 @@ import { HttpLink } from 'apollo-angular/http';
 import { InMemoryCache, ApolloLink } from '@apollo/client/core';
 import { setContext } from '@apollo/client/link/context';
 
-const uri = 'http://localhost/graphql';
+const uri = 'http://10.0.0.5:1337/graphql';
 
 export function createApollo(httpLink: HttpLink) {
   const basic = setContext((operation, context) => ({
