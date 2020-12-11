@@ -20,8 +20,8 @@
       "collection": "centro-atencion"
     },
     "denuncias": {
-      "collection": "denuncia",
-      "via": "enre"
+      "via": "enre",
+      "collection": "denuncia"
     },
     "cuestionamientos": {
       "via": "enre",
