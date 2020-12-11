@@ -1,6 +1,47 @@
-<mat-card-title><a color="accent">GESTIONA TUS CUSTIONAMIENTOS</a></mat-card-title>
-<mat-divider></mat-divider>
-<app-autenticar (confirm)="funAlmacenar($event)" *ngIf = "!confirm"></app-autenticar>
-<mat-card class = "content" *ngIf="confirm">
-    <span>Cuestionamientos</span>
+<mat-card class="container">
+    <mat-card-title>GESTIONA TUS CUESTIONAMIENTOS</mat-card-title>
+    <mat-divider></mat-divider>
+    <app-autenticar (setpersona)="funPersona($event)" (confirm)="funAlmacenar($event)" *ngIf="!confirm">
+    </app-autenticar>
+    
+        <mat-table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="confirm">
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="fecha">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> FECHA </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.fecha}} </mat-cell>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="imei">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> IMEI </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.imei}} </mat-cell>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="operadora">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> OPERADORA </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.operadora}} </mat-cell>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef> ACCION </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <button mat-icon-button>
+                        <mat-icon>launch</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <!--        <ng-container matColumnDef="noData">
+            <mat-footer-cell *matFooterCellDef colspan="6">
+                No hay datos.
+            </mat-footer-cell>
+        </ng-container>
+    -->
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            <!--        <mat-footer-row *matFooterRowDef="['noData']"></mat-footer-row>   -->
+        </mat-table>
 </mat-card>
