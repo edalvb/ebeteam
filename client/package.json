@@ -30,6 +30,7 @@
     "jquery": "^3.5.1",
     "mapbox-gl": "^1.13.0",
     "ngx-captcha": "^8.0.1",
+    "ngx-file-drop": "^10.1.1",
     "ngx-mapbox-gl": "^4.8.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",

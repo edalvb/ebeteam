@@ -5,19 +5,19 @@
         <form>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>DNI</mat-label>
-                <input type="text" required matInput value={{persona.dni}}>
+                <input type="text" disabled matInput value={{persona.dni}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Nombre</mat-label>
-                <input type="text" required matInput value={{persona.nombre}}>
+                <input type="text" disabled matInput value={{persona.nombre}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Apellido Paterno</mat-label>
-                <input required matInput type="text" value={{persona.paterno}}>
+                <input type="text" disabled matInput value={{persona.paterno}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Apellido Materno</mat-label>
-                <input required matInput type="text" value={{persona.materno}}>
+                <input type="text" disabled matInput value={{persona.materno}}>
             </mat-form-field>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Celular</mat-label>
@@ -40,7 +40,6 @@
                 <input required matInput type="text">
             </mat-form-field>
             <br>
-            <mat-divider></mat-divider>
             <mat-form-field appearance="outline" class="inpt">
                 <mat-label>Empresa Operadora</mat-label>
                 <mat-select>
@@ -73,8 +72,12 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
+            <mat-form-field appearance="outline" class="inpt">
+                <mat-label>Nro. de Resolución</mat-label>
+                <input required matInput type="text">
+            </mat-form-field>
+            <app-file-drop></app-file-drop>
             <br>
-            <mat-divider></mat-divider>
             <button mat-raised-button color="accent" (click)="onNoClick()">Cancelar</button>
             <button mat-raised-button color="primary">Enviar Denuncia</button>
         </form>
