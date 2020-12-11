@@ -39,8 +39,8 @@
       "type": "email"
     },
     "denuncias": {
-      "collection": "denuncia",
-      "via": "sede"
+      "via": "sede",
+      "collection": "denuncia"
     },
     "horario": {
       "type": "string"
