@@ -1,6 +1,6 @@
 ## VITEL
 
-INSERT INTO `ebeteam`.`centro_atencions` (`enre`, `distrito`, `direccion`, `horario`, `published_at`) VALUES
+INSERT INTO `centro_atencions` (`enre`, `distrito`, `direccion`, `horario`, `published_at`) VALUES
 ('8', '444', 'AV. MARISCAL CÁCERES NRO 1255', 'Lunes a Sábado y Feriado', '2020-12-11 08:50:00'),
 ('8', '444', 'JR. ASAMBLEA  NRO 348', 'Lunes a Sábado y Feriado', '2020-12-11 08:50:00'),
 ('8', '444', 'AV MARISCAL CASTILLA 276', 'Lunes a Sábado y Feriado', '2020-12-11 08:50:00'),
@@ -145,7 +145,7 @@ INSERT INTO `ebeteam`.`centro_atencions` (`enre`, `distrito`, `direccion`, `hora
 
 ## CLARO
 
-INSERT INTO `ebeteam`.`centro_atencions` (`enre`, `nombre`, `distrito`, `direccion`, `horario`, `published_at`) VALUES
+INSERT INTO `centro_atencions` (`enre`, `nombre`, `distrito`, `direccion`, `horario`, `published_at`) VALUES
 ('1', 'ACD  GRAN CHIMU CASCAS', '618', 'JR 22 DE OCTUBRE N° 636 - PLAZA DE ARMAS', 'De Lunes a viernes de: 09:00 - 13:00 / 15:00 - 19:00 y los sábados: 09:00 - 13:00', '2020-12-11 8:50:00'),
 ('1', 'ACD AGTEL CHEPEN', '1185', 'CA. CAJAMARCA 611 (FRENTE PLAZA DE ARMAS', 'De Lunes a viernes de: 09:00 - 19:00 y los sábados: 09:00 - 19:00', '2020-12-11 8:50:00'),
 ('1', 'ACD ANDAHUAYLAS COMVERZA I', '260', 'JR. RAMÓN CASTILLA 381', 'De Lunes a viernes de: 10:00 - 18:00 y los sábados: 10:00 - 18:00', '2020-12-11 8:50:00'),
@@ -269,4 +269,36 @@ INSERT INTO `ebeteam`.`centro_atencions` (`enre`, `nombre`, `distrito`, `direcci
 ('1', 'CAC TUMBES', '1845', 'CALLE PLAZA DE ARMAS N° 104', 'De Lunes a viernes de: 09:15 - 18:00 y los sábados: 09:15 - 13:00', '2020-12-11 8:50:00'),
 ('1', 'CAC UNICACHI', '1069', 'URB. PRO INDUSTRIAL AV. ALFREDO MENDIOLA 7026 Int.102', 'De Lunes a viernes de: 10:00 - 17:00 y los sábados: 10:00 - 17:00', '2020-12-11 8:50:00');
 
+
+
+## ENTEL
+
+INSERT INTO `ebeteam`.`centro_atencions` (`enre`, `nombre`, `distrito`, `direccion`, `horario`, `published_at`) VALUES
+('3', 'TPF TUMBES', '1845', 'AV. TUMBES 217. TUMBES', 'Lunes a Viernes de: 09:00 AM - 7:00 PM y Sábados de: 09:00 AM - 7:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF CERCADO', '1281', 'AV. PASEO DE LA REPÚBLICA 144. TIENDA 6', 'Lunes a Viernes de: 9:00 AM - 8:00 PM y Sábados de: 9:00 AM - 8:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF JOCKEY PLAZA', '1320', 'AV JAVIER PRADO ESTE 4200 CC JOCKEY PLAZA LOCATARIO 208 A1', 'Lunes a Viernes de: 10:00 AM - 8:00 PM y Sábados de: 10:00 AM - 8:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF MINKA', '690', 'CC MINKA  LOCAL 105 106 107', 'Lunes a Viernes de: 9:00 AM - 8:00 PM y Sábados de: 9:00 AM - 8:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF LA VICTORIA', '1248', 'AV. MANCO CAPAC 680 TIENDA 103', 'Lunes a Viernes de: 9:00 AM - 6:30 PM y Sábados de: 9:00 AM - 1:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF PLAZA SAN MIGUEL', '482', 'AV LA MARINA N°2000 LOCAL T321 322', 'Lunes a Viernes de: 09:00 AM - 8:00 PM y Sábados de: 09:00 AM - 8:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF OPEN ANGAMOS', '1321', 'AV. ANGAMOS ESTE N°2681 INTERIOR N° LC 25 - 26A', 'Lunes a Viernes de: 09:00 AM - 7:00 PM y Sábados de: 09:00 AM - 7:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF CHORRILLOS', '1288', 'CC PLAZA LIMA SUR: PROL. PASEO DE LA REPÚBLICA S/N', 'Lunes a Viernes de: 10:00 AM - 8:00 PM y Sábados de: 10:00 AM - 8:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP CHICLAYO', '1243', 'AV. LUIS GONZALES 245', 'Lunes a Viernes de: 9:00 AM - 7:00 PM y Sábados de: 9:00 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP CUSCO', '697', 'AV. EL SOL 449. TIENDA B. PISO 1', 'Lunes a Viernes de: 9:00 AM - 6:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP HUACHO', '1401', 'AV. GRAU 283 -285. LOCAL 28', 'Lunes a Viernes de: 8:30 AM - 6:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP HUANCAYO', '1036', 'AV. GIRÁLDEZ 347 ESQUINA JR. OMAR YALI 113 - 119', 'Lunes a Viernes de: 9:00 AM - 6:00 PM y Sábados de: 9:00 AM - 6:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP ILO', '1533', 'CALLE MOQUEGUA 529 – 533 – 535', 'Lunes a Viernes de: 9:00 AM - 6:00 PM y Sábados de: 9:00 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP JULIACA', '1718', 'JIRÓN CUZCO NO. 135. CIUDAD DE JULIACA', 'Lunes a Viernes de: 9:00 AM - 6:00 PM y Sábados de: 9:00 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP LARCO', '344', 'AV. LARCO 497. MIRAFLORES. LIMA', 'Lunes a Viernes de: 8:30 AM - 7:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TPF MEGA PLAZA', '89', 'AV ALFREDO MENDIOLA 3698. C. C. MEGA PLAZA', 'Lunes a Viernes de: 09:00 AM - 8:00 PM y Sábados de: 09:00 AM - 8:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP PIURA', '1565', 'AV. GRAU 429-443', 'Lunes a Viernes de: 8:30 AM - 7:00 PM y Sábados de: 9:00 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP REPUBLICA', '883', 'PASEO DE LA REPÚBLICA N° 3490', 'Lunes a Viernes de: 8:30 AM - 7:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP SAN BORJA', '1310', 'AV. AVIACIÓN 2647', 'Lunes a Viernes de: 8:30 AM - 7:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP SJ LURIGANCHO', '1312', 'AV PRÓCERES DE LA INDEPENDENCIA N°1677. 1679.  MZ T LT 3 URB. LAS FLORES DE LIMA', 'Lunes a Viernes de: 7:00 AM - 7:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP SJ MIRAFLORES', '1313', 'AV. SAN JUAN 899', 'Lunes a Viernes de: 8:30 AM - 7:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP TACNA', '1817', 'AV. SAN MARTÍN N°  465', 'Lunes a Viernes de: 9:00 AM - 6:00 PM y Sábados de: 9:00 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP TALARA', '1618', 'CALLE CENTRO CIVICO 241 - 342', 'Lunes a Viernes de: 9:00 AM - 7:00 PM y Sábados de: 9:00 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP AREQUIPA', '337', 'AV. EL EJERCITO 1001', 'Lunes a Viernes de: 8:30 AM - 5:00 PM y Sábados de: 8:30 - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP CHIMBOTE', '224', 'AV. FRANCISCO BOLOGNESI NO. 473', 'Lunes a Viernes de: 8:30 AM - 6:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP ICA', '993', 'CALLE SAN MARTÍN 570 URB. LAS MORALES. ICA', 'Lunes a Viernes de: 9:00 AM - 6:00 PM y Sábados de: 8:30 AM - 12:00 PM', '2020-12-11 08:50:00'),
+('3', 'TP TRUJILLO', '1160', 'AV. LARCO 780. URBANIZACIÓN SAN ANDRÉS', 'Lunes a Viernes de: 08:30 AM - 7:00 PM y Sábados de: 8:30 AM - 2:00 PM', '2020-12-11 08:50:00');
 

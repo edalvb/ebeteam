@@ -15,7 +15,7 @@ INSERT INTO `resultado_cuestionamientos` (`nombre`, `published_at`) VALUES
 ('No corresponde - se tiene por no elevado por falta de información', '2020-12-11 08:50:00');
 
 ## Tipo de Persona
-INSERT INTO `tipo_personas` (`nombre`, `published_at`) ('Natural', '2020-12-11 08:50:00'), ('Jurídica', '2020-12-11 08:50:00');
+INSERT INTO `tipo_personas` (`nombre`, `published_at`) VALUES ('Natural', '2020-12-11 08:50:00'), ('Jurídica', '2020-12-11 08:50:00');
 
 ## Tipo de Documento Legal
 INSERT INTO `tipo_documento_legals` (`nombre`, `cantidad_caracteres`, `published_at`) VALUES
