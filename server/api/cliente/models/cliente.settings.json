@@ -38,8 +38,8 @@
       "via": "cliente"
     },
     "distrito": {
-      "model": "distrito",
-      "via": "clientes"
+      "via": "clientes",
+      "model": "distrito"
     }
   }
 }
