@@ -24,8 +24,8 @@
       "via": "enre"
     },
     "cuestionamientos": {
-      "collection": "cuestionamiento",
-      "via": "enre"
+      "via": "enre",
+      "collection": "cuestionamiento"
     },
     "casos": {
       "via": "enres",

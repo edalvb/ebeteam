@@ -16,7 +16,7 @@
       "model": "centro-atencion"
     },
     "dia": {
-      "type": "string",
+      "type": "integer",
       "required": true
     },
     "inicio": {

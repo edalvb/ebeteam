@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "cuestionamientos",
   "info": {
-    "name": "cuestionamiento"
+    "name": "cuestionamiento",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,12 +11,24 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "carta_respuesta": {
-      "type": "string",
-      "required": true
+    "modalidad_ingreso": {
+      "model": "modalidad-ingreso",
+      "via": "cuestionamientos"
+    },
+    "celular": {
+      "model": "celular",
+      "via": "cuestionamientos"
+    },
+    "enre": {
+      "model": "entidad-referencia",
+      "via": "cuestionamientos"
     },
     "fecha_recepcion": {
       "type": "datetime",
+      "required": true
+    },
+    "carta_respuesta": {
+      "type": "string",
       "required": true
     },
     "fecha_respuesta": {
@@ -23,14 +36,6 @@
     },
     "plazo_solucion": {
       "type": "datetime"
-    },
-    "cliente": {
-      "model": "cliente",
-      "via": "cuestionamientos"
-    },
-    "modalidad_ingreso": {
-      "model": "modalidad-ingreso",
-      "via": "cuestionamientos"
     },
     "estado_cuentionamiento": {
       "model": "estado-cuentionamiento",
@@ -40,9 +45,16 @@
       "model": "resultado-cuestionamiento",
       "via": "cuestionamientos"
     },
-    "enre": {
-      "via": "cuestionamientos",
-      "model": "entidad-referencia"
+    "archivo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
