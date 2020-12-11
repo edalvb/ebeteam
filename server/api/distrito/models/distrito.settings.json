@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "distritos",
   "info": {
-    "name": "distrito"
+    "name": "distrito",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -20,13 +21,17 @@
       "type": "string",
       "required": true
     },
+    "capital": {
+      "type": "string",
+      "required": true
+    },
     "provincia": {
       "model": "provincia",
       "via": "distritos"
     },
     "clientes": {
-      "via": "distrito",
-      "collection": "cliente"
+      "collection": "cliente",
+      "via": "distrito"
     },
     "centro_atencions": {
       "via": "distrito",

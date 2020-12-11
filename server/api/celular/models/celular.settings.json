@@ -20,6 +20,10 @@
     },
     "imei": {
       "type": "string"
+    },
+    "cuestionamientos": {
+      "via": "celular",
+      "collection": "cuestionamiento"
     }
   }
 }

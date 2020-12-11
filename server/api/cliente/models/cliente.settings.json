@@ -38,12 +38,8 @@
       "via": "cliente"
     },
     "distrito": {
-      "model": "distrito",
-      "via": "clientes"
-    },
-    "cuestionamientos": {
-      "via": "cliente",
-      "collection": "cuestionamiento"
+      "via": "clientes",
+      "model": "distrito"
     }
   }
 }

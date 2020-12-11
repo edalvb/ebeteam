@@ -11,6 +11,13 @@
     "draftAndPublish": true
   },
   "attributes": {
+    "enre": {
+      "model": "entidad-referencia",
+      "via": "centro_atencions"
+    },
+    "nombre": {
+      "type": "string"
+    },
     "distrito": {
       "model": "distrito",
       "via": "centro_atencions"
@@ -18,13 +25,8 @@
     "direccion": {
       "type": "text"
     },
-    "enre": {
-      "model": "entidad-referencia",
-      "via": "centro_atencions"
-    },
-    "dia_atencion_centro_atencions": {
-      "collection": "dia-atencion-centro-atencion",
-      "via": "centro_atencion"
+    "horario": {
+      "type": "text"
     },
     "ubicacion_latitud": {
       "type": "string"

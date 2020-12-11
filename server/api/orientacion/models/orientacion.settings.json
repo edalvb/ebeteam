@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "orientacions",
   "info": {
-    "name": "orientacion",
-    "description": ""
+    "name": "orientacion"
   },
   "options": {
     "increments": true,
@@ -11,29 +10,31 @@
     "draftAndPublish": true
   },
   "attributes": {
+    "sede": {
+      "model": "sede",
+      "via": "orientacions"
+    },
     "mes": {
-      "type": "integer",
-      "required": true
+      "type": "biginteger"
+    },
+    "cate": {
+      "model": "canal-atencion",
+      "via": "orientacions"
     },
     "enre": {
-      "via": "orientacions",
-      "model": "entidad-referencia"
+      "model": "entidad-referencia",
+      "via": "orientacions"
     },
     "servicio": {
       "model": "servicio",
       "via": "orientacions"
     },
-    "tema_general_orientacion": {
-      "model": "tema-general-orientacion",
-      "via": "orientacions"
+    "tema_general": {
+      "type": "text",
+      "required": true
     },
-    "sede": {
-      "via": "orientacions",
-      "model": "sede"
-    },
-    "cate": {
-      "via": "orientacions",
-      "model": "canal-atencion"
+    "cantidad_orientacion": {
+      "type": "biginteger"
     }
   }
 }

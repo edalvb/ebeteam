@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/dia-atencion-sedes",
-      "handler": "dia-atencion-sede.find",
+      "path": "/canal-sedes",
+      "handler": "canal-sede.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/dia-atencion-sedes/count",
-      "handler": "dia-atencion-sede.count",
+      "path": "/canal-sedes/count",
+      "handler": "canal-sede.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/dia-atencion-sedes/:id",
-      "handler": "dia-atencion-sede.findOne",
+      "path": "/canal-sedes/:id",
+      "handler": "canal-sede.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/dia-atencion-sedes",
-      "handler": "dia-atencion-sede.create",
+      "path": "/canal-sedes",
+      "handler": "canal-sede.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/dia-atencion-sedes/:id",
-      "handler": "dia-atencion-sede.update",
+      "path": "/canal-sedes/:id",
+      "handler": "canal-sede.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/dia-atencion-sedes/:id",
-      "handler": "dia-atencion-sede.delete",
+      "path": "/canal-sedes/:id",
+      "handler": "canal-sede.delete",
       "config": {
         "policies": []
       }

@@ -15,18 +15,22 @@
       "type": "string",
       "required": true
     },
-    "orientacions": {
-      "collection": "orientacion",
-      "via": "cate"
-    },
-    "enres": {
-      "collection": "entidad-referencia",
-      "via": "cates"
-    },
     "casos": {
       "collection": "categoria-solicitud",
       "via": "cates",
       "dominant": true
+    },
+    "canal_entidad_referencias": {
+      "collection": "canal-entidad-referencia",
+      "via": "cate"
+    },
+    "canal_sedes": {
+      "via": "cate",
+      "collection": "canal-sede"
+    },
+    "orientacions": {
+      "via": "cate",
+      "collection": "orientacion"
     }
   }
 }

@@ -23,22 +23,21 @@
       "collection": "denuncia",
       "via": "enre"
     },
-    "orientacions": {
-      "collection": "orientacion",
-      "via": "enre"
-    },
     "cuestionamientos": {
-      "collection": "cuestionamiento",
-      "via": "enre"
-    },
-    "cates": {
-      "via": "enres",
-      "collection": "canal-atencion",
-      "dominant": true
+      "via": "enre",
+      "collection": "cuestionamiento"
     },
     "casos": {
       "via": "enres",
       "collection": "categoria-solicitud"
+    },
+    "canal_entidad_referencias": {
+      "via": "enre",
+      "collection": "canal-entidad-referencia"
+    },
+    "orientacions": {
+      "via": "enre",
+      "collection": "orientacion"
     }
   }
 }
