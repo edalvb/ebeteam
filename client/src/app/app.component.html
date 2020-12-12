@@ -19,7 +19,7 @@
         <mat-nav-list>
             <mat-list>
 
-                <mat-list-item [routerLink]="['/home']">
+                <mat-list-item [routerLink]="['/']">
                     <mat-icon mat-list-icon>home</mat-icon>
                     <div mat-line>Home</div>
                 </mat-list-item>
@@ -32,7 +32,7 @@
                     <div mat-line>Denuncias</div>
                 </mat-list-item>
 
-                <mat-list-item>
+                <mat-list-item  [routerLink]="['/cuestionamientos']">
                     <mat-icon mat-list-icon>phonelink_lock</mat-icon>
                     <div mat-line>Cuestionamientos</div>
                 </mat-list-item>
@@ -44,7 +44,7 @@
                     <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
                     <div mat-line>OSIPTEL</div>
                 </mat-list-item>
-                <mat-list-item>
+                <mat-list-item [routerLink]="['/canal-atencion-eo']">
                     <mat-icon mat-list-icon>support_agent</mat-icon>
                     <div mat-line>Empresas Operadoras</div>
                 </mat-list-item>
@@ -87,7 +87,7 @@
     </mat-sidenav-content>
 
 </mat-sidenav-container>
-<div [ngSwitch]="child">
+<!-- <div [ngSwitch]="child">
     <div *ngSwitchCase="1">
         <app-nav-principal (setOption)="funChild($event)"></app-nav-principal>
     </div>
@@ -98,4 +98,4 @@
         <app-panel-control (setOption)="funChild($event)"></app-panel-control>
     </div>
 
-</div>
+</div> -->
