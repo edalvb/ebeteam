@@ -1,21 +1,32 @@
-<mat-card class="canales-card">
-  <mat-card-header>
-    <mat-card-title>Canales de Atención </mat-card-title>
-    <mat-card-subtitle>EMPRESAS OPERADORAS</mat-card-subtitle>
-  </mat-card-header>
+<div style="display: flex; align-items: start;" >
 
-  <mat-card-content>
-    <section>
-      <div class="example-button-row">
-        <div class="example-flex-container">
-          <div class="example-button-container" *ngFor="let canal of canales">
-            <button mat-icon-button [routerLink]="['/dialog-canal-des-eo']">
-              <mat-icon svgIcon="{{canal.icono}}"></mat-icon>
-            </button>
+  <mat-card style="width: 18%; height: 90%;">
+
+    <mat-card-header>
+      <mat-card-title>Canales de Atención </mat-card-title>
+      <mat-card-subtitle>EMPRESAS OPERADORAS</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <section>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container" *ngFor="let canal of canales">
+              <button mat-icon-button [routerLink]="['/dialog-canal-des-eo']">
+                <mat-icon svgIcon="{{canal.icono}}"></mat-icon>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </mat-card-content>
 
-  </mat-card-content>
-</mat-card>
+  </mat-card>
+
+  <mat-card style="width: 82%; height: 90%;">
+
+    <app-dialog-canal-des-eo></app-dialog-canal-des-eo>
+
+  </mat-card>
+
+</div>

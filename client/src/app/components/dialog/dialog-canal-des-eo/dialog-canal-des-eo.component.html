@@ -2,21 +2,15 @@
 
   <app-titulo-dialog [titulo]="'Movistar'" [imagen]="'/assets/img/movistar.svg'"></app-titulo-dialog>
 
-  <mat-card style="padding: 5px;">
-    <h2 class="example-h2" style="margin-bottom: 0px; padding: 4px;">!Comunícate con Nosotros!</h2>
-    <mat-card-content class="atencion">
+  <h2 class="example-h2" style="margin-bottom: 0px; padding: 4px;">!Comunícate con Nosotros!</h2>
+  <mat-card-content class="atencion">
+    <app-card-atencion-eo></app-card-atencion-eo>
+  </mat-card-content>
 
-      <app-card-atencion-eo></app-card-atencion-eo>
+  <mat-card-content>
+    <app-oficina-eo></app-oficina-eo>
+  </mat-card-content>
 
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="result">
-    <mat-card-content>
-      <h2 class="example-h2">Ubicación</h2>
-      <app-oficina-eo></app-oficina-eo>
-    </mat-card-content>
-  </mat-card>
 
   <mat-dialog-content class="mat-typography" style="padding-top: 10px;">
     <div>
@@ -25,10 +19,10 @@
     </div>
   </mat-dialog-content>
 
-  <mat-dialog-actions align="end">
-    <button mat-icon-button [mat-dialog-close]="">
-      <mat-icon>west</mat-icon>
-    </button>
-  </mat-dialog-actions>
+  <!-- <mat-dialog-actions align="end">
+  <button mat-icon-button [mat-dialog-close]="">
+    <mat-icon>west</mat-icon>
+  </button>
+</mat-dialog-actions> -->
 
 </div>
