@@ -40,6 +40,10 @@
     "distrito": {
       "via": "clientes",
       "model": "distrito"
+    },
+    "denuncias": {
+      "via": "cliente",
+      "collection": "denuncia"
     }
   }
 }
