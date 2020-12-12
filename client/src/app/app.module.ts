@@ -21,6 +21,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatRippleModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatSortModule} from '@angular/material/sort';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -39,7 +40,6 @@ import { LoginComponent } from './components/login/login.component';
 import { CanalAtencionEoComponent } from './components/canal-atencion-eo/canal-atencion-eo.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { AssistantComponent } from './components/assistant/assistant.component';
-import { ScnDenunciasComponent } from './components/denuncias/scn-denuncias/scn-denuncias.component';
 import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
@@ -52,6 +52,7 @@ import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form
 import { DialogCanalDesOsiptelComponent } from './components/dialog/dialog-canal-des-osiptel/dialog-canal-des-osiptel.component';
 import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
 
+
 import { CuestionamientosComponent } from './components/cuestionamientos/cuestionamientos.component';
 import { CardOptionsComponent } from './components/card-options/card-options.component';
 
@@ -60,7 +61,11 @@ import { DialogCanalPresDesOsiptelComponent } from './components/dialog/dialog-c
 import { DescripcionCanalDialogComponent } from './components/canal-osiptel/descripcion-canal-dialog/descripcion-canal-dialog.component';
 import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-dialog.component';
 import { DescripcionEoComponent } from './components/oficina/oficina-eo/descripcion-eo/descripcion-eo.component';
+import { CardAtencionEoComponent } from './components/oficina/oficina-eo/card-atencion-eo/card-atencion-eo.component';
 
+import { NgxFileDropModule } from 'ngx-file-drop';
+import { FileDropComponent } from './components/file-drop/file-drop.component';
+import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz-osiptel.component';
 
 
 @NgModule({
@@ -72,7 +77,6 @@ import { DescripcionEoComponent } from './components/oficina/oficina-eo/descripc
     CanalAtencionEoComponent,
     DenunciasComponent,
     AssistantComponent,
-    ScnDenunciasComponent,
     StepRegistroComponent,
     MonitoreoPaginaComponent,
     OficinaOsiptelComponent,
@@ -92,6 +96,9 @@ import { DescripcionEoComponent } from './components/oficina/oficina-eo/descripc
     DescripcionCanalDialogComponent,
     TituloDialogComponent,
     DescripcionEoComponent,
+    CardAtencionEoComponent,
+    FileDropComponent,
+    InterfazOsiptelComponent,
 
 
   ],
@@ -122,6 +129,8 @@ import { DescripcionEoComponent } from './components/oficina/oficina-eo/descripc
     NgxCaptchaModule,
     MatListModule,
     MatDialogModule,
+    MatSortModule,
+    NgxFileDropModule,
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
       // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)

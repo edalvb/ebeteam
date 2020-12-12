@@ -5,7 +5,7 @@ import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/den
 export interface DialogData {
   nombre: String;
   dni: String;
-  
+
   paterno: String;
   materno: String;
 }
