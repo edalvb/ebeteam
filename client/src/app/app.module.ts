@@ -25,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -72,6 +73,9 @@ import { PanelControlComponent } from './panel-control/panel-control.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavPrincipalComponent } from './nav-principal/nav-principal.component';
 import { InboxComponent } from './components/panel-content/inbox/inbox.component';
+import { DenTableComponent } from './components/panel-content/scn-denuncia/den-table/den-table.component';
+import { RegDenunciaComponent } from './components/panel-content/scn-denuncia/reg-denuncia/reg-denuncia.component';
+import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/scn-denuncia.component';
 
 
 @NgModule({
@@ -107,6 +111,9 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
     PanelControlComponent,
     NavPrincipalComponent,
     InboxComponent,
+    DenTableComponent,
+    RegDenunciaComponent,
+    ScnDenunciaComponent,
 
 
   ],
@@ -141,6 +148,7 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
     MatMenuModule,
     MatBadgeModule,
     NgxFileDropModule,
+    MatPaginatorModule,
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
       // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
