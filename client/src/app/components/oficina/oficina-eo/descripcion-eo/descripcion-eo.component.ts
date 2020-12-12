@@ -9,7 +9,7 @@ import { Apollo } from 'apollo-angular';
 })
 export class DescripcionEoComponent implements OnDestroy, OnChanges {
   @Input('idEO') idEO = 0;
-  @Input('idEO') idDist = 0;
+  @Input('idDist') idDist = 0;
 
   centros_atencion: any;
 

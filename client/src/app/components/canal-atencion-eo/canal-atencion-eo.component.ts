@@ -42,7 +42,6 @@ export class CanalAtencionEoComponent implements OnInit {
   agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       nombre,
-      //bitel.svg
       sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
   }
 
@@ -52,6 +51,7 @@ export class CanalAtencionEoComponent implements OnInit {
       disableClose: true,
       width: '900px',
       height: '500px',
+
     });
 
   }

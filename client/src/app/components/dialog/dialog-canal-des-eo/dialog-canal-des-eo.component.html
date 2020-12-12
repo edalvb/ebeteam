@@ -12,13 +12,13 @@
 <mat-card class="result">
   <mat-card-content>
     <h2 class="example-h2">Ubicación</h2>
-    <app-oficina-eo></app-oficina-eo>
+    <app-oficina-eo (idDistrito)="getDistrito($event)"></app-oficina-eo>
   </mat-card-content>
 </mat-card>
 
 <mat-dialog-content class="mat-typography" style="padding-top: 10px;">
   <div>
-    <app-descripcion-eo style="display: inline-block;"></app-descripcion-eo>
+    <app-descripcion-eo [idEO]="this.idEO" [idDist]="this.idDistro" style="display: inline-block;"></app-descripcion-eo>
     <app-mapa-dialog-oficina style="width: 250px;height: 250px; display: inline-block;"></app-mapa-dialog-oficina>
   </div>
 </mat-dialog-content>
