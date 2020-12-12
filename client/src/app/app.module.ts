@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Angular Material
+import { MatNativeDateModule } from "@angular/material/core";
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,6 +27,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -76,6 +79,7 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
 import { DenTableComponent } from './components/panel-content/scn-denuncia/den-table/den-table.component';
 import { RegDenunciaComponent } from './components/panel-content/scn-denuncia/reg-denuncia/reg-denuncia.component';
 import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/scn-denuncia.component';
+import { SelectUbicacionComponent } from './components/select-ubicacion/select-ubicacion.component';
 
 
 @NgModule({
@@ -114,6 +118,7 @@ import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/sc
     DenTableComponent,
     RegDenunciaComponent,
     ScnDenunciaComponent,
+    SelectUbicacionComponent,
 
 
   ],
@@ -157,7 +162,9 @@ import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/sc
     MatGridListModule,
     MatDialogModule,
     LayoutModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],
