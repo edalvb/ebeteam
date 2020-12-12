@@ -49,7 +49,8 @@ export class CanalAtencionEoComponent implements OnInit {
   openDialog(): void {
 
     this.dialog.open(DialogCanalDesEoComponent, {
-      width: '600px',
+      disableClose: true,
+      width: '900px',
       height: '500px',
     });
 

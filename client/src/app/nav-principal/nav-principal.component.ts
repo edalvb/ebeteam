@@ -1,32 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, Output, EventEmitter } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-// import { AuthService } from "./services/auth.service";
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-nav-principal',
+  templateUrl: './nav-principal.component.html',
+  styleUrls: ['./nav-principal.component.css']
 })
-export class AppComponent {
-  public child = "1";
+export class NavPrincipalComponent {
 
-  cambiaTema: boolean = false;
+  @Output() setOption = new EventEmitter;
+
+  cambia: boolean = false;
   url = 'https://img.ecartelera.com/noticias/57100/57138-m.jpg';
 
+  @HostBinding('class') componentCssClass: any;
+  
   constructor(
+    public overlayContainer: OverlayContainer ,
     private breakpointObserver: BreakpointObserver,
     iconRegistry: MatIconRegistry, sanitizer: DomSanitizer
     /*private authService: AuthService*/) {
     this.agregarIcono('osiptel', iconRegistry, sanitizer),
-      this.agregarIcono('logo', iconRegistry, sanitizer)
-  }
-
-  funChild(e: any) {
-    this.child = e;
+    this.agregarIcono('logo', iconRegistry, sanitizer)
   }
 
   agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
@@ -41,9 +41,6 @@ export class AppComponent {
     };
   }
 
-  cambia(e: any) {
-    this.cambiaTema = e;
-  }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -52,16 +49,23 @@ export class AppComponent {
     );
 
   accede() {
+    this.setOption.emit('2');
     // return this.authService.acceder()
   }
 
-  cerrarSesion() {
-    // this.authService.cerrarSesion();
+  public onSetTheme(){
+    if(this.cambia==false){
+      this.cambia=!this.cambia;
+      this.overlayContainer.getContainerElement().classList.add('temadark');
+    this.componentCssClass = 'temadark';
+    }
+    else{
+      this.cambia=!this.cambia;
+      this.overlayContainer.getContainerElement().classList.add('temaLight');
+    this.componentCssClass = 'temaLight';
+    }
+    
   }
-
-  cambiarTema() {
-    this.cambiaTema = !this.cambiaTema;
-  }
-
 
 }
+

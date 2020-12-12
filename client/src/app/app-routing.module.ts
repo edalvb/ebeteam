@@ -44,7 +44,6 @@ const routes: Routes = [
     path: 'canal-atencion-eo',
     component: CanalAtencionEoComponent
   },
-
 ];
 
 @NgModule({

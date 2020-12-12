@@ -1,0 +1,37 @@
+<mat-card style="display: inline-block;" style="margin: auto;">
+
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let eo of empresaoperadora">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{eo.direccion}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-list>
+        <mat-list-item class="canal-list-item" *ngIf="eo.direccion">
+          <mat-icon mat-list-icon>location_on</mat-icon>
+          <div mat-line class="canal-mat-line">{{eo.direccion}}</div>
+        </mat-list-item>
+
+        <!-- <mat-list-item class="canal-list-item" *ngIf="eo.telefono">
+          <mat-icon mat-list-icon>location_on</mat-icon>
+          <div mat-line class="canal-mat-line">{{eo.telefono}}</div>
+        </mat-list-item>
+
+        <mat-list-item class="canal-list-item" *ngIf="eo.web">
+          <mat-icon mat-list-icon>location_on</mat-icon>
+          <div mat-line class="canal-mat-line">{{eo.web}}</div>
+        </mat-list-item> -->
+
+        <mat-list-item class="canal-list-item" *ngIf="eo.horario">
+          <mat-icon mat-list-icon>access_time</mat-icon>
+          <div mat-line class="canal-mat-line">{{eo.horario}}</div>
+        </mat-list-item>
+      </mat-list>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</mat-card>
