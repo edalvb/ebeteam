@@ -15,7 +15,17 @@ export class DescripcionEoComponent implements OnInit {
 
   empresaoperadora: EmpresaOperadora[] = [
     {
+      departamento:'LAMBAYEQUE',
+      provincia: 'CHICLAYO',
+      distrito: 'CHICLAYO',
       direccion: 'CALLE ANDRÉS AVELINO CÁCERES 222 LC -148',
+      horario: 'Lunes a Sábado',
+    },
+    {
+      departamento:'LAMBAYEQUE',
+      provincia: 'CHICLAYO',
+      distrito: 'CHICLAYO',
+      direccion: 'CALLE ARICA N°1046',
       horario: 'Lunes a Sábado',
     },
   ];

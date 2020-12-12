@@ -1,9 +1,22 @@
 <app-titulo-dialog [titulo]="'Movistar'" [imagen]="'/assets/img/movistar.svg'"></app-titulo-dialog>
 
-<mat-dialog-content class="mat-typography">
-  <div style="display: table;">
+<mat-card style="padding: 4px;">
+  <h2 class="example-h2" style="margin-bottom: 0px; padding: 4px;">!Comunícate con Nosotros!</h2>
+  <mat-card-content class="atencion">
+
+    <app-card-atencion-eo></app-card-atencion-eo>
+
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="result">
+  <mat-card-content>
+    <h2 class="example-h2">Ubicación</h2>
     <app-oficina-eo></app-oficina-eo>
-  </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-dialog-content class="mat-typography" style="padding-top: 10px;">
   <div>
     <app-descripcion-eo style="display: inline-block;"></app-descripcion-eo>
     <app-mapa-dialog-oficina style="width: 250px;height: 250px; display: inline-block;"></app-mapa-dialog-oficina>
@@ -15,3 +28,4 @@
     <mat-icon>west</mat-icon>
   </button>
 </mat-dialog-actions>
+

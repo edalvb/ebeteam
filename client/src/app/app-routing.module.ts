@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.component';
 import { CuestionamientosComponent } from './components/cuestionamientos/cuestionamientos.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
+import { CanalAtencionEoComponent } from './components/canal-atencion-eo/canal-atencion-eo.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz-osiptel.component';
@@ -39,7 +40,10 @@ const routes: Routes = [
     path: 'osiptel',
     component: InterfazOsiptelComponent
   },
-
+  {
+    path: 'canal-atencion-eo',
+    component: CanalAtencionEoComponent
+  },
 ];
 
 @NgModule({
