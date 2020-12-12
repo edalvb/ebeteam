@@ -6,14 +6,10 @@
     </app-autenticar>
     <div *ngIf="confirm">
         <div style="height: 10px;"></div>
-        <button mat-raised-button style="float: left;" color="primary" (click)="onCreate()">Presenta tu
-            Denuncia</button>
-        <div style="height: 10px;"></div>
         <mat-form-field>
             <mat-label>Filtrar</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Ej. claro" #input>
         </mat-form-field>
-
         <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
 
             <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
@@ -33,35 +29,26 @@
             <ng-container>
                 <th class="_det"> Materia </th>
                 <td> {{element.materia}}</td>
+
             </ng-container>
             <ng-container>
                 <th class="_det"> Recurso </th>
                 <td> {{element.recurso}}</td>
             </ng-container>
-
-
     </div>
     </div>
     </td>
     </ng-container>
-
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
         [class.expanded-row]="expandedElement === element"
-        (click)="expandedElement = expandedElement === element ? null : element">
-    </tr>
+        (click)="expandedElement = expandedElement === element ? null : element"></tr>
     <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
-    <!-- Row shown when there is no matching data. -->
-
-
     <!-- Row shown when there is no matching data. -->
     <tr class="mat-row" *matNoDataRow>
         <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
     </tr>
     </table>
-<<<<<<< HEAD
+
     </div>
 </mat-card>
-=======
-</mat-card>
->>>>>>> 395454ce2362b72d34408874523e9e34957e1dc1

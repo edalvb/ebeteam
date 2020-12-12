@@ -140,7 +140,6 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
     }),
     MatRippleModule,
     MatGridListModule,
-<<<<<<< HEAD
     MatDialogModule,
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
@@ -148,8 +147,6 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
     }),
     MatRippleModule,
     LayoutModule
-=======
->>>>>>> 395454ce2362b72d34408874523e9e34957e1dc1
   ],
   providers: [],
   bootstrap: [AppComponent],

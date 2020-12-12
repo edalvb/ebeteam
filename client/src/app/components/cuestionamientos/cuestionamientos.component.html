@@ -22,21 +22,22 @@
                     <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
                         <div class="element-description row">
                             <ng-container>
-                                <th class="_det"> Estado </th>
-                                <td> {{element.estado}} </td>
-                            </ng-container>
-                        </div>
-                    </div>
-                </td>
+                <th class="_det"> Estado </th>
+                <td> {{element.estado}} </td>
             </ng-container>
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row" [class.expanded-row]="expandedElement === element"
+    </div>
+    </div>
+    </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
+        [class.expanded-row]="expandedElement === element"
         (click)="expandedElement = expandedElement === element ? null : element"></tr>
-        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
-        <!-- Row shown when there is no matching data. -->
-        <tr class="mat-row" *matNoDataRow> 
-            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-        </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
     </table>
     </div>
 </mat-card>

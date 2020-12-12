@@ -24,6 +24,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
     servicio: 'Servicios empaquetados',
     materia: 'Derechos reconocidos',
     estado: 'CONCLUIDO'
+  },
+  {
+    fecha: '08/01/2019',
+    denuncia: '001-2019-LN/DEN',
+    operadora: 'TELEFÓNICA DEL PERÚ S.A.A.',
+    recurso: 'Incumplimiento de resolución de primera instancia',
+    servicio: 'Servicios empaquetados',
+    materia: 'Derechos reconocidos',
+    estado: 'CONCLUIDO'
   }
 ];
 
