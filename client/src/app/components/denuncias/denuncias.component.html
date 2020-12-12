@@ -1,54 +1,69 @@
 <mat-card class="container">
-    <mat-card-title>GESTIONA TUS DENUNCIAS</mat-card-title>
-    <mat-divider></mat-divider>
-    <app-autenticar [link]="'/home'" (setpersona)="funPersona($event)" (confirm)="funAlmacenar($event)"
-        *ngIf="!confirm">
-    </app-autenticar>
-    <div *ngIf="confirm">
-        <div style="height: 10px;"></div>
-        <mat-form-field>
-            <mat-label>Filtrar</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Ej. claro" #input>
-        </mat-form-field>
-        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
 
-            <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
-                <th mat-header-cell *matHeaderCellDef class="_header"> {{column}} </th>
-                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-            </ng-container>
+  <mat-card-title>GESTIONA TUS DENUNCIAS</mat-card-title>
 
-            <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
-            <ng-container matColumnDef="expandedDetail">
-                <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
-                    <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-                        <div class="element-description row">
-                            <ng-container>
-                <th class="_det"> Servicio </th>
-                <td> {{element.servicio}} </td>
-            </ng-container>
-            <ng-container>
-                <th class="_det"> Materia </th>
-                <td> {{element.materia}}</td>
+  <mat-divider></mat-divider>
 
-            </ng-container>
-            <ng-container>
-                <th class="_det"> Recurso </th>
-                <td> {{element.recurso}}</td>
-            </ng-container>
+  <app-autenticar [link]="'/home'" (setpersona)="funPersona($event)" (confirm)="funAlmacenar($event)"
+    *ngIf="!this.estaLogueado()">
+  </app-autenticar>
+
+  <div *ngIf="this.estaLogueado()">
+
+    <div style="height: 10px;"></div>
+
+    <div align="center">
+      <mat-form-field appearance="outline" style="max-width: 300px;">
+        <mat-label>Buscar</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Escribe aquí" #input>
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+      <button [routerLink]="'/denuncias/nuevo'" mat-mini-fab color="primary" matTooltip="Añadir Responsable"
+        aria-label="Boton que crea un Responsable">
+        <mat-icon>add</mat-icon>
+      </button>
     </div>
-    </div>
-    </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
-        [class.expanded-row]="expandedElement === element"
-        (click)="expandedElement = expandedElement === element ? null : element"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
-    <!-- Row shown when there is no matching data. -->
-    <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-    </tr>
-    </table>
 
-    </div>
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+
+      <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef class="_header"> {{column}} </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      </ng-container>
+
+      <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+      <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+          <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+            <div class="element-description row">
+              <ng-container>
+        <th class="_det"> Servicio </th>
+        <td> {{element.servicio}} </td>
+      </ng-container>
+      <ng-container>
+        <th class="_det"> Materia </th>
+        <td> {{element.materia}}</td>
+
+      </ng-container>
+      <ng-container>
+        <th class="_det"> Recurso </th>
+        <td> {{element.recurso}}</td>
+      </ng-container>
+  </div>
+  </div>
+  </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
+    [class.expanded-row]="expandedElement === element"
+    (click)="expandedElement = expandedElement === element ? null : element"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+  <!-- Row shown when there is no matching data. -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
+  </table>
+
+  </div>
 </mat-card>

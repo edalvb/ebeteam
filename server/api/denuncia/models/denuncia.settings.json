@@ -15,27 +15,22 @@
       "type": "string",
       "required": true
     },
-    "fecha_recepcion": {
-      "type": "datetime",
-      "required": true
-    },
-    "fecha_solucion": {
-      "type": "datetime"
-    },
-    "plazo_solucion": {
-      "type": "datetime"
+    "recurso_denuncia": {
+      "model": "recurso-denuncia",
+      "via": "denuncias"
     },
     "cliente": {
       "model": "cliente",
       "via": "denuncias"
     },
-    "sede": {
-      "model": "sede",
-      "via": "denuncias"
+    "direccion": {
+      "type": "string"
     },
-    "recurso_denuncia": {
-      "model": "recurso-denuncia",
-      "via": "denuncias"
+    "celular": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
     },
     "enre": {
       "model": "entidad-referencia",
@@ -45,13 +40,29 @@
       "model": "servicio",
       "via": "denuncias"
     },
-    "estado_denuncia": {
-      "model": "estado-denuncia",
-      "via": "denuncias"
+    "numero_servicio_contrato": {
+      "type": "string"
     },
-    "materia_denuncia": {
-      "model": "materia-denuncia",
-      "via": "denuncias"
+    "numero_expediente_trasu": {
+      "type": "string"
+    },
+    "fecha_resolucion_trasu": {
+      "type": "date"
+    },
+    "numero_resolucion_eo": {
+      "type": "string"
+    },
+    "fecha_resolucion_eo": {
+      "type": "date"
+    },
+    "fecha_sar": {
+      "type": "date"
+    },
+    "fecha_sara": {
+      "type": "date"
+    },
+    "fundamento": {
+      "type": "text"
     },
     "archivo": {
       "collection": "file",
@@ -63,6 +74,55 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "fecha_recepcion": {
+      "type": "datetime",
+      "required": true
+    },
+    "plazo_solucion": {
+      "type": "datetime"
+    },
+    "sede": {
+      "model": "sede",
+      "via": "denuncias"
+    },
+    "materia_denuncia": {
+      "model": "materia-denuncia",
+      "via": "denuncias"
+    },
+    "medios_probatorios": {
+      "type": "text"
+    },
+    "observacion_gpsu_god": {
+      "type": "text"
+    },
+    "estado_denuncia": {
+      "model": "estado-denuncia",
+      "via": "denuncias"
+    },
+    "fecha_derivacion_sttrasu": {
+      "type": "date"
+    },
+    "responsable_gpsu_god": {
+      "type": "string"
+    },
+    "firma_gpsu_god": {
+      "type": "boolean"
+    },
+    "cumplio_sttrasu": {
+      "type": "boolean"
+    },
+    "observacion_sttrasu": {
+      "type": "text"
+    },
+    "responsable_sttrasu": {
+      "type": "string"
+    },
+    "firma_sttrasu": {
+      "type": "boolean"
+    },
+    "fecha_solucion": {
+      "type": "datetime"
     }
   }
 }
