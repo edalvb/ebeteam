@@ -110,7 +110,9 @@ INSERT INTO `enres` (`nombre`, `published_at`) VALUES
 ('CABLE NORTE S.A.C.', '2020-12-11 08:50:00'),
 ('CABLE ORIENTE S.A', '2020-12-11 08:50:00'),
 ('MICROSYSTEM NET COMUNICACIONES E.I.R.L.', '2020-12-11 08:50:00'),
-('USUARIO', '2020-12-11 08:50:00');
+('USUARIO', '2020-12-11 08:50:00'),
+('OPTICAL TECHNOLOGIES SAC', '2020-12-11 08:50:00'),
+('STAR GLOBAL COM ', '2020-12-11 08:50:00');
 
 
 ## SERVICIOS
@@ -131,7 +133,7 @@ INSERT INTO `servicios` (`nombre`, `published_at`) VALUES
 
 ## ORIENTACIONES
 
-INSERT INTO `ebeteam`.`orientacions` (`sede`, `mes`, `cate`, `enre`, `servicio`, `tema_general`, `cantidad_orientacion`, `published_at`) VALUES
+INSERT INTO `orientacions` (`sede`, `mes`, `cate`, `enre`, `servicio`, `tema_general`, `cantidad_orientacion`, `published_at`) VALUES
 ('1', '1', '1', '1', '1', 'Procedimiento de reclamo', '0', '2020-12-11 08:50:00'),
 ('1', '1', '1', '2', '2', 'Usuario remite información adicional/ solicitada', '0', '2020-12-11 08:50:00'),
 ('1', '1', '1', '2', '3', 'Atención de la empresa', '0', '2020-12-11 08:50:00'),

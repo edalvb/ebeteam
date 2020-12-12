@@ -2,8 +2,8 @@
   <mat-dialog-content class="contenedor">
     <mat-form-field appearance="outline">
       <mat-label>Selecciona Departamento</mat-label>
-      <mat-select>
-        <mat-option value="d.id" *ngFor="let de of departamentos">
+      <mat-select (selectionChange)="this.getProvincias()" [(ngModel)]="this.idDepa">
+        <mat-option *ngFor="let de of departamentos" [value]="de.id">
           {{de.nombre}}
         </mat-option>
       </mat-select>
@@ -11,8 +11,8 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Selecciona Provincia</mat-label>
-      <mat-select>
-        <mat-option value="d.id" *ngFor="let p of provincias">
+      <mat-select (selectionChange)="this.getDistritos()" [(ngModel)]="this.idProv">
+        <mat-option *ngFor="let p of provincias" [value]="p.id">
           {{p.nombre}}
         </mat-option>
       </mat-select>
@@ -20,9 +20,9 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Selecciona Distrito</mat-label>
-      <mat-select>
-        <mat-option value="d.id" *ngFor="let d of distritos">
-          {{d.nombre}}<ng-container></ng-container>
+      <mat-select (selectionChange)="this.getCentrosAtencion()" [(ngModel)]="this.idDist">
+        <mat-option *ngFor="let d of distritos" [value]="d.id">
+          {{d.nombre}}
         </mat-option>
       </mat-select>
     </mat-form-field>
