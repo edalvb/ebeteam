@@ -9,11 +9,11 @@
       <div style="height: 40px;"></div>
       <mat-list-item (click)="funChild('1')">
         <div mat-line class="_but">Bandeja de Entrada</div>
-        <mat-icon class="_ico" matBadge="15" matBadgeColor="accent">inbox</mat-icon>
+        <mat-icon class="_ico" matBadge="{{badgeInbox}}" matBadgeColor="accent">inbox</mat-icon>
       </mat-list-item>
       <mat-list-item (click)="funChild('2')">
         <div mat-line class="_but">Denuncias</div>
-        <mat-icon class="_ico">gavel</mat-icon>
+        <mat-icon class="_ico" matBadge="{{badgeDen}}" matBadgeColor="accent">gavel</mat-icon>
       </mat-list-item>
       <mat-list-item (click)="funChild('3')">
         <div mat-line class="_but">Cuestionamientos</div>
@@ -58,10 +58,10 @@
     </mat-toolbar>
     <div [ngSwitch]="child">
       <div *ngSwitchCase="1">
-        <app-inbox></app-inbox>
+        <app-inbox (porleer)="newsLeer($event)"></app-inbox>
       </div>
       <div *ngSwitchCase="2">
-        <mat-card-title>Denuncias</mat-card-title>
+        <app-scn-denuncia ></app-scn-denuncia>
       </div>
       <div *ngSwitchCase="3">
         <mat-card-title>Cuestionamientos</mat-card-title>

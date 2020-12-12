@@ -6,43 +6,31 @@
       [pageSizeOptions]="[10, 15, 20, 50]">
   </mat-paginator>
     <table mat-table class="full-width-table" matSort aria-label="Elements">
-
-        <ng-container matColumnDef="reg">
-            <th mat-header-cell *matHeaderCellDef></th>
-            <td mat-cell *matCellDef="let row">
-                <button mat-icon-button aria-label="Hola">
-                    <mat-icon color="primary">check_box</mat-icon>
-                </button>
-                <button mat-icon-button>
-                    <mat-icon>star_border</mat-icon>
-                </button>
-            </td>
-        </ng-container>
     
         <ng-container matColumnDef="denuncia">
-            <th mat-header-cell *matHeaderCellDef></th>
+            <th mat-header-cell *matHeaderCellDef>servicio</th>
             <td mat-cell *matCellDef="let row"> {{row.denuncia}} </td>
         </ng-container>
     
         <ng-container matColumnDef="operadora">
-            <th mat-header-cell *matHeaderCellDef></th>
+            <th mat-header-cell *matHeaderCellDef>servicio</th>
             <td mat-cell *matCellDef="let row"> {{row.operadora}} </td>
         </ng-container>
     
         <ng-container matColumnDef="servicio">
-            <th mat-header-cell *matHeaderCellDef></th>
+            <th mat-header-cell *matHeaderCellDef>servicio</th>
             <td mat-cell *matCellDef="let row"> {{row.servicio}} </td>
         </ng-container>
     
         <ng-container matColumnDef="fecha">
-            <th mat-header-cell *matHeaderCellDef></th>
+            <th mat-header-cell *matHeaderCellDef>fecha</th>
             <td mat-cell *matCellDef="let row"> {{row.fecha}} </td>
         </ng-container>
 
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let row">
-                <button mat-icon-button aria-label="Hola">
+                <button mat-icon-button >
                     <mat-icon color="accent">launch</mat-icon>
                 </button>
             </td>

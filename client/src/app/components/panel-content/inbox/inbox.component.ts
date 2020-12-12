@@ -1,51 +1,33 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { animate, state, style, transition, trigger } from '@angular/animations';
-
-export interface Inbox {
-  fecha: string;
-  denuncia: string;
-  operadora: string;
-  recurso: string;
-  servicio: string;
-  materia: string;
-  estado: string;
-}
-
-const ELEMENT_DATA: Inbox[] = [
-  {
-    fecha: '08/01/2019',
-    denuncia: '001-2019-LN/DEN',
-    operadora: 'TELEFÓNICA DEL PERÚ S.A.A.',
-    recurso: 'Incumplimiento de resolución de primera instancia',
-    servicio: 'Servicios empaquetados',
-    materia: 'Derechos reconocidos',
-    estado: 'CONCLUIDO'
-  }
-];
+import { AfterViewInit, Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
+import { InboxTableDataSource, InboxItem } from './inbox-table-datasource';
 
 @Component({
   selector: 'app-inbox',
   templateUrl: './inbox.component.html',
-  styleUrls: ['./inbox.component.css'],
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
+  styleUrls: ['./inbox.component.css']
 })
-export class InboxComponent implements OnInit {
+export class InboxComponent implements AfterViewInit, OnInit {
 
-  constructor() { }
+  @Output() porleer = new EventEmitter;
 
-  ngOnInit(): void {
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatTable) table!: MatTable<InboxItem>;
+  dataSource!: InboxTableDataSource;
+  
+  displayedColumns = ['reg', 'denuncia', 'operadora', 'servicio', 'fecha','actions'];
+
+  ngOnInit() {
+    this.dataSource = new InboxTableDataSource();
+    this.porleer.emit(this.dataSource.data.length);
   }
 
-  panelOpenState = false;
-  displayedColumns: string[] = ['fecha', 'denuncia', 'operadora', 'estado'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
-  expandedElement!: Inbox | null;
-
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+    this.table.dataSource = this.dataSource;
+  }
 }

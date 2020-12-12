@@ -18,6 +18,9 @@ export class PanelControlComponent {
   @HostBinding('class') componentCssClass: any;
 
   hidden = false;
+  badgeDen: any;
+  badgeInbox: any;
+  badgeCuest: any;
 
   toggleBadgeVisibility() {
     this.hidden = !this.hidden;
@@ -52,6 +55,18 @@ export class PanelControlComponent {
   }
   funChild(e: any){
     this.child=e;
+  }
+
+  newsLeer(e: any){
+    this.badgeInbox=e;
+  }
+
+  newsCuest(e: any){
+    this.badgeCuest=e;
+  }
+
+  newsDen(e: any){
+    this.badgeDen=e;
   }
   
   cerrarSesion() {

@@ -1,8 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+import { MatIconRegistry } from '@angular/material/icon';
 
 import { map } from "rxjs/operators";
+import { DomSanitizer } from '@angular/platform-browser';
 
 const LOGIN = gql`
   mutation loguear(
@@ -27,8 +29,16 @@ const LOGIN = gql`
 export class LoginComponent implements OnInit {
 
   @Output() setOption = new EventEmitter;
+
+  constructor(private apollo: Apollo, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    this.agregarIcono('osiptel-v', iconRegistry, sanitizer)
+  }
   
-  constructor(private apollo: Apollo) { }
+  agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      nombre,
+      sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
+  }
 
   ngOnInit(): void {
   }
@@ -46,11 +56,11 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  cancel(){
+  cancel() {
     this.setOption.emit('1');
   }
 
-  logup(){
+  logup() {
     this.setOption.emit('3');
   }
 
