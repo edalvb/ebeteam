@@ -4,6 +4,7 @@ import { CanalOsiptelComponent } from './components/canal-osiptel/canal-osiptel.
 import { CuestionamientosComponent } from './components/cuestionamientos/cuestionamientos.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { CanalAtencionEoComponent } from './components/canal-atencion-eo/canal-atencion-eo.component';
+import { DialogCanalDesEoComponent } from './components/dialog/dialog-canal-des-eo/dialog-canal-des-eo.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz-osiptel.component';
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'canal-atencion-eo',
     component: CanalAtencionEoComponent
+  },
+  {
+    path: 'dialog-canal-des-eo',
+    component: DialogCanalDesEoComponent
   },
 ];
 

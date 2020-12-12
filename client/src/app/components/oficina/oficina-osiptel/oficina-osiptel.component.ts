@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import * as ubicacionQL from "../../../graphql/ubicacion";
-import * as sedeQL from "../../../graphql/sede";
+import * as osiptelQL from "../../../graphql/osiptel";
 import { Apollo } from 'apollo-angular';
 import { Subscription } from 'rxjs';
 
@@ -34,9 +34,8 @@ export class OficinaOsiptelComponent implements OnDestroy {
   }
 
   getSedes() {
-    console.log(this.idDepa)
     this.qSubSede = this.apollo.watchQuery({
-      query: sedeQL.GET_SEDES_X_DEPARTAMENTO,
+      query: osiptelQL.GET_SEDES_X_DEPARTAMENTO,
       variables: {
         ide: this.idDepa
       }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dialog-canal-des-eo',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialog-canal-des-eo.component.css']
 })
 export class DialogCanalDesEoComponent implements OnInit {
+  @Input('idEO') idEO: any;
+
+  idDistro: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  getDistrito(e: any) {
+    this.idDistro = e;
+  }
+
 
 }
