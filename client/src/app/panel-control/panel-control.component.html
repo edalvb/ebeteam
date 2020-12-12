@@ -1,0 +1,78 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="text-align: center;">
+      <mat-icon svgIcon="osiptel-v" style="width: 200px; height: 100%;"></mat-icon>
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-divider></mat-divider>
+      <div style="height: 40px;"></div>
+      <mat-list-item (click)="funChild('1')">
+        <div mat-line class="_but">Bandeja de Entrada</div>
+        <mat-icon class="_ico" matBadge="15" matBadgeColor="accent">inbox</mat-icon>
+      </mat-list-item>
+      <mat-list-item (click)="funChild('2')">
+        <div mat-line class="_but">Denuncias</div>
+        <mat-icon class="_ico">gavel</mat-icon>
+      </mat-list-item>
+      <mat-list-item (click)="funChild('3')">
+        <div mat-line class="_but">Cuestionamientos</div>
+        <mat-icon class="_ico">phonelink_lock</mat-icon>
+      </mat-list-item>
+      <mat-list-item (click)="funChild('4')">
+        <div mat-line class="_but">Atención y Orientación</div>
+        <mat-icon class="_ico">support_agent</mat-icon>
+      </mat-list-item>
+      <div style="height: 100px;"></div>
+      <mat-divider></mat-divider>
+      <mat-list-item (click)="funChild('5')" disabled>
+        <div mat-line class="_but">Super Usuario</div>
+        <mat-icon class="_ico">admin_panel_settings</mat-icon>
+      </mat-list-item>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <button mat-icon-button class="material-icons" aria-label="Cambiar tema" (click)="onSetTheme()">
+        <mat-icon>invert_colors</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item disabled>
+          <mat-icon>create</mat-icon>
+          <span>Editar Perfil</span>
+        </button>
+        <button mat-menu-item (click)="cerrarSesion()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Cerrar Cesión</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+    <div [ngSwitch]="child">
+      <div *ngSwitchCase="1">
+        <app-inbox></app-inbox>
+      </div>
+      <div *ngSwitchCase="2">
+        <mat-card-title>Denuncias</mat-card-title>
+      </div>
+      <div *ngSwitchCase="3">
+        <mat-card-title>Cuestionamientos</mat-card-title>
+      </div>
+      <div *ngSwitchCase="4">
+        <mat-card-title>Atención y Orientación</mat-card-title>
+      </div>
+      <div></div>
+      <div *ngSwitchCase="5">
+        <mat-card-title>Super Usuario</mat-card-title>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

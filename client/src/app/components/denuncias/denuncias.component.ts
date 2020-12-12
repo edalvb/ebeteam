@@ -1,13 +1,13 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { PersonaDni } from 'src/app/modelo/persona';
-import {animate, state, style, transition, trigger} from '@angular/animations';
 import { FormDenunciaComponent } from './form-denuncia/form-denuncia.component';
 
 export interface PeriodicElement {
   fecha: string;
-  ndenuncia: string;
+  denuncia: string;
   operadora: string;
   recurso: string;
   servicio: string;
@@ -18,7 +18,7 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     fecha: '08/01/2019',
-    ndenuncia: '001-2019-LN/DEN',
+    denuncia: '001-2019-LN/DEN',
     operadora: 'TELEFÓNICA DEL PERÚ S.A.A.',
     recurso: 'Incumplimiento de resolución de primera instancia',
     servicio: 'Servicios empaquetados',
@@ -57,9 +57,8 @@ export class DenunciasComponent implements OnInit {
   }
 
   panelOpenState = false;
-  displayedColumns: string[] = ['fecha', 'ndenuncia', 'operadora', 'estado'];
+  displayedColumns: string[] = ['fecha', 'denuncia', 'operadora', 'estado'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-  columnsToDisplay = ['fecha', 'ndenuncia', 'operadora', 'estado'];
   expandedElement!: PeriodicElement | null;
 
   applyFilter(event: Event) {
@@ -77,8 +76,8 @@ export class DenunciasComponent implements OnInit {
 
   onCreate() {
     const dialogRef = this.dialog.open(FormDenunciaComponent, {
-      width: '100%',
-      height: '90%',
+      width: "100%",
+      height: "100%",
       disableClose: true,
       data: {
         dni: this.persona_dni.dni, nombre: this.persona_dni.name,

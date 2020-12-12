@@ -1,10 +1,4 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material/icon';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-// import { AuthService } from "./services/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -12,51 +6,9 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public child = "1";
 
-  cambiaTema: boolean = false;
-  url = 'https://img.ecartelera.com/noticias/57100/57138-m.jpg';
-
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    iconRegistry: MatIconRegistry, sanitizer: DomSanitizer
-    /*private authService: AuthService*/) {
-    this.agregarIcono('osiptel', iconRegistry, sanitizer),
-    this.agregarIcono('logo', iconRegistry, sanitizer)
+  funChild(e: any){
+    this.child=e;
   }
-
-  agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      nombre,
-      sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
-  }
-
-  setStyles() {
-    return {
-      'background-image': `url(${this.url})`
-    };
-  }
-
-  cambia(e: any) {
-    this.cambiaTema = e;
-  }
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-  accede() {
-    // return this.authService.acceder()
-  }
-
-  cerrarSesion() {
-    // this.authService.cerrarSesion();
-  }
-
-  cambiarTema() {
-    this.cambiaTema = !this.cambiaTema;
-  }
-
-
 }

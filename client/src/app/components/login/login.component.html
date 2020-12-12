@@ -11,10 +11,11 @@
             <mat-label>Contraseña</mat-label>
             <input #contrasena matInput placeholder="Contraseña" type="password">
         </mat-form-field>
-        <button style="border-radius: 15px;" (click)="login(usuario.value, contrasena.value)" mat-raised-button
+        <button style="border-radius: 15px;" (click)="logup()" mat-raised-button
             color="primary">Ingresar</button>
         <br>
-        <button mat-button color="primary" style="margin-top: 20px;" routerLink="/registro">Crear una cuenta</button>
+        <button style="border-radius: 15px; margin-top: 20px;" (click)="cancel()" mat-raised-button
+            color="accent">Cancelar</button>
     </mat-card>
 
 </div>

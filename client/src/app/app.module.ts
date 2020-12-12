@@ -22,6 +22,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatRippleModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatSortModule} from '@angular/material/sort';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -39,7 +41,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CanalAtencionEoComponent } from './components/canal-atencion-eo/canal-atencion-eo.component';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
-import { AssistantComponent } from './components/assistant/assistant.component';
 import { StepRegistroComponent } from './components/registro-usuario/step-registro/step-registro.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { MonitoreoPaginaComponent } from './components/monitoreo-pagina/monitoreo-pagina.component';
@@ -62,6 +63,10 @@ import { TituloDialogComponent } from './components/dialog/titulo-dialog/titulo-
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { FileDropComponent } from './components/file-drop/file-drop.component';
 import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz-osiptel.component';
+import { PanelControlComponent } from './panel-control/panel-control.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavPrincipalComponent } from './nav-principal/nav-principal.component';
+import { InboxComponent } from './components/panel-content/inbox/inbox.component';
 
 
 @NgModule({
@@ -72,7 +77,6 @@ import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz
     LoginComponent,
     CanalAtencionEoComponent,
     DenunciasComponent,
-    AssistantComponent,
     StepRegistroComponent,
     MonitoreoPaginaComponent,
     OficinaOsiptelComponent,
@@ -93,6 +97,9 @@ import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz
     TituloDialogComponent,
     FileDropComponent,
     InterfazOsiptelComponent,
+    PanelControlComponent,
+    NavPrincipalComponent,
+    InboxComponent,
 
 
   ],
@@ -124,6 +131,8 @@ import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz
     MatListModule,
     MatDialogModule,
     MatSortModule,
+    MatMenuModule,
+    MatBadgeModule,
     NgxFileDropModule,
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
@@ -136,7 +145,8 @@ import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz
       accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
       // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
     }),
-    MatRippleModule
+    MatRippleModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
