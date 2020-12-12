@@ -42,8 +42,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./denuncias.component.css'],
   animations: [
     trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
       transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
     ]),
   ],
@@ -59,10 +59,11 @@ export class DenunciasComponent implements OnInit {
     last_name: '',
     name: ''
   };
-  
+
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.estaLogueado();
   }
 
   panelOpenState = false;
@@ -86,13 +87,19 @@ export class DenunciasComponent implements OnInit {
   onCreate() {
     const dialogRef = this.dialog.open(FormDenunciaComponent, {
       width: "100%",
-      height: "100%",
+      height: "max-content",
       disableClose: true,
       data: {
-        dni: this.persona_dni.dni, nombre: this.persona_dni.name,
-        paterno: this.persona_dni.first_name, materno: this.persona_dni.last_name
+        dni: this.persona_dni.dni,
+        nombre: this.persona_dni.name,
+        paterno: this.persona_dni.first_name,
+        materno: this.persona_dni.last_name
       }
     });
+  }
+
+  estaLogueado(): boolean {
+    return sessionStorage.getItem('usuario') != null;
   }
 
 }

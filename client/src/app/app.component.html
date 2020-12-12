@@ -1,5 +1,4 @@
-<div style="height: 100%;">
-  <ng-container [ngSwitch]="child">
+<ng-container [ngSwitch]="child">
     <ng-container *ngSwitchCase="1">
       <app-nav-principal (setOption)="funChild($event)"></app-nav-principal>
     </ng-container>
@@ -11,4 +10,3 @@
     </ng-container>
 
   </ng-container>
-</div>

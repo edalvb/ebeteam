@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz-osiptel.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
+import { FormDenunciaComponent } from './components/denuncias/form-denuncia/form-denuncia.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'denuncias',
     component: DenunciasComponent
+  },
+  {
+    path: 'denuncias/nuevo',
+    component: FormDenunciaComponent
   },
   {
     path: 'canal-osiptel',

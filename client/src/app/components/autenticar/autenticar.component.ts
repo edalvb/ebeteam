@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { PersonaDni } from '../../modelo/persona';
 import { PersonaDniService } from '../../servicio/persona-dni.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-autenticar',
@@ -19,13 +20,14 @@ export class AutenticarComponent {
 
   @Input('link') link = '/home';
   @Output() confirm = new EventEmitter;
-  @Output() setpersona =new EventEmitter;
+  @Output() setpersona = new EventEmitter;
 
   constructor(private persona: PersonaDniService, private _snackBar: MatSnackBar) { }
 
   getpersona() {
     this.persona.getPersonaDni(this.persona_dni.dni).subscribe((res: any) => {
       if (res.cui == this.persona_dni.cui) {
+        sessionStorage.setItem('usuario', JSON.stringify(res));
         this.setpersona.emit(res);
         this.confirm.emit(true);
       } else {
