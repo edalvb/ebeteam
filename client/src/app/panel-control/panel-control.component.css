@@ -1,0 +1,66 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+  padding: 5px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+mat-card-title{
+  text-align: center;
+}
+
+.icono-principal{
+  width: 100%;
+  font-size: 100px; 
+  text-align: center;
+}
+
+.example-button-container {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  justify-content: center;
+}
+
+.example-container {
+  max-width: 400px;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  position: fixed;
+  bottom: 75px;
+  right: 35px;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  border: 2px solid green;
+  background-color: rgb(222, 233, 201);
+  border-radius: 20px;
+}
+
+.contenedor{
+  height: 100%;
+}

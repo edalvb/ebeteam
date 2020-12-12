@@ -8,7 +8,9 @@
   display: inline-block;
   max-width: 70%;
 }
-
+mat-card-title{
+  font-size: 22px;
+}
 .title {
   font-size: 18px;
   text-transform: uppercase;

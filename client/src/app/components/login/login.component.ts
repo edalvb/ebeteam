@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 
@@ -26,6 +26,8 @@ const LOGIN = gql`
 })
 export class LoginComponent implements OnInit {
 
+  @Output() setOption = new EventEmitter;
+  
   constructor(private apollo: Apollo) { }
 
   ngOnInit(): void {
@@ -42,6 +44,14 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token', `${res.data.login.jwt}`);
       console.log(localStorage.getItem('token'));
     });
+  }
+
+  cancel(){
+    this.setOption.emit('1');
+  }
+
+  logup(){
+    this.setOption.emit('3');
   }
 
 }
