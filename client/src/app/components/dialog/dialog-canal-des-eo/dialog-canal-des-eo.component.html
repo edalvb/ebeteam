@@ -10,29 +10,30 @@
   <mat-card-content>
     <app-oficina-eo></app-oficina-eo>
   </mat-card-content>
-<div class="row">
-  <mat-card class="col-lg-3">
-    <mat-card-content>
-      <h2 class="example-h2">Ubicación</h2>
-      <app-select-ubicacion (idDistrito)="getDistrito($event)"></app-select-ubicacion>
-    </mat-card-content>
-  </mat-card>
+  <div class="row">
+    <mat-card class="col-lg-3">
+      <mat-card-content>
+        <h2 class="example-h2">Ubicación</h2>
+        <app-select-ubicacion (idDistrito)="getDistrito($event)"></app-select-ubicacion>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card class="col-lg-9 row" >
-    <div class="col-lg-12 row">
-      <app-descripcion-eo [idDist]="idDistro" class="col-lg-6"  style="height: 100%; display: inline-block;"></app-descripcion-eo>
-      <app-mapa-dialog-oficina class="col-lg-6" style="margin-right: 0px; width: 300px; height: 300px; display: inline-block;"></app-mapa-dialog-oficina>
+    <div class="col-lg-7">
+      <div class="row">
+        <app-descripcion-eo [idDist]="idDistro" class="col-lg-6" style="height: 300px; display: inline-block;">
+        </app-descripcion-eo>
+        <app-mapa-dialog-oficina class="col-lg-5"
+          style="margin-right: 0px; width: 250px; height: 300px; display: inline-block;"></app-mapa-dialog-oficina>
+      </div>
     </div>
-  </mat-card>
 
-  <!-- <mat-dialog-actions align="end">
+    <!-- <mat-dialog-actions align="end">
   <button mat-icon-button [mat-dialog-close]="">
     <mat-icon>west</mat-icon>
   </button>
 </mat-dialog-actions> -->
 
-</div>
+  </div>
 
 
 </div>
-  
