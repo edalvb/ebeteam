@@ -8,6 +8,7 @@ export interface PeriodicElement {
   imei: string;
   operadora: string;
   estado: string;
+  descripcion: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -15,13 +16,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
     fecha: '19/08/2020',
     imei: '13254664544453435',
     operadora: 'Movistar',
-    estado: 'ATENDIDO'
+    estado: 'ATENDIDO',
+    descripcion: 'Su terminal será desbloqueado'
   },
   {
     fecha: '10/08/2020',
     imei: '03254664544453435',
     operadora: 'Claro',
-    estado: 'EN TRAMITE'
+    estado: 'EN TRAMITE',
+    descripcion: 'Su cuestionamiento está siendo revisado'
   }
 ];
 
@@ -50,7 +53,7 @@ export class CuestionamientosComponent {
   };
   displayedColumns: string[] = ['fecha', 'imei', 'operadora'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-  expandedElement!: PeriodicElement | null;
+  expandedElement!: PeriodicElement;
 
 
   applyFilter(event: Event) {

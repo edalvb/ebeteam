@@ -1,0 +1,17 @@
+<mat-form-field appearance="outline" class="inpt">
+    <mat-label>Servicio</mat-label>
+    <mat-select [(value)]="servSeleccionado" (selectionChange)="this.select(servSeleccionado)">
+        <mat-option [value]="e.id" *ngFor="let e of serv">
+            {{e.nombre}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="inpt">
+    <mat-label>Materia</mat-label>
+    <mat-select>
+        <mat-option [value]="e.id" *ngFor="let e of mat">
+            {{e.nombre}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

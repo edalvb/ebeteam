@@ -1,83 +1,81 @@
-<mat-card class="content">
-    <mat-card-title><a color="accent">Formulario de Denuncias</a></mat-card-title>
-    <mat-divider></mat-divider>
-        <form>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>DNI</mat-label>
-                <input type="text" matInput>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Nombre</mat-label>
-                <input type="text" matInput>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Apellido Paterno</mat-label>
-                <input type="text" matInput>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Apellido Materno</mat-label>
-                <input type="text" matInput>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Celular</mat-label>
-                <input matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Distrito</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Provincia</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Departamento</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Dirección</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <br>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Empresa Operadora</mat-label>
-                <mat-select>
-                    <mat-option value="e.id" *ngFor="let e of eos">
-                        {{e.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Servicio</mat-label>
-                <mat-select>
-                    <mat-option value="s.id" *ngFor="let s of servs">
-                        {{s.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Materia</mat-label>
-                <mat-select>
-                    <mat-option value="m.id" *ngFor="let m of mats">
-                        {{m.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Recurso</mat-label>
-                <mat-select>
-                    <mat-option value="r.id" *ngFor="let r of recs">
-                        {{r.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Nro. de Resolución</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <app-file-drop></app-file-drop>
-            <br>
-            <button mat-raised-button color="accent">Cancelar</button>
-            <button mat-raised-button color="primary">Enviar Denuncia</button>
-        </form>
-</mat-card>
+<div class="container">
+    <mat-horizontal-stepper labelPosition="end" #stepper>
+        <mat-step [stepControl]="firstFormGroup" required>
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Identificación</ng-template>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>DNI</mat-label>
+                    <input matInput [(ngModel)]="persona_dni.dni" placeholder="DNI del Usuario"
+                        formControlName="firstCtrl" required>
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button color="primary" matStepperNext (click)="getpersona()">Siguiente</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Datos de la denuncia</ng-template>
+                <form>
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>DNI</mat-label>
+                        <input type="text" matInput value="{{persona_dni.dni}}" disabled>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>Nombre</mat-label>
+                        <input type="text" matInput value="{{persona_dni.name}}" disabled>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>Apellido Paterno</mat-label>
+                        <input type="text" matInput value="{{persona_dni.first_name}}" disabled>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>Apellido Materno</mat-label>
+                        <input type="text" matInput value="{{persona_dni.last_name}}" disabled>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>Celular</mat-label>
+                        <input required matInput type="text">
+                    </mat-form-field>
+
+                    <app-select-ubicacion></app-select-ubicacion>
+
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>Dirección</mat-label>
+                        <input required matInput type="text">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>Empresa Operadora</mat-label>
+                        <mat-select>
+                            <mat-option value="e.id" *ngFor="let e of eos">
+                                {{e.nombre}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <app-select-servicio></app-select-servicio>
+                    <app-select-recurso></app-select-recurso>
+                    <app-file-drop></app-file-drop>
+
+                    <mat-form-field appearance="outline" class="inpt">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="text">
+                      </mat-form-field>
+
+                </form>
+                <div>
+                    <button mat-raised-button color="accent" matStepperPrevious>Atras</button>
+                    <button mat-raised-button color="primary" matStepperNext>Siguiente</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Confirmar</ng-template>
+            <p>Revisar y confirmar el registro dela denuncia</p>
+            <div>
+                <button mat-raised-button color="primary">Enviar Denuncia</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>

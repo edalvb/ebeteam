@@ -1,12 +1,12 @@
 <ng-container [ngSwitch]="child">
-    <ng-container *ngSwitchCase="1">
-      <app-nav-principal (setOption)="funChild($event)"></app-nav-principal>
-    </ng-container>
-    <ng-container *ngSwitchCase="2">
-      <app-login (setOption)="funChild($event)"></app-login>
-    </ng-container>
-    <ng-container *ngSwitchCase="3">
-      <app-panel-control (setOption)="funChild($event)"></app-panel-control>
-    </ng-container>
-
+  <ng-container *ngSwitchCase="1">
+    <app-nav-principal (setOption)="funChild($event)"></app-nav-principal>
   </ng-container>
+  <ng-container *ngSwitchCase="2">
+    <app-login (setOption)="funChild($event)"></app-login>
+  </ng-container>
+  <ng-container *ngSwitchCase="3">
+    <app-panel-control (setOption)="funChild($event)"></app-panel-control>
+  </ng-container>
+
+</ng-container>

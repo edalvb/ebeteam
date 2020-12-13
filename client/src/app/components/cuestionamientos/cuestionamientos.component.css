@@ -50,7 +50,10 @@
   }
 
   ._det{
-    width: 100%;
     font-weight: bold;
     font-size: 16px;
+  }
+
+  ._con{
+    text-align: left;
   }

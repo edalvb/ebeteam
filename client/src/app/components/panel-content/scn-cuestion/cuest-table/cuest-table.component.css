@@ -1,0 +1,13 @@
+.full-width-table {
+  width: 100%;
+}
+
+.hide{
+  display: none;
+}
+
+.footer{
+  text-align: center;
+  justify-content: center;
+  font-style: italic;
+}

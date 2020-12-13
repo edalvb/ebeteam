@@ -5,8 +5,8 @@
     </app-autenticar>
     <div *ngIf="confirm">
         <div style="height: 10px;"></div>
-        <mat-form-field>
-            <mat-label>Filtrar</mat-label>
+        <mat-form-field appearance="outline">
+            <mat-label>Buscar</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Ej. claro" #input>
         </mat-form-field>
         <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
@@ -21,23 +21,24 @@
                 <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
                     <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
                         <div class="element-description row">
-                            <ng-container>
-                <th class="_det"> Estado </th>
-                <td> {{element.estado}} </td>
+                            <span class="_det col-lg-2 col-12"> Estado </span>
+                            <span class="_con col-lg-3 col-12"> {{element.estado}} </span>
+
+                            <span class="_det col-lg-2 col-12"> Descripción </span>
+                            <span class="_con col-lg-3 col-12"> {{element.descripcion}}</span>
+                        </div>
+                    </div>
+                </td>
             </ng-container>
-    </div>
-    </div>
-    </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
-        [class.expanded-row]="expandedElement === element"
-        (click)="expandedElement = expandedElement === element ? null : element"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
-    <!-- Row shown when there is no matching data. -->
-    <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-    </tr>
-    </table>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
+                [class.expanded-row]="expandedElement === element"
+                (click)="expandedElement = expandedElement === element ? null : element"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No se encuentra un resultado para <span style="font-weight: bolder;">"{{input.value}}"</span></td>
+            </tr>
+        </table>
     </div>
 </mat-card>

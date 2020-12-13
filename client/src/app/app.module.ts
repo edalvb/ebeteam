@@ -80,8 +80,15 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
 import { DenTableComponent } from './components/panel-content/scn-denuncia/den-table/den-table.component';
 import { RegDenunciaComponent } from './components/panel-content/scn-denuncia/reg-denuncia/reg-denuncia.component';
 import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/scn-denuncia.component';
+
+import { ScnCuestionComponent } from './components/panel-content/scn-cuestion/scn-cuestion.component';
+import { CuestTableComponent } from './components/panel-content/scn-cuestion/cuest-table/cuest-table.component';
+import { CuestFormComponent } from './components/panel-content/scn-cuestion/cuest-form/cuest-form.component';
+
 import { SelectUbicacionComponent } from './components/select-ubicacion/select-ubicacion.component';
 import { DialogElegirEoComponent } from './components/dialog/dialog-elegir-eo/dialog-elegir-eo.component';
+import { SelectServicioComponent } from './components/denuncias/select-servicio/select-servicio.component';
+import { SelectRecursoComponent } from './components/denuncias/select-recurso/select-recurso.component';
 
 
 @NgModule({
@@ -120,9 +127,14 @@ import { DialogElegirEoComponent } from './components/dialog/dialog-elegir-eo/di
     DenTableComponent,
     RegDenunciaComponent,
     ScnDenunciaComponent,
+    ScnCuestionComponent,
+    CuestTableComponent,
+    CuestFormComponent,
     SelectUbicacionComponent,
     DialogElegirEoComponent,
 
+    SelectServicioComponent,
+    SelectRecursoComponent,
 
   ],
   imports: [
