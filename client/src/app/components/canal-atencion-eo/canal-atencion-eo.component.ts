@@ -34,7 +34,7 @@ export class CanalAtencionEoComponent implements OnInit {
     },
   ]
 
-  public child!: string;
+  public child: string = '1';
   operadora!: string;
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, public dialog: MatDialog) {
