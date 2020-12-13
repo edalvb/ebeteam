@@ -4,14 +4,7 @@
 
   <form>
 
-    <mat-form-field appearance="outline" class="inpt">
-      <mat-label>Recurso</mat-label>
-      <mat-select>
-        <mat-option value="r.id" *ngFor="let r of recs">
-          {{r.nombre}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+    <app-select-recurso (recursoSeleccionado)="seleccionarRecurso($event)"></app-select-recurso>
 
     <mat-form-field appearance="outline" class="inpt">
       <mat-label>Nombre</mat-label>
@@ -35,28 +28,32 @@
 
     <mat-form-field appearance="outline" class="inpt">
       <mat-label>Celular</mat-label>
-      <input matInput type="text">
+      <input name="celular" matInput type="text" [(ngModel)]="this.denuncia.celular">
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="inpt">
       <mat-label>Dirección</mat-label>
-      <input required matInput type="text">
+      <input name="direccion" required matInput type="text" [(ngModel)]="this.denuncia.direccion">
     </mat-form-field>
 
-    <app-select-ubicacion></app-select-ubicacion>
+    <app-select-ubicacion (idDistrito)="seleccionarDistrito($event)"></app-select-ubicacion>
+
     <br>
-    <mat-form-field appearance="outline" class="inpt">
+
+    <mat-form-field style="cursor: pointer;" appearance="outline" class="inpt"
+      (click)="this.openDialogEmpresaOperadora()">
       <mat-label>Empresa Operadora</mat-label>
-      <mat-select>
-        <mat-option value="e.id" *ngFor="let e of eo">
-          {{e.nombre}}
-        </mat-option>
-      </mat-select>
+      <input style="cursor: pointer;" disabled matInput type="text" [value]="this.eo.nombre">
     </mat-form-field>
 
-    <app-select-servicio></app-select-servicio>
-    <app-select-recurso></app-select-recurso>
-    <app-file-drop></app-file-drop>
+    <app-select-servicio (servicioSeleccionado)="seleccionarServicio($event)"></app-select-servicio>
+
+    <mat-form-field style="cursor: pointer;" appearance="outline" class="inpt" (click)="this.openDialogMateria()">
+      <mat-label>Materia</mat-label>
+      <input style="cursor: pointer;" disabled matInput type="text" [value]="this.materia.nombre">
+    </mat-form-field>
+
+    <!-- <app-file-drop></app-file-drop> -->
 
     <section>
       <mat-checkbox name="autorizo" [(ngModel)]="this.autorizo">
@@ -65,13 +62,13 @@
       </mat-checkbox><br>
       <mat-form-field appearance="outline" class="inpt">
         <mat-label>Email</mat-label>
-        <input [disabled]="!autorizo" required matInput type="text">
+        <input name="email" [disabled]="!autorizo" required matInput type="text" [(ngModel)]="this.denuncia.email">
       </mat-form-field>
     </section>
 
 
     <br>
     <button mat-raised-button [routerLink]="'/denuncias'" color="accent">Cancelar</button>
-    <button mat-raised-button color="primary">Enviar Denuncia</button>
+    <button mat-raised-button color="primary" (click)="this.crearDenuncia()">Enviar Denuncia</button>
   </form>
 </mat-card>

@@ -1,0 +1,8 @@
+<mat-form-field appearance="outline" class="inpt">
+  <mat-label>Recurso</mat-label>
+  <mat-select (selectionChange)="this.seleccionarRecurso()"  [(ngModel)]="this.recurso">
+    <mat-option [value]="r" *ngFor="let r of recursos">
+      {{r.nombre}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

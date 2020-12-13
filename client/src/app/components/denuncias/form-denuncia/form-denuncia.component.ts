@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
-import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/denuncia';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogElegirEoComponent } from "../../dialog/dialog-elegir-eo/dialog-elegir-eo.component";
+import { DialogElegirMateriaComponent } from "../../dialog/dialog-elegir-materia/dialog-elegir-materia.component";
+import { CREATE_DENUNCIA } from "../../../graphql/denuncia";
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
+import { map } from "rxjs/operators";
+import { type } from 'os';
 
 @Component({
   selector: 'app-form-denuncia',
@@ -11,68 +16,30 @@ import { DialogElegirEoComponent } from "../../dialog/dialog-elegir-eo/dialog-el
 
 export class FormDenunciaComponent {
 
+  denuncia = {
+    idRecurso: null,
+    direccion: null,
+    celular: null,
+    email: null,
+    idEO: null,
+    idServicio: null,
+    idMateria: null,
+    idDitrito: null
+  }
+
   nombre: String;
   dni: String;
   paterno: String;
   materno: String;
 
+  idRecurso: any;
+
   autorizo: boolean = false;
 
   eo = { id: null, nombre: null };
+  materia = { id: null, nombre: null };
 
-  servs: Servicio[] = [
-    {
-      id: '1',
-      nombre: 'Telefonía Movil'
-    },
-    {
-      id: '2',
-      nombre: 'Telefonía Fija'
-    },
-    {
-      id: '3',
-      nombre: 'Servicios Empaquetados'
-    },
-    {
-      id: '4',
-      nombre: 'TV Cable'
-    },
-  ]
-
-  mats: Materia[] = [
-    {
-      id: '1',
-      nombre: 'Facturación'
-    },
-    {
-      id: '2',
-      nombre: 'Cobro del servicio'
-    },
-    {
-      id: '3',
-      nombre: 'Calidad o idoneidad en la prestación del servicio'
-    },
-    {
-      id: '4',
-      nombre: 'Veracidad de la información brindada por la empresa operadora al usuario'
-    }
-  ]
-
-  recs: Recurso[] = [
-    {
-      id: '1',
-      nombre: 'Incumplimiento de resolución de primera instancia'
-    },
-    {
-      id: '2',
-      nombre: 'SARA'
-    },
-    {
-      id: '3',
-      nombre: 'Incumplimiento de aplicación de SAR'
-    }
-  ]
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private apollo: Apollo) {
     let persona = JSON.parse(sessionStorage.getItem('usuario') as string);
     this.dni = persona.dni;
     this.nombre = persona.name;
@@ -80,18 +47,73 @@ export class FormDenunciaComponent {
     this.materno = persona.last_name;
   }
 
-  openDialog(): void {
+  crearDenuncia() {
+    let session: any = sessionStorage.getItem('usuario');
+    let idCliente = JSON.parse(session).id;
+    if (typeof (idCliente) != 'undefined') {
+      let variable = {
+        idRecurso: this.denuncia.idRecurso,
+        idCliente: idCliente,
+        direccion: this.denuncia.direccion,
+        celular: this.denuncia.celular,
+        email: this.denuncia.email,
+        idEO: this.denuncia.idEO,
+        idServicio: this.denuncia.idServicio,
+        idMateria: this.denuncia.idMateria,
+        idDitrito: this.denuncia.idDitrito
+      }
+      console.log(variable);
+      this.apollo.mutate({
+        mutation: CREATE_DENUNCIA,
+        variables: variable
+      }).subscribe((data) => {
+        console.log(data);
+      })
+    }
+  }
+
+  openDialogEmpresaOperadora(): void {
     const dialogRef = this.dialog.open(DialogElegirEoComponent, {
       width: '340px',
       height: 'max-content',
-      data: { name: 'this.name', animal: 'this.animal' }
+      data: { id: null, nombre: null },
+      disableClose: true
     });
 
     dialogRef.afterClosed().subscribe((result: any) => {
-      console.log('The dialog was closed');
-      this.nombre = result;
+      if (typeof (result) != 'undefined') {
+        this.denuncia.idEO = result.id;
+        this.eo.nombre = result.nombre;
+      }
     });
   }
 
+  openDialogMateria(): void {
+    const dialogRef = this.dialog.open(DialogElegirMateriaComponent, {
+      width: '340px',
+      height: 'max-content',
+      data: { id: null, nombre: null },
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      if (typeof (result) != 'undefined') {
+        this.denuncia.idMateria = result.id;
+        this.materia.nombre = result.nombre;
+      }
+    });
+  }
+
+  seleccionarRecurso(e: any) {
+    this.denuncia.idRecurso = e.id;
+  }
+
+  seleccionarDistrito(e: any) {
+    this.denuncia.idDitrito = e;
+  }
+
+  seleccionarServicio(e: any) {
+    this.denuncia.idServicio = e.id;
+  }
 
 }

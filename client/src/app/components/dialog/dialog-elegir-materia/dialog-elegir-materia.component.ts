@@ -2,16 +2,16 @@ import { Component, ViewChild, Inject, OnDestroy, OnInit, AfterContentInit } fro
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import * as eoQL from "../../../graphql/eo";
+import * as denunciaQL from "../../../graphql/denuncia";
 import { Apollo } from 'apollo-angular';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-dialog-elegir-eo',
-  templateUrl: './dialog-elegir-eo.component.html',
-  styleUrls: ['./dialog-elegir-eo.component.css']
+  selector: 'app-dialog-elegir-materia',
+  templateUrl: './dialog-elegir-materia.component.html',
+  styleUrls: ['./dialog-elegir-materia.component.css']
 })
-export class DialogElegirEoComponent implements OnDestroy, AfterContentInit, OnInit {
+export class DialogElegirMateriaComponent implements OnDestroy, AfterContentInit, OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -23,16 +23,16 @@ export class DialogElegirEoComponent implements OnDestroy, AfterContentInit, OnI
 
   dataSource!: MatTableDataSource<any>;
 
-  constructor(private apollo: Apollo, public dialogRef: MatDialogRef<DialogElegirEoComponent>, @Inject(MAT_DIALOG_DATA) public my_eo: any) { }
+  constructor(private apollo: Apollo, public dialogRef: MatDialogRef<DialogElegirMateriaComponent>, @Inject(MAT_DIALOG_DATA) public my_eo: any) { }
 
   ngOnInit(): void {
     this.s_eo = this.apollo
       .watchQuery({
-        query: eoQL.GET_EOS,
+        query: denunciaQL.GET_MATERIAS,
       })
       .valueChanges.subscribe(({ data }) => {
         let dato: any = data;
-        this.eo = dato.entidadReferencias;
+        this.eo = dato.materiaDenuncias;
         this.dataSource = new MatTableDataSource(this.eo)
         this.dataSource.paginator = this.paginator;
       });
