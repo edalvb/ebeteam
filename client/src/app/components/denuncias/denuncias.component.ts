@@ -65,9 +65,6 @@ export class DenunciasComponent implements OnInit {
           this.dataSource = new MatTableDataSource(this.denuncias);
         });
 
-        for (const iterator of object) {
-
-        }
     }
   }
 
