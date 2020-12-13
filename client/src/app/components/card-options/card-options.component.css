@@ -2,9 +2,12 @@
   flex: 1 1 auto;
 }
 
+.container{
+  margin-top: 0px;
+}
 .description {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   display: inline-block;
   max-width: 70%;
 }

@@ -11,7 +11,7 @@
       </mat-toolbar-row>
       <mat-toolbar-row></mat-toolbar-row>
       <mat-toolbar-row style="background: linear-gradient(to top, rgb(0, 0, 0), rgba(4, 4, 4, 0));">
-        <span>Isabela Moner</span>
+        <span>Qimichu - Osiptel</span>
       </mat-toolbar-row>
     </mat-toolbar>
 
@@ -31,7 +31,7 @@
           <div mat-line>Denuncias</div>
         </mat-list-item>
 
-        <mat-list-item>
+        <mat-list-item [routerLink]="['/cuestionamientos']">
           <mat-icon mat-list-icon>phonelink_lock</mat-icon>
           <div mat-line>Cuestionamientos</div>
         </mat-list-item>
@@ -43,7 +43,7 @@
           <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
           <div mat-line>OSIPTEL</div>
         </mat-list-item>
-        <mat-list-item>
+        <mat-list-item  [routerLink]="['/canal-atencion-eo']">
           <mat-icon mat-list-icon>support_agent</mat-icon>
           <div mat-line>Empresas Operadoras</div>
         </mat-list-item>
@@ -61,7 +61,6 @@
         <button fixedInViewport type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-        <span class="spacer"></span>
         <button mat-button aria-label="Logo" style="margin-left:20px" routerLink="/">
           <mat-icon svgIcon="osiptel" style="width: 150px; height: 100%;"></mat-icon>
         </button>

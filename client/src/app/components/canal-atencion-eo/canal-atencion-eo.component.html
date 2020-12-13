@@ -10,8 +10,8 @@
     <mat-card-content>
       <section>
         <div class="example-button-row">
-          <div class="example-flex-container">
-            <div class="example-button-container" *ngFor="let canal of canales">
+          <div class="container row">
+            <div class="example-button-container col-lg-12 col-3" *ngFor="let canal of canales">
               <button mat-icon-button (click)="funChild(canal)">
                 <mat-icon style="border-radius: 50px;" svgIcon="{{canal.icono}}"></mat-icon>
               </button>
