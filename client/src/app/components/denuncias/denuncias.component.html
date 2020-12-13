@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 10px;">
+<mat-card class="container">
   <mat-card-title>GESTIONA TUS DENUNCIAS</mat-card-title>
 
   <mat-divider></mat-divider>
@@ -7,6 +7,14 @@
   </app-autenticar>
 
   <div *ngIf="this.estaLogueado()">
+    <div style="text-align: left;">
+      <span style="font-weight: bolder;">Usuario: </span>
+      <span>{{persona_dni.name}} {{persona_dni.first_name}} {{persona_dni.last_name}}
+      </span>
+      <br>
+      <span style="font-weight: bolder;">DNI: </span>
+      <span>{{persona_dni.dni}}</span>
+    </div>
 
     <div style="height: 10px;"></div>
     <button [routerLink]="'/denuncias/nuevo'" style="float: left;" mat-raised-button color="primary">Nueva
@@ -63,4 +71,4 @@
     </table>
 
   </div>
-</div>
+</mat-card>

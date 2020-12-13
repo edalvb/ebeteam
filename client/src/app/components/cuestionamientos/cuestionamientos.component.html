@@ -4,6 +4,15 @@
     <app-autenticar (setpersona)="funPersona($event)" (confirm)="funAlmacenar($event)" *ngIf="!confirm">
     </app-autenticar>
     <div *ngIf="confirm">
+        <div style="text-align: left;">
+            <span style="font-weight: bolder;">Usuario: </span>
+            <span>{{persona_dni.name}} {{persona_dni.first_name}} {{persona_dni.last_name}}
+            </span>
+            <br>
+            <span style="font-weight: bolder;">DNI: </span>
+            <span>{{persona_dni.dni}}</span>
+        </div>
+        
         <div style="height: 10px;"></div>
         <mat-form-field appearance="outline">
             <mat-label>Buscar</mat-label>
@@ -37,7 +46,8 @@
             <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
             <!-- Row shown when there is no matching data. -->
             <tr class="mat-row" *matNoDataRow>
-                <td class="mat-cell" colspan="4">No se encuentra un resultado para <span style="font-weight: bolder;">"{{input.value}}"</span></td>
+                <td class="mat-cell" colspan="4">No se encuentra un resultado para <span
+                        style="font-weight: bolder;">"{{input.value}}"</span></td>
             </tr>
         </table>
     </div>
