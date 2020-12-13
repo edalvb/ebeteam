@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Angular Material
+import { MatNativeDateModule } from "@angular/material/core";
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -21,10 +22,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatRippleModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatSortModule} from '@angular/material/sort';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -75,9 +79,12 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
 import { DenTableComponent } from './components/panel-content/scn-denuncia/den-table/den-table.component';
 import { RegDenunciaComponent } from './components/panel-content/scn-denuncia/reg-denuncia/reg-denuncia.component';
 import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/scn-denuncia.component';
+
 import { ScnCuestionComponent } from './components/panel-content/scn-cuestion/scn-cuestion.component';
 import { CuestTableComponent } from './components/panel-content/scn-cuestion/cuest-table/cuest-table.component';
 import { CuestFormComponent } from './components/panel-content/scn-cuestion/cuest-form/cuest-form.component';
+
+import { SelectUbicacionComponent } from './components/select-ubicacion/select-ubicacion.component';
 
 
 @NgModule({
@@ -119,7 +126,7 @@ import { CuestFormComponent } from './components/panel-content/scn-cuestion/cues
     ScnCuestionComponent,
     CuestTableComponent,
     CuestFormComponent,
-
+    SelectUbicacionComponent,
 
   ],
   imports: [
@@ -161,12 +168,10 @@ import { CuestFormComponent } from './components/panel-content/scn-cuestion/cues
     MatRippleModule,
     MatGridListModule,
     MatDialogModule,
-    NgxMapboxGLModule.withConfig({
-      accessToken: 'pk.eyJ1IjoiZWRhbHZiIiwiYSI6ImNraWV1OXpmZzFqODUyeXJ0ZGJvbGhkZWIifQ.mZWepF12ftoqj2suS961IQ', // Optional, can also be set per map (accessToken input of mgl-map)
-      // geocoderAccessToken: 'TOKEN' // Optional, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
-    }),
-    MatRippleModule,
-    LayoutModule
+    LayoutModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],

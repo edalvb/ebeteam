@@ -1,14 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component } from '@angular/core';
 import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/denuncia';
-
-export interface DialogData {
-  nombre: String;
-  dni: String;
-
-  paterno: String;
-  materno: String;
-}
 
 @Component({
   selector: 'app-form-denuncia',
@@ -17,6 +8,14 @@ export interface DialogData {
 })
 
 export class FormDenunciaComponent {
+
+  nombre: String;
+  dni: String;
+  paterno: String;
+  materno: String;
+
+  autorizo: boolean = false;
+
   eos: EmpresaOperadora[] = [
     {
       id: '1',
@@ -84,11 +83,12 @@ export class FormDenunciaComponent {
       nombre: 'Incumplimiento de aplicación de SAR'
     }
   ]
-  constructor(
-    public dialogRef: MatDialogRef<any>,
-    @Inject(MAT_DIALOG_DATA) public persona: DialogData) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
+  constructor() {
+    let persona = JSON.parse(sessionStorage.getItem('usuario') as string);
+    this.dni = persona.dni;
+    this.nombre = persona.name;
+    this.paterno = persona.first_name;
+    this.materno = persona.last_name;
   }
+
 }

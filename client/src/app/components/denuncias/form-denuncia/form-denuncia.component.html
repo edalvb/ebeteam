@@ -1,83 +1,118 @@
-<mat-card class="content">
-    <mat-card-title><a color="accent">Formulario de Denuncias</a></mat-card-title>
-    <mat-divider></mat-divider>
-        <form>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>DNI</mat-label>
-                <input type="text" disabled matInput value={{persona.dni}}>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Nombre</mat-label>
-                <input type="text" disabled matInput value={{persona.nombre}}>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Apellido Paterno</mat-label>
-                <input type="text" disabled matInput value={{persona.paterno}}>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Apellido Materno</mat-label>
-                <input type="text" disabled matInput value={{persona.materno}}>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Celular</mat-label>
-                <input matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Distrito</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Provincia</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Departamento</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Dirección</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <br>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Empresa Operadora</mat-label>
-                <mat-select>
-                    <mat-option value="e.id" *ngFor="let e of eos">
-                        {{e.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Servicio</mat-label>
-                <mat-select>
-                    <mat-option value="s.id" *ngFor="let s of servs">
-                        {{s.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Materia</mat-label>
-                <mat-select>
-                    <mat-option value="m.id" *ngFor="let m of mats">
-                        {{m.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Recurso</mat-label>
-                <mat-select>
-                    <mat-option value="r.id" *ngFor="let r of recs">
-                        {{r.nombre}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="inpt">
-                <mat-label>Nro. de Resolución</mat-label>
-                <input required matInput type="text">
-            </mat-form-field>
-            <app-file-drop></app-file-drop>
-            <br>
-            <button mat-raised-button color="accent" (click)="onNoClick()">Cancelar</button>
-            <button mat-raised-button color="primary">Enviar Denuncia</button>
-        </form>
-</mat-card>
+<div style="padding: 5px;">
+
+  <mat-card-title><a color="accent">Formulario de Denuncias</a></mat-card-title>
+
+<form>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Recurso</mat-label>
+    <mat-select>
+      <mat-option value="r.id" *ngFor="let r of recs">
+        {{r.nombre}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Nombre</mat-label>
+    <input type="text" disabled matInput value={{nombre}}>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Apellido Paterno</mat-label>
+    <input type="text" disabled matInput value={{paterno}}>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Apellido Materno</mat-label>
+    <input type="text" disabled matInput value={{materno}}>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>DNI</mat-label>
+    <input type="text" disabled matInput value={{dni}}>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Dirección</mat-label>
+    <input required matInput type="text">
+  </mat-form-field>
+
+  <app-select-ubicacion></app-select-ubicacion>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Celular</mat-label>
+    <input matInput type="text">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Empresa Operadora</mat-label>
+    <mat-select>
+      <mat-option value="e.id" *ngFor="let e of eos">
+        {{e.nombre}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>N° /código del servicio/ contrato de abonado:</mat-label>
+    <input matInput type="text">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>N° de expediente del TRASU</mat-label>
+    <input matInput type="text">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Fecha de resolución del expediente del TRASU</mat-label>
+    <input matInput [matDatepicker]="picker1">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>N° de resolución de la Empresa Operadora:</mat-label>
+    <input matInput type="text">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>fecha de resolución de la Empresa Operadora:</mat-label>
+    <input matInput [matDatepicker]="picker2">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker2></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Fecha de SAR:</mat-label>
+    <input matInput [matDatepicker]="picker3">
+    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker3></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inpt">
+    <mat-label>Fecha de SARA:</mat-label>
+    <input matInput [matDatepicker]="picker4">
+    <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker4></mat-datepicker>
+  </mat-form-field>
+
+  <section>
+    <mat-checkbox name="autorizo" [(ngModel)]="this.autorizo">
+      <span style="white-space: normal;">Autorizo ser notificado en la siguiente dirección de correo electrónico
+        (opcional):</span>
+    </mat-checkbox>
+    <mat-form-field appearance="outline" class="inpt">
+      <mat-label>Email</mat-label>
+      <input [disabled]="!autorizo" matInput type="text">
+    </mat-form-field>
+  </section>
+
+  <app-file-drop></app-file-drop>
+  <br>
+  <button mat-raised-button [routerLink]="'/denuncias'" color="accent">Cancelar</button>
+  <button mat-raised-button color="primary">Enviar Denuncia</button>
+</form>
+
+
+</div>
