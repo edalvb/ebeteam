@@ -50,7 +50,6 @@ tr.element-row:not(.expanded-row):active {
 }
 
 ._det{
-  width: 100%;
   font-weight: bold;
   font-size: 16px;
 }

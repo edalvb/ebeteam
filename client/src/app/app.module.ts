@@ -75,6 +75,9 @@ import { InboxComponent } from './components/panel-content/inbox/inbox.component
 import { DenTableComponent } from './components/panel-content/scn-denuncia/den-table/den-table.component';
 import { RegDenunciaComponent } from './components/panel-content/scn-denuncia/reg-denuncia/reg-denuncia.component';
 import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/scn-denuncia.component';
+import { ScnCuestionComponent } from './components/panel-content/scn-cuestion/scn-cuestion.component';
+import { CuestTableComponent } from './components/panel-content/scn-cuestion/cuest-table/cuest-table.component';
+import { CuestFormComponent } from './components/panel-content/scn-cuestion/cuest-form/cuest-form.component';
 
 
 @NgModule({
@@ -113,6 +116,9 @@ import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/sc
     DenTableComponent,
     RegDenunciaComponent,
     ScnDenunciaComponent,
+    ScnCuestionComponent,
+    CuestTableComponent,
+    CuestFormComponent,
 
 
   ],

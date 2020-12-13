@@ -1,0 +1,76 @@
+<div class="container">
+<mat-horizontal-stepper labelPosition="end" #stepper>
+    <mat-step [stepControl]="firstFormGroup" required>
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Identificación</ng-template>
+            <mat-form-field appearance="outline" class="inpt">
+                <mat-label>DNI</mat-label>
+                <input matInput [(ngModel)]="persona_dni.dni" placeholder="DNI del Usuario" formControlName="firstCtrl"
+                    required>
+            </mat-form-field>
+            <div>
+                <button mat-raised-button matStepperNext (click)="getpersona()">Siguiente</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Datos del cuestionamiento</ng-template>
+            <form>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>DNI</mat-label>
+                    <input type="text" matInput value="{{persona_dni.dni}}" disabled>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>Nombre</mat-label>
+                    <input type="text" matInput value="{{persona_dni.name}}" disabled>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>Apellido Paterno</mat-label>
+                    <input type="text" matInput value="{{persona_dni.first_name}}" disabled>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>Apellido Materno</mat-label>
+                    <input type="text" matInput value="{{persona_dni.last_name}}" disabled>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>IMEI</mat-label>
+                    <input matInput type="text" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>Numero de Servicio</mat-label>
+                    <input matInput type="text" required>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>Empresa Operadora</mat-label>
+                    <mat-select>
+                        <mat-option value="e.id" *ngFor="let e of eos">
+                            {{e.nombre}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inpt">
+                    <mat-label>Modalidad de Ingreso</mat-label>
+                    <mat-select>
+                        <mat-option value="e.id" *ngFor="let e of mod">
+                            {{e.nombre}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+            <div>
+                <button mat-raised-button color="accent" matStepperPrevious>Atras</button>
+                <button mat-raised-button color="primary" matStepperNext>Siguiente</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Guardado</ng-template>
+        <p>Revisar y confirmar el registro del cuestionamiento</p>
+        <div>
+            <button mat-raised-button color="primary">Guardar</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
+</div>
