@@ -11,13 +11,16 @@ import { Subscription } from 'rxjs';
 })
 export class OficinaOsiptelComponent implements OnDestroy {
 
-  idDepa: any = 0;
+  idDepa: any = 1;
 
   panelOpenState = false;
 
   departamentos: any;
 
   oficinas: any;
+  lugar: any;
+
+  ofSelect!: any;
 
   private qSubDepartamento: Subscription;
   private qSubSede: any;

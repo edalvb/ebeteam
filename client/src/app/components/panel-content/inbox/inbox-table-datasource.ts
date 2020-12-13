@@ -3,18 +3,45 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-
-export interface InboxItem {
-    fecha: string;
-    denuncia: string;
-    operadora: string;
-    recurso: string;
-    servicio: string;
-    materia: string;
-    estado: string;
-  }
+import { Denuncia } from 'src/app/modelo/denuncia';
   
-  const ELEMENT_DATA: InboxItem[] = [
+  const ELEMENT_DATA: Denuncia[] = [
+    {
+      fecha: '08/01/2019',
+      denuncia: '001-2019-LN/DEN',
+      operadora: 'TELEFÓNICA DEL PERÚ S.A.A.',
+      recurso: 'Incumplimiento de resolución de primera instancia',
+      servicio: 'Servicios empaquetados',
+      materia: 'Derechos reconocidos',
+      estado: 'CONCLUIDO'
+    },
+    {
+      fecha: '10/02/2019',
+      denuncia: '002-2019-LN/DEN',
+      operadora: 'CLARO',
+      recurso: 'Incumplimiento de resolución de primera instancia',
+      servicio: 'Servicios empaquetados',
+      materia: 'Derechos reconocidos',
+      estado: 'EN TRAMITE'
+    },
+    {
+      fecha: '08/01/2019',
+      denuncia: '001-2019-LN/DEN',
+      operadora: 'TELEFÓNICA DEL PERÚ S.A.A.',
+      recurso: 'Incumplimiento de resolución de primera instancia',
+      servicio: 'Servicios empaquetados',
+      materia: 'Derechos reconocidos',
+      estado: 'CONCLUIDO'
+    },
+    {
+      fecha: '10/02/2019',
+      denuncia: '002-2019-LN/DEN',
+      operadora: 'CLARO',
+      recurso: 'Incumplimiento de resolución de primera instancia',
+      servicio: 'Servicios empaquetados',
+      materia: 'Derechos reconocidos',
+      estado: 'EN TRAMITE'
+    },
     {
       fecha: '08/01/2019',
       denuncia: '001-2019-LN/DEN',
@@ -35,8 +62,8 @@ export interface InboxItem {
     }
   ];
   
-  export class InboxTableDataSource extends DataSource<InboxItem> {
-    data: InboxItem[] = ELEMENT_DATA;
+  export class InboxTableDataSource extends DataSource<Denuncia> {
+    data: Denuncia[] = ELEMENT_DATA;
     paginator!: MatPaginator;
     sort!: MatSort;
   
@@ -44,7 +71,7 @@ export interface InboxItem {
       super();
     }
   
-    connect(): Observable<InboxItem[]> {
+    connect(): Observable<Denuncia[]> {
       
       const dataMutations = [
         observableOf(this.data),
@@ -59,12 +86,12 @@ export interface InboxItem {
   
     disconnect() {}
   
-    private getPagedData(data: InboxItem[]) {
+    private getPagedData(data: Denuncia[]) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
     }
   
-    private getSortedData(data: InboxItem[]) {
+    private getSortedData(data: Denuncia[]) {
       if (!this.sort.active || this.sort.direction === '') {
         return data;
       }

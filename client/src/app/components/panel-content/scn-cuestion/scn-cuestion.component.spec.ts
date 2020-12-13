@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DescripcionEoComponent } from './descripcion-eo.component';
+import { ScnCuestionComponent } from './scn-cuestion.component';
 
-describe('DescripcionEoComponent', () => {
-  let component: DescripcionEoComponent;
-  let fixture: ComponentFixture<DescripcionEoComponent>;
+describe('ScnCuestionComponent', () => {
+  let component: ScnCuestionComponent;
+  let fixture: ComponentFixture<ScnCuestionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DescripcionEoComponent ]
+      declarations: [ ScnCuestionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DescripcionEoComponent);
+    fixture = TestBed.createComponent(ScnCuestionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,7 +2,8 @@ import { AfterViewInit, Component, EventEmitter, OnInit, Output, ViewChild } fro
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { InboxTableDataSource, InboxItem } from './inbox-table-datasource';
+import { Denuncia } from 'src/app/modelo/denuncia';
+import { InboxTableDataSource } from './inbox-table-datasource';
 
 @Component({
   selector: 'app-inbox',
@@ -15,7 +16,7 @@ export class InboxComponent implements AfterViewInit, OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<InboxItem>;
+  @ViewChild(MatTable) table!: MatTable<Denuncia>;
   dataSource!: InboxTableDataSource;
   
   displayedColumns = ['reg', 'denuncia', 'operadora', 'servicio', 'fecha','actions'];

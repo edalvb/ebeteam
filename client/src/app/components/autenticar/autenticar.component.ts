@@ -2,7 +2,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { PersonaDni } from '../../modelo/persona';
 import { PersonaDniService } from '../../servicio/persona-dni.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { stringify } from '@angular/compiler/src/util';
 import * as clienteQL from "../../graphql/cliente";
 import { Apollo } from 'apollo-angular';
 import { Subscription } from 'rxjs';

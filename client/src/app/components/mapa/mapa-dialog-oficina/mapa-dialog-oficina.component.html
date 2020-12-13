@@ -1,4 +1,4 @@
-<mgl-map [style]="'mapbox://styles/mapbox/streets-v9'" [zoom]="[5]" [center]="[-65.017, -16.457]">
+<mgl-map [style]="'mapbox://styles/mapbox/streets-v9'" [zoom]="[4]" [center]="[-75.015, -9.189]">
     <mgl-marker *ngFor="let feature of geojson.features" [feature]="feature">
         <div (click)="alert(feature.properties.message)" class="marker" [ngStyle]="estilosMarcador(feature)"></div>
     </mgl-marker>

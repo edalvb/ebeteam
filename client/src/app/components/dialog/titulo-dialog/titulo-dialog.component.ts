@@ -8,9 +8,10 @@ import { Component, Input } from '@angular/core';
         <div
           mat-list-icon
           style="background-size: cover; width: 50px !important; height: 50px !important;"
-          [ngStyle]="{ 'background-image': 'url(' + imagen + ')' }"
+          [ngStyle]="{ 'background-image': 'url(' + '/assets/img/'+titulo+'.svg' + ')' }"
         ></div>
-        <mat-card-title mat-line>{{ titulo }}</mat-card-title>
+        <mat-card-title mat-line style="text-transform: uppercase; font-size: 24px;
+    font-weight: bolder;">{{ titulo }}</mat-card-title>
       </mat-list-item>
     </mat-list>
   `,
@@ -20,6 +21,6 @@ export class TituloDialogComponent {
   @Input('imagen') imagen: string =
     'https://ebeteam.s3.us-east-2.amazonaws.com/assets/img/images/presencial.png';
 
-  constructor() {}
+  constructor() { }
 
 }

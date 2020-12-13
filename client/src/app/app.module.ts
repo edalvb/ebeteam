@@ -30,7 +30,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
@@ -72,7 +71,6 @@ import { CardAtencionEoComponent } from './components/oficina/oficina-eo/card-at
 
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { FileDropComponent } from './components/file-drop/file-drop.component';
-import { InterfazOsiptelComponent } from './components/interfaz-osiptel/interfaz-osiptel.component';
 import { PanelControlComponent } from './panel-control/panel-control.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavPrincipalComponent } from './nav-principal/nav-principal.component';
@@ -121,7 +119,6 @@ import { DialogElegirMateriaComponent } from './components/dialog/dialog-elegir-
     DescripcionEoComponent,
     CardAtencionEoComponent,
     FileDropComponent,
-    InterfazOsiptelComponent,
     PanelControlComponent,
     NavPrincipalComponent,
     InboxComponent,

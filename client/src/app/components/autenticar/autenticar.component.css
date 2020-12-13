@@ -19,13 +19,14 @@ mat-form-field {
     padding: 10px;
     position: absolute;
     z-index: 99;
-    bottom: 30%;
+    bottom: 31%;
     right: 50%;
     opacity: 0;
     transition: opacity 0.3s;
 }
-.info img{
+.info .capa mat-icon{
   width: 250px;
+  height: 150px;
 }
 
 .info:hover > .capa{
