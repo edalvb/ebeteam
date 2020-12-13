@@ -36,6 +36,10 @@
     "centro_atencions": {
       "via": "distrito",
       "collection": "centro-atencion"
+    },
+    "denuncias": {
+      "via": "distrito",
+      "collection": "denuncia"
     }
   }
 }

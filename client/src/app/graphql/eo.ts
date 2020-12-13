@@ -16,3 +16,15 @@ export const GET_CENTROS_ATENCION_X_DISTRITO = gql`
       }
     }
 `;
+
+/**
+ * Obtienes todas las entidades de referencia
+ */
+export const GET_EOS = gql`
+    query {
+      entidadReferencias {
+        id,
+        nombre
+      }
+    }
+`;

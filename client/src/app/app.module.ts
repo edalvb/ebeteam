@@ -28,6 +28,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
@@ -82,9 +83,11 @@ import { ScnCuestionComponent } from './components/panel-content/scn-cuestion/sc
 import { CuestTableComponent } from './components/panel-content/scn-cuestion/cuest-table/cuest-table.component';
 import { CuestFormComponent } from './components/panel-content/scn-cuestion/cuest-form/cuest-form.component';
 
-import { SelectUbicacionComponent } from './components/select-ubicacion/select-ubicacion.component';
-import { SelectServicioComponent } from './components/denuncias/select-servicio/select-servicio.component';
-import { SelectRecursoComponent } from './components/denuncias/select-recurso/select-recurso.component';
+import { SelectUbicacionComponent } from './components/selecciones/select-ubicacion/select-ubicacion.component';
+import { DialogElegirEoComponent } from './components/dialog/dialog-elegir-eo/dialog-elegir-eo.component';
+import { SelectServicioComponent } from './components/selecciones/select-servicio/select-servicio.component';
+import { SelectRecursoComponent } from './components/selecciones/select-recurso/select-recurso.component';
+import { DialogElegirMateriaComponent } from './components/dialog/dialog-elegir-materia/dialog-elegir-materia.component';
 
 
 @NgModule({
@@ -126,8 +129,11 @@ import { SelectRecursoComponent } from './components/denuncias/select-recurso/se
     CuestTableComponent,
     CuestFormComponent,
     SelectUbicacionComponent,
+    DialogElegirEoComponent,
+
     SelectServicioComponent,
     SelectRecursoComponent,
+    DialogElegirMateriaComponent,
 
   ],
   imports: [
@@ -172,7 +178,8 @@ import { SelectRecursoComponent } from './components/denuncias/select-recurso/se
     LayoutModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

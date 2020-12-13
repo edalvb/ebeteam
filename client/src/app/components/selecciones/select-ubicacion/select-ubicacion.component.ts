@@ -1,5 +1,5 @@
 import { Component, Output, OnDestroy, EventEmitter } from '@angular/core';
-import * as ubicacionQL from "../../graphql/ubicacion";
+import * as ubicacionQL from "../../../graphql/ubicacion";
 import { Apollo } from 'apollo-angular';
 import { Subscription } from 'rxjs';
 
@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./select-ubicacion.component.css']
 })
 export class SelectUbicacionComponent implements OnDestroy {
+
   @Output() idDistrito = new EventEmitter;
   @Output() idProvincia = new EventEmitter;
   @Output() idDepartamento = new EventEmitter;
