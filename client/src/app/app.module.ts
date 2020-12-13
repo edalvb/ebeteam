@@ -28,6 +28,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
@@ -80,6 +81,7 @@ import { DenTableComponent } from './components/panel-content/scn-denuncia/den-t
 import { RegDenunciaComponent } from './components/panel-content/scn-denuncia/reg-denuncia/reg-denuncia.component';
 import { ScnDenunciaComponent } from './components/panel-content/scn-denuncia/scn-denuncia.component';
 import { SelectUbicacionComponent } from './components/select-ubicacion/select-ubicacion.component';
+import { DialogElegirEoComponent } from './components/dialog/dialog-elegir-eo/dialog-elegir-eo.component';
 
 
 @NgModule({
@@ -119,6 +121,7 @@ import { SelectUbicacionComponent } from './components/select-ubicacion/select-u
     RegDenunciaComponent,
     ScnDenunciaComponent,
     SelectUbicacionComponent,
+    DialogElegirEoComponent,
 
 
   ],
@@ -164,7 +167,8 @@ import { SelectUbicacionComponent } from './components/select-ubicacion/select-u
     LayoutModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

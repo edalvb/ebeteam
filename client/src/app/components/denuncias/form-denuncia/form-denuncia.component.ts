@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { EmpresaOperadora, Materia, Recurso, Servicio } from 'src/app/modelo/denuncia';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogElegirEoComponent } from "../../dialog/dialog-elegir-eo/dialog-elegir-eo.component";
 
 @Component({
   selector: 'app-form-denuncia',
@@ -16,20 +18,7 @@ export class FormDenunciaComponent {
 
   autorizo: boolean = false;
 
-  eos: EmpresaOperadora[] = [
-    {
-      id: '1',
-      nombre: 'Telfónica'
-    },
-    {
-      id: '2',
-      nombre: 'Claro'
-    },
-    {
-      id: '3',
-      nombre: 'Bitel'
-    }
-  ]
+  eo = { id: null, nombre: null };
 
   servs: Servicio[] = [
     {
@@ -83,12 +72,26 @@ export class FormDenunciaComponent {
       nombre: 'Incumplimiento de aplicación de SAR'
     }
   ]
-  constructor() {
+  constructor(public dialog: MatDialog) {
     let persona = JSON.parse(sessionStorage.getItem('usuario') as string);
     this.dni = persona.dni;
     this.nombre = persona.name;
     this.paterno = persona.first_name;
     this.materno = persona.last_name;
   }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogElegirEoComponent, {
+      width: '340px',
+      height: 'max-content',
+      data: { name: 'this.name', animal: 'this.animal' }
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log('The dialog was closed');
+      this.nombre = result;
+    });
+  }
+
 
 }
