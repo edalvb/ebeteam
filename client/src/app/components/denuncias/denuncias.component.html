@@ -7,14 +7,14 @@
   </app-autenticar>
 
   <div *ngIf="this.estaLogueado()">
-    <div style="text-align: left;">
+    <!-- <div style="text-align: left;">
       <span style="font-weight: bolder;">Usuario: </span>
       <span>{{persona_dni.name}} {{persona_dni.first_name}} {{persona_dni.last_name}}
       </span>
       <br>
       <span style="font-weight: bolder;">DNI: </span>
       <span>{{persona_dni.dni}}</span>
-    </div>
+    </div> -->
 
     <div style="height: 10px;"></div>
     <button [routerLink]="'/denuncias/nuevo'" style="float: left;" mat-raised-button color="primary">Nueva

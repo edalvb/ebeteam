@@ -117,7 +117,7 @@ export class FormDenunciaComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    this.s_getDenuncias.unsubscribe();
+    if (typeof (this.s_getDenuncias) != 'undefined') this.s_getDenuncias.unsubscribe();
   }
 
 }

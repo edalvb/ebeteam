@@ -1,11 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { PersonaDni } from '../../modelo/persona';
 import { PersonaDniService } from '../../servicio/persona-dni.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import * as clienteQL from "../../graphql/cliente";
 import { Apollo } from 'apollo-angular';
 import { Subscription } from 'rxjs';
-import { stringify } from '@angular/compiler/src/util';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 
@@ -14,7 +13,7 @@ import { MatIconRegistry } from '@angular/material/icon';
   templateUrl: './autenticar.component.html',
   styleUrls: ['./autenticar.component.css']
 })
-export class AutenticarComponent {
+export class AutenticarComponent implements OnDestroy {
   persona_dni: PersonaDni = {
     cui: '',
     dni: '',
@@ -92,6 +91,10 @@ export class AutenticarComponent {
     sessionStorage.setItem('usuario', JSON.stringify(res));
     this.setpersona.emit(res);
     this.confirm.emit(true);
+  }
+
+  ngOnDestroy() {
+    if (typeof (this.s_servicio) != 'undefined') this.s_servicio.unsubscribe();
   }
 
 }
