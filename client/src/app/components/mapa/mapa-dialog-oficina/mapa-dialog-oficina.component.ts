@@ -15,33 +15,33 @@ export class MapaDialogOficinaComponent implements OnInit {
         type: 'Feature' as const,
         properties: {
           message: 'Foo',
-          iconSize: [40, 40]
+          iconSize: [20, 25]
         },
         geometry: {
           type: 'Point' as const,
-          coordinates: [-66.324462890625, -16.024695711685304],
+          coordinates: [-76.3633039, -9.8911106],
         },
       },
       {
         type: 'Feature' as const,
         properties: {
           message: 'Bar',
-          iconSize: [40, 40]
+          iconSize: [20, 25]
         },
         geometry: {
           type: 'Point' as const,
-          coordinates: [-61.2158203125, -15.97189158092897],
+          coordinates: [-77.0802424, -12.0549915],
         },
       },
       {
         type: 'Feature' as const,
         properties: {
           message: 'Baz',
-          iconSize: [40, 40]
+          iconSize: [20, 25]
         },
         geometry: {
           type: 'Point' as const,
-          coordinates: [-63.29223632812499, -18.28151823530889],
+          coordinates: [-77.9007062, -6.2181624],
         },
       },
     ],
@@ -57,7 +57,7 @@ export class MapaDialogOficinaComponent implements OnInit {
 
   estilosMarcador(feature: any) {
     return {
-      'background-image': 'url(/assets/img/logo.svg)',
+      'background-image': 'url(/assets/img/loc-osiptel.svg)',
       width: feature.properties.iconSize[0] + 'px',
       height: feature.properties.iconSize[1] + 'px'
     };

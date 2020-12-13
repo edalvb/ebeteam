@@ -13,22 +13,29 @@ export class CanalAtencionEoComponent implements OnInit {
 
   canales = [
     {
+      id: '1',
       nombre: 'Movistar',
       icono: 'movistar'
     },
     {
+      id: '2',
       nombre: 'Claro',
       icono: 'claro'
     },
     {
+      id: '3',
       nombre: 'Bitel',
       icono: 'bitel'
     },
     {
+      id: '4',
       nombre: 'Entel',
       icono: 'entel'
     },
   ]
+
+  public child!: string;
+  operadora!: string;
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, public dialog: MatDialog) {
     this.agregarIcono('movistar', iconRegistry, sanitizer);
@@ -54,5 +61,10 @@ export class CanalAtencionEoComponent implements OnInit {
 
     });
 
+  }
+
+  funChild(e: any){
+    this.child=e.id;
+    this.operadora = e.icono;
   }
 }

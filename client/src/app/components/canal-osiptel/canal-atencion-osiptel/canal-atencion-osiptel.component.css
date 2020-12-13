@@ -1,22 +1,22 @@
-.title {display: flex;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
+.title {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .example-card {
-    width: 194px;
-    margin: 11px;
-    cursor: pointer;
-    padding: 0px;
+  margin: 11px;
+  cursor: pointer;
+  padding: 0px;
 }
 
 .canal-card {
-    max-width: 220px;
-    height: 465px;
+  height: 465px;
 }
 
-.nombre{
-    margin-left: 10px;
+.nombre {
+  margin-left: 10px;
+  text-align: left;
 }

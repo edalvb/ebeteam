@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./dialog-canal-des-eo.component.css']
 })
 export class DialogCanalDesEoComponent implements OnInit {
-  @Input('idEO') idEO: any;
+  @Input() op: any;
 
   idDistro: any;
 

@@ -1,3 +1,13 @@
+export interface Denuncia {
+    fecha: string;
+    denuncia: string;
+    operadora: string;
+    recurso: string;
+    servicio: string;
+    materia: string;
+    estado: string;
+  }
+
 export interface EmpresaOperadora {
     id: String;
     nombre: String;

@@ -3,6 +3,8 @@ import { PersonaDni } from '../../modelo/persona';
 import { PersonaDniService } from '../../servicio/persona-dni.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { stringify } from '@angular/compiler/src/util';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   selector: 'app-autenticar',
@@ -22,8 +24,15 @@ export class AutenticarComponent {
   @Output() confirm = new EventEmitter;
   @Output() setpersona = new EventEmitter;
 
-  constructor(private persona: PersonaDniService, private _snackBar: MatSnackBar) { }
-
+  constructor(private persona: PersonaDniService, private _snackBar: MatSnackBar, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    this.agregarIcono('cui', iconRegistry, sanitizer)
+  }
+  
+  agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      nombre,
+      sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
+  }
   getpersona() {
     this.persona.getPersonaDni(this.persona_dni.dni).subscribe((res: any) => {
       if (res.cui == this.persona_dni.cui) {
