@@ -1,8 +1,8 @@
 <ngx-file-drop required dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
     (onFileLeave)="fileLeave($event)">
     <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
-        Arrastra aquí la resolución del reclamo a la operadora.
-        <button mat-raised-button color="warm" (click)="openFileSelector()" style="font-size: 10px;">Examinar...</button>
+        Arrastra aquí la resolución.
+        <button mat-raised-button color="accent" (click)="openFileSelector()" style="font-size: 10px;">Examinar...</button>
     </ng-template>
 </ngx-file-drop>
 <div class="upload-table">

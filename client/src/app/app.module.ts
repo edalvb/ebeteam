@@ -85,6 +85,8 @@ import { CuestTableComponent } from './components/panel-content/scn-cuestion/cue
 import { CuestFormComponent } from './components/panel-content/scn-cuestion/cuest-form/cuest-form.component';
 
 import { SelectUbicacionComponent } from './components/select-ubicacion/select-ubicacion.component';
+import { SelectServicioComponent } from './components/denuncias/select-servicio/select-servicio.component';
+import { SelectRecursoComponent } from './components/denuncias/select-recurso/select-recurso.component';
 
 
 @NgModule({
@@ -127,6 +129,8 @@ import { SelectUbicacionComponent } from './components/select-ubicacion/select-u
     CuestTableComponent,
     CuestFormComponent,
     SelectUbicacionComponent,
+    SelectServicioComponent,
+    SelectRecursoComponent,
 
   ],
   imports: [

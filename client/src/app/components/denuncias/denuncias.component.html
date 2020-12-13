@@ -1,14 +1,15 @@
+<mat-card class="container">
   <mat-card-title>GESTIONA TUS DENUNCIAS</mat-card-title>
 
   <mat-divider></mat-divider>
 
-  <app-autenticar (setpersona)="funPersona($event)" (confirm)="funAlmacenar($event)"
-    *ngIf="!this.estaLogueado()">
+  <app-autenticar (setpersona)="funPersona($event)" (confirm)="funAlmacenar($event)" *ngIf="!this.estaLogueado()">
   </app-autenticar>
 
   <div *ngIf="this.estaLogueado()">
 
     <div style="height: 10px;"></div>
+    <button [routerLink]="'/denuncias/nuevo'" style="float: left;" mat-raised-button color="primary">Nueva Denuncia</button>
 
     <div align="center">
       <mat-form-field appearance="outline" style="max-width: 300px;">
@@ -16,11 +17,6 @@
         <input matInput (keyup)="applyFilter($event)" placeholder="Escribe aquí" #input>
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
-
-      <button [routerLink]="'/denuncias/nuevo'" mat-mini-fab color="primary" matTooltip="Añadir Responsable"
-        aria-label="Boton que crea un Responsable">
-        <mat-icon>add</mat-icon>
-      </button>
     </div>
 
     <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
@@ -44,21 +40,21 @@
 
                 <span class="_det col-lg-2 col-12"> Recurso </span>
                 <span class="col-lg-2 col-12"> {{element.recurso}}</span>
+              </ng-container>
+            </div>
+          </div>
+        </td>
       </ng-container>
-  </div>
-  </div>
-  </td>
-  </ng-container>
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
-    [class.expanded-row]="expandedElement === element"
-    (click)="expandedElement = expandedElement === element ? null : element"></tr>
-  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
-  <!-- Row shown when there is no matching data. -->
-  <tr class="mat-row" *matNoDataRow>
-    <td class="mat-cell" colspan="4">No se encuentra un resultado para "{{input.value}}"</td>
-  </tr>
-  </table>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
+        [class.expanded-row]="expandedElement === element"
+        (click)="expandedElement = expandedElement === element ? null : element"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No se encuentra un resultado para "{{input.value}}"</td>
+      </tr>
+    </table>
 
   </div>
 </mat-card>
