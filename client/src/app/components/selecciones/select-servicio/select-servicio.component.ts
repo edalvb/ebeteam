@@ -27,7 +27,6 @@ export class SelectServicioComponent implements OnInit, OnDestroy {
         query: denunciaQL.GET_SERVICIOS,
       })
       .valueChanges.subscribe(({ data }) => {
-        console.log(data);
         let dato: any = data;
         this.servicios = dato.servicios
       });

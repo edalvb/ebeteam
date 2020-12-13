@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogElegirEoComponent } from "../../dialog/dialog-elegir-eo/dialog-elegir-eo.component";
 import { DialogElegirMateriaComponent } from "../../dialog/dialog-elegir-materia/dialog-elegir-materia.component";
 import { CREATE_DENUNCIA } from "../../../graphql/denuncia";
 import { Apollo } from 'apollo-angular';
+import { Router } from "@angular/router";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-form-denuncia',
@@ -11,7 +13,7 @@ import { Apollo } from 'apollo-angular';
   styleUrls: ['./form-denuncia.component.css']
 })
 
-export class FormDenunciaComponent {
+export class FormDenunciaComponent implements OnDestroy {
 
   denuncia = {
     idRecurso: null,
@@ -33,10 +35,12 @@ export class FormDenunciaComponent {
 
   autorizo: boolean = false;
 
+  s_getDenuncias!: Subscription;
+
   eo = { id: null, nombre: null };
   materia = { id: null, nombre: null };
 
-  constructor(public dialog: MatDialog, private apollo: Apollo) {
+  constructor(public dialog: MatDialog, private apollo: Apollo, private router: Router) {
     let persona = JSON.parse(sessionStorage.getItem('usuario') as string);
     this.dni = persona.dni;
     this.nombre = persona.name;
@@ -59,12 +63,11 @@ export class FormDenunciaComponent {
         idMateria: this.denuncia.idMateria,
         idDitrito: this.denuncia.idDitrito
       }
-      console.log(variable);
-      this.apollo.mutate({
+      this.s_getDenuncias = this.apollo.mutate({
         mutation: CREATE_DENUNCIA,
         variables: variable
       }).subscribe((data) => {
-        console.log(data);
+        this.router.navigate(['/denuncias']);
       })
     }
   }
@@ -111,6 +114,10 @@ export class FormDenunciaComponent {
 
   seleccionarServicio(e: any) {
     this.denuncia.idServicio = e.id;
+  }
+
+  ngOnDestroy() {
+    this.s_getDenuncias.unsubscribe();
   }
 
 }

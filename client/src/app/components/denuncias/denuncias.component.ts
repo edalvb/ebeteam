@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { PersonaDni } from 'src/app/modelo/persona';
@@ -22,7 +22,7 @@ import { Denuncia1 } from "../../modelo/denuncia";
   ],
 })
 
-export class DenunciasComponent implements OnInit {
+export class DenunciasComponent implements OnInit, OnDestroy {
 
   confirm: boolean = false;
   persona_dni: PersonaDni = {
@@ -48,25 +48,27 @@ export class DenunciasComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.estaLogueado()) {
-
-      let session: any = sessionStorage.getItem('usuario');
-      let idCliente = JSON.parse(session).id;
-
-      this.s_denuncia = this.apollo
-        .watchQuery({
-          query: GET_DENUNCIA_X_CLIENTE,
-          variables: {
-            idCliente: idCliente
-          }
-        })
-        .valueChanges.subscribe(({ data }) => {
-          let dato: any = data;
-          this.denuncias = dato.cliente.denuncias
-          console.log(this.denuncias);
-          this.dataSource = new MatTableDataSource(this.denuncias);
-        });
-
+      this.getDenuncias();
     }
+  }
+
+  getDenuncias() {
+    let session: any = sessionStorage.getItem('usuario');
+    let idCliente = JSON.parse(session).id;
+
+    this.s_denuncia = this.apollo
+      .watchQuery({
+        query: GET_DENUNCIA_X_CLIENTE,
+        variables: {
+          idCliente: idCliente
+        }
+      })
+      .valueChanges.subscribe(({ data }) => {
+        let dato: any = data;
+        this.denuncias = dato.cliente.denuncias
+        console.log(this.denuncias);
+        this.dataSource = new MatTableDataSource(this.denuncias);
+      });
   }
 
   applyFilter(event: Event) {
@@ -76,6 +78,7 @@ export class DenunciasComponent implements OnInit {
 
   funAlmacenar(e: any) {
     this.confirm = e;
+    this.getDenuncias();
   }
 
   funPersona(e: any) {
@@ -98,6 +101,10 @@ export class DenunciasComponent implements OnInit {
 
   estaLogueado(): boolean {
     return sessionStorage.getItem('usuario') != null;
+  }
+
+  ngOnDestroy() {
+    this.s_denuncia.unsubscribe();
   }
 
 }
