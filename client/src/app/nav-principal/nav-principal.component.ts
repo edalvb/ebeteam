@@ -16,7 +16,7 @@ export class NavPrincipalComponent {
   @Output() setOption = new EventEmitter;
 
   cambia: boolean = false;
-  url = 'https://img.ecartelera.com/noticias/57100/57138-m.jpg';
+  url = 'https://www.osiptel.gob.pe/repositorioaps/data/1/1/1/not/comunicado-osiptel-amplia-plazo-inscripcion-ceu/images/osiptel-3.jpg';
 
   @HostBinding('class') componentCssClass: any;
   
