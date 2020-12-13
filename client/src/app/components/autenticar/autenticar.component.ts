@@ -5,6 +5,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import * as clienteQL from "../../graphql/cliente";
 import { Apollo } from 'apollo-angular';
 import { Subscription } from 'rxjs';
+import { stringify } from '@angular/compiler/src/util';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   selector: 'app-autenticar',
@@ -28,7 +31,15 @@ export class AutenticarComponent {
   @Output() confirm = new EventEmitter;
   @Output() setpersona = new EventEmitter;
 
-  constructor(private persona: PersonaDniService, private _snackBar: MatSnackBar, private apollo: Apollo) { }
+  constructor(private persona: PersonaDniService, private _snackBar: MatSnackBar, private apollo: Apollo, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    this.agregarIcono('cui', iconRegistry, sanitizer)
+  }
+
+  agregarIcono(nombre: string, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      nombre,
+      sanitizer.bypassSecurityTrustResourceUrl(`/assets/img/${nombre}.svg`));
+  }
 
   getpersona() {
     this.persona.getPersonaDni(this.persona_dni.dni).subscribe((res: any) => {

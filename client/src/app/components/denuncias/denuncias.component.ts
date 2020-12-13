@@ -47,10 +47,11 @@ export class DenunciasComponent implements OnInit {
   constructor(private dialog: MatDialog, private apollo: Apollo) { }
 
   ngOnInit(): void {
-    let session: any = sessionStorage.getItem('usuario');
-    let idCliente = JSON.parse(session).id;
-
     if (this.estaLogueado()) {
+
+      let session: any = sessionStorage.getItem('usuario');
+      let idCliente = JSON.parse(session).id;
+
       this.s_denuncia = this.apollo
         .watchQuery({
           query: GET_DENUNCIA_X_CLIENTE,
