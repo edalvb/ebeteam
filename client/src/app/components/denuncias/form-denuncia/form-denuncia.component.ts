@@ -4,9 +4,6 @@ import { DialogElegirEoComponent } from "../../dialog/dialog-elegir-eo/dialog-el
 import { DialogElegirMateriaComponent } from "../../dialog/dialog-elegir-materia/dialog-elegir-materia.component";
 import { CREATE_DENUNCIA } from "../../../graphql/denuncia";
 import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
-import { map } from "rxjs/operators";
-import { type } from 'os';
 
 @Component({
   selector: 'app-form-denuncia',

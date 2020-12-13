@@ -66,9 +66,12 @@ export const CREATE_DENUNCIA = gql`
 
 export const GET_DENUNCIA_X_CLIENTE = gql`
     query denunciaPorCliente($idCliente: ID!) {
-      cliente (id: $idCliente) {
-        nombre,
+      cliente(id: $idCliente) {
         denuncias {
+          created_at,
+          direccion,
+          celular,
+          email,
           enre {
             nombre
           }
@@ -76,9 +79,6 @@ export const GET_DENUNCIA_X_CLIENTE = gql`
             nombre
           }
           materia_denuncia {
-            nombre
-          }
-          distrito {
             nombre
           }
           estado_denuncia {

@@ -4,37 +4,10 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { PersonaDni } from 'src/app/modelo/persona';
 import { FormDenunciaComponent } from './form-denuncia/form-denuncia.component';
-
-export interface PeriodicElement {
-  fecha: string;
-  denuncia: string;
-  operadora: string;
-  recurso: string;
-  servicio: string;
-  materia: string;
-  estado: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {
-    fecha: '08/01/2019',
-    denuncia: '001-2019-LN/DEN',
-    operadora: 'TELEFÓNICA DEL PERÚ S.A.A.',
-    recurso: 'Incumplimiento de resolución de primera instancia',
-    servicio: 'Servicios empaquetados',
-    materia: 'Derechos reconocidos',
-    estado: 'CONCLUIDO'
-  },
-  {
-    fecha: '08/01/2019',
-    denuncia: '001-2019-LN/DEN',
-    operadora: 'TELEFÓNICA DEL PERÚ S.A.A.',
-    recurso: 'Incumplimiento de resolución de primera instancia',
-    servicio: 'Servicios empaquetados',
-    materia: 'Derechos reconocidos',
-    estado: 'CONCLUIDO'
-  }
-];
+import { GET_DENUNCIA_X_CLIENTE } from "../../graphql/denuncia";
+import { Apollo } from 'apollo-angular';
+import { Subscription } from 'rxjs';
+import { Denuncia1 } from "../../modelo/denuncia";
 
 @Component({
   selector: 'app-denuncias',
@@ -60,16 +33,43 @@ export class DenunciasComponent implements OnInit {
     name: ''
   };
 
-  constructor(private dialog: MatDialog) { }
+  s_denuncia!: Subscription;
+
+  denuncias!: Denuncia1[];
+
+  denuncia: any;
+
+  dataSource: any;
+
+  displayedColumns: string[] = ['materia_denuncia', 'enre', 'servicio', 'estado_denuncia'];
+  expandedElement!: Denuncia1 | null;
+
+  constructor(private dialog: MatDialog, private apollo: Apollo) { }
 
   ngOnInit(): void {
-    this.estaLogueado();
-  }
+    let session: any = sessionStorage.getItem('usuario');
+    let idCliente = JSON.parse(session).id;
 
-  panelOpenState = false;
-  displayedColumns: string[] = ['fecha', 'denuncia', 'operadora', 'estado'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
-  expandedElement!: PeriodicElement | null;
+    if (this.estaLogueado()) {
+      this.s_denuncia = this.apollo
+        .watchQuery({
+          query: GET_DENUNCIA_X_CLIENTE,
+          variables: {
+            idCliente: idCliente
+          }
+        })
+        .valueChanges.subscribe(({ data }) => {
+          let dato: any = data;
+          this.denuncias = dato.cliente.denuncias
+          console.log(this.denuncias);
+          this.dataSource = new MatTableDataSource(this.denuncias);
+        });
+
+        for (const iterator of object) {
+
+        }
+    }
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -85,7 +85,7 @@ export class DenunciasComponent implements OnInit {
   }
 
   onCreate() {
-    const dialogRef = this.dialog.open(FormDenunciaComponent, {
+    this.dialog.open(FormDenunciaComponent, {
       width: "100%",
       height: "max-content",
       disableClose: true,
