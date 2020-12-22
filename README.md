@@ -6,4 +6,4 @@ Dentro de los archivos client y server ejecuta los comandos `npm install` para q
 
 Una vez hecho esto para ejecutar Strapi ejecuta `npm run develop` y para ejecutar Angular ejecuta `ng serve`
 
-[DEMO](http://150.136.105.70)
+[DEMO](http://ebe-team.web.app/)
