@@ -13,7 +13,7 @@
   "dependencies": {
     "knex": "<0.20.0",
     "mysql": "latest",
-    "strapi": "3.3.4",
+    "strapi": "3.6.8",
     "strapi-admin": "3.3.4",
     "strapi-connector-bookshelf": "3.3.4",
     "strapi-connector-mongoose": "^3.3.4",
