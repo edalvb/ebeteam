@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod=true --cross-origin=use-credentials --service-worker=true --aot=true --build-optimizer=true",
+    "build": "ng build --prod=true --cross-origin=use-credentials --service-worker=true --aot=true --build-optimizer=true --base-href /ebeteam/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
