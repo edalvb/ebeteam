@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1727390791410,
+  "timestamp": 1727391917743,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -105,7 +105,7 @@
     "/assets/img/web.svg": "0f26634873b52635def93c67dc3b9dcfe5bb292f",
     "/assets/img/whatsapp.svg": "3854388399421bd244735652d314948e103e2eef",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "74f2a817e014ca9ab9e645c508e7e01902283eb1",
+    "/index.html": "0eaaf9a85669bb31fbae4ce15eabc03e5959f644",
     "/main.b5957054c1f72003033d.js": "5c610c53a0744df7c1e85b9060fbf2eda8a7ab17",
     "/manifest.webmanifest": "a17f4c8cdfb8d3c00e1580e00c917da2c6c77914",
     "/polyfills.a7dc2585938f51d15d8c.js": "747604882a6ecb61e0da835bb0bf81546f01e06b",
