@@ -1,8 +1,0 @@
-<mat-form-field appearance="outline" class="inpt">
-  <mat-label>Servicio</mat-label>
-  <mat-select (selectionChange)="this.seleccionarServicio()" [(ngModel)]="this.servicio">
-    <mat-option [value]="s" *ngFor="let s of servicios">
-      {{s.nombre}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
